@@ -2,7 +2,7 @@
 
 This repository contains a short (2-day) course teaching tools and practices for FAIR (Findable, Accessible, Interoperable and Reusable) research software. 
 
-The course is visible at: https://softwaresaved.github.io/fair-research-software/ and uses [the Markdown lesson template][workbench-markdown-template] from the [The Carpentries Workbench lesson infrastructure][sandpaper-docs].
+The course is visible at: https://softwaresaved.github.io/fair-research-software/ and uses [the Markdown lesson template][workbench-markdown-template] from the [The Carpentries Workbench lesson infrastructure][sandpaper-documentation].
 
 🚧 **This curriculum is currently under development.** 🚧
 
@@ -50,7 +50,7 @@ Citation info coming soon...
 
 Please get in touch with [Aleksandra Nenadic](a.nenadic@software.ac.uk) with any questions about this lesson.
 
-[sandpaper-docs]: https://carpentries.github.io/sandpaper-docs/
+[sandpaper-documentation]: https://carpentries.github.io/sandpaper-docs/
 [workbench-markdown-template]: https://github.com/carpentries/workbench-template-md/
 [ssi]: https:/www.software.ac.uk
 [ukrn]: https://www.ukrn.org/
