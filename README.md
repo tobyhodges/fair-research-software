@@ -4,7 +4,7 @@ This repository contains a short (2-day) course teaching tools and practices for
 
 The course is visible at: https://softwaresaved.github.io/fair-research-software/ and uses [the Markdown lesson template][workbench-markdown-template] from the [The Carpentries Workbench lesson infrastructure][sandpaper-docs].
 
-🚧 ** This curriculum is currently under development.** 🚧
+🚧 **This curriculum is currently under development.** 🚧
 
 ## Contributing
 
