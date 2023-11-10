@@ -36,8 +36,9 @@ The content of this episode was inspired / heavily borrowed from the following r
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
-- ...
-- ...
+- [The FAIR Guiding Principles for scientific data management and stewardship](https://www.nature.com/articles/sdata201618)
+- [The FAIR Cookbook](https://faircookbook.elixir-europe.org/content/home.html)
+- [The Turing Way Guide for Reproducible Research: Open Research](https://the-turing-way.netlify.app/reproducible-research/open)
 
 
 
