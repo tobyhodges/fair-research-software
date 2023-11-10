@@ -44,7 +44,10 @@ We recommend the following resources for some additional reading on the topic of
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- ...
+- Readable code is easier to understand, maintain, debug and extend!
+- Creating functions from the smallest, reusable units of code will help compartmentalise which parts of the code are doing what actions
+- Choosing descriptive variable and function names will communicate their purpose more effectively
+- Using inline comments and docstrings to describe parts of the code will help transmit understanding, and verify that the code is correct
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
