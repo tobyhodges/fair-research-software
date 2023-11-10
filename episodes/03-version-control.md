@@ -6,7 +6,9 @@ exercises: 30
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
--  ...
+- What is a version control system?
+- How can a version control system help make my work reproducible?
+- What does a standard version control workflow look like?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
