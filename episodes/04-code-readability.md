@@ -14,7 +14,9 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- ...
+- Organise code into reusable functions that achieve a singular purpose
+- Create function and variable names that help explain the purpose of the function or variable
+- Write informative inline comments and docstrings to provide more detail about what the code is doing
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
