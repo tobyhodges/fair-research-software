@@ -6,7 +6,9 @@ exercises: 30
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
--  ...
+- Why does readable code matter?
+- How can I organise my code to be more readable?
+- What types of documentation can I include to improve the readability of my code?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
