@@ -12,7 +12,10 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- ...
+- Create atomic commits in git to incrementally save work
+- Create branches to separate development work from stable work
+- Push new work from a local machine to a remote server
+- Open Pull Requests to review and merge new work into the stable branch
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
