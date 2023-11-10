@@ -45,6 +45,10 @@ We recommend the following resources for some additional reading on the topic of
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- ...
+- A version control system is software that tracks and manages changes to a project over time
+- Using version control aids reproducibility since the exact state of the software that produced an output can be recovered
+- A commit represents the smallest unit of change to a project
+- Branches are an integral part of the version control workflow since they separate stable work from developing work, and limit conflicts between collaborators
+- Pull Requests are a mechanism to include changes into the stable branch after passing tests and code review
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
