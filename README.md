@@ -6,6 +6,8 @@ The course is visible at: https://softwaresaved.github.io/fair-research-software
 
 🚧 **This curriculum is currently under development.** 🚧
 
+Launch this lesson on mybinder! 👉 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/carpentries-incubator/fair-research-software/HEAD?urlpath=rstudio)
+
 ## Contributing
 
 Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for contributing guidelines and details on how to get involved with this project.
