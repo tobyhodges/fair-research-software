@@ -21,10 +21,36 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Create a new repository
 
+Create a new directory in the `Desktop` folder for our work, and then change the current working directory to the newly created one:
 
-Content of the episode goes here.
+```bash
+$ cd ~/Desktop
+$ mkdir planets
+$ cd planets
+```
 
+We tell Git to make `planets` a repository -- a place where Git can store versions of our files:
+
+```bash
+git init
+```
+
+We can check everything is setup correctly by asking Git to tell us the status of our project:
+
+```bash
+$ git status
+```
+
+```output
+On branch main
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+```
+
+The exact wording of this output may be slightly different if you are using a different version of Git.
 
 ## Acknowledgements
 
