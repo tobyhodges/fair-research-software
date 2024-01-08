@@ -119,7 +119,7 @@ A:
 
 * Add a license file
 * Add license statement to the top of every file
-* 
+
 
 
 ## License file exercise
@@ -164,7 +164,21 @@ A:
 * Add a citation file
 * Add a codemeta file, FAIR principles
 
+## Pull Requests
+ * show pull request workflow
+ * get a helper to pull reuqest a change into a file
+ * demonstrate review process
 
+## Pull Request Exercise
+
+Q: add yourself to the authors or citation file and submit a pull request
+
+:::::::::::::::: solution
+
+A: 
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Acknowledgements
 
