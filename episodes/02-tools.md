@@ -13,8 +13,8 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- List the tools that will be covered in the lesson
-- Check everyone has the tools installed correctly
+- Identify some key tools for FAIR research
+- Install and run key tools on their own workstation
 - Explain why these help us work in a FAIR way
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
