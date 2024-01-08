@@ -19,7 +19,7 @@ title: Learner Profiles
 * Some of the data sources have gaps and inconsistencies and will require some cleaning first.
 * A senior researcher has given Gerry some sources for the data and some example R code which does the analysis.  
 
-## Phiippa the Physicist
+## Philippa the Physicist
 * Reserach fellow in particle physics
 * Has a PhD in particle physics and several years of postdoc experience
 * Did some Fortran modules as an undergraduate, self-taught Python programmer. 
