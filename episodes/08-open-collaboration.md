@@ -89,6 +89,7 @@ Q: choose a license for a scenario
 A: 
 
 :::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -103,6 +104,8 @@ Explain code vs data/documentation licenses
 
 * Older CC licenses, less suitable internationally, more variants in newer versions
 
+::::::::::::::::::::::::::::::::::::: challenge
+
 ## License selection exercise 2
 
 Q: choose a license for a scenario involving code and data
@@ -112,6 +115,7 @@ Q: choose a license for a scenario involving code and data
 A: 
 
 :::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -121,6 +125,7 @@ A:
 * Add license statement to the top of every file
 
 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## License file exercise
 Q: add a license file to your git repo
@@ -130,6 +135,7 @@ Q: add a license file to your git repo
 A: 
 
 :::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -145,6 +151,8 @@ A:
 * Contributor license agreements
 * Don't try to write your own
 
+::::::::::::::::::::::::::::::::::::: challenge
+
 ## Relicensing exercise
 
 Q: somebody has code under license X, can they relicense under Y?
@@ -154,6 +162,7 @@ Q: somebody has code under license X, can they relicense under Y?
 A: 
 
 :::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Sharing your code 
@@ -169,6 +178,8 @@ A:
  * get a helper to pull reuqest a change into a file
  * demonstrate review process
 
+::::::::::::::::::::::::::::::::::::: challenge
+
 ## Pull Request Exercise
 
 Q: add yourself to the authors or citation file and submit a pull request
@@ -178,6 +189,7 @@ Q: add yourself to the authors or citation file and submit a pull request
 A: 
 
 :::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Acknowledgements
