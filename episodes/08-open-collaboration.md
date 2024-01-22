@@ -4,14 +4,6 @@ teaching: 60
 exercises: 30
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
-
--  What licensing information should I include with my code and data?
--  How do I share my code on Github?
--  How do I ensure my code is citable?
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Explain why adding licensing information to a repository is important.
@@ -19,6 +11,14 @@ exercises: 30
 - Understand that some licenses are intended for code and others for data. 
 - Understand your rights and obligations under the GPL, MIT, BSD, Apache 2 and Creative Commons licenses.
 - Recall that open source software can be sold and used in commercial products but that license declaration will need to be included and any other terms of the license adhered to.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+-  What licensing information should I include with my code and data?
+-  How do I share my code on Github?
+-  How do I ensure my code is citable?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
