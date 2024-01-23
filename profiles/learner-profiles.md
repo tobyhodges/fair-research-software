@@ -3,13 +3,10 @@ title: Learner Profiles
 ---
 
 ## Bobby the Bioinformatician
-* Postdoc in bioinformatics, finished PhD 2 years ago
-* Did a software Carpentry workshop covering Shell, Python and Git 3 years ago during his PhD. 
-* Wrote a couple of analysis scripts during his PhD, but hasn't done much recently.
-* Now needs to run a set of Python scripts written by another research who has recently left. This is in github, but Bobby doesn't have much experience with Git apart from the course he did 3 years ago, he's never posted any code of his own on Github.
-* These read data in FASTQ format and write out a set of CSVs with summary information.
-* This code might need a few minor bugs fixing, but don't currently require any major work. 
-* Bobby's favourite journal has started requesting all the raw data, scripts and environments used to generate the results. So he'd like to have an up to date github repository with his bugfixes, environments and some supporting scripts. 
+* Bobby is a postdoctoral reseacher in bioinformatics, having finished his PhD 2 years ago.
+* Bobby attended a Software Carpentry workshop 3 years ago during his PhD, covering the foundatinal knowledge of Shell, Python and Git. 
+* Bobby wrote a couple of Python analysis scripts during his PhD, but hasn't done much recently. He now needs to run a set of Python scripts written by another researcher who has recently left his group. The scripts are in GitHub, but Bobby does not have much experience with Git or GitHub, apart from the course he did 3 years ago, and he has never shared any of his code on Github. These scripts read data in FASTQ format and write out a set of CSV files with summary information. They may need a few minor bugs fixes and improved documentation for others to be able to more easily reuse them. 
+* In addition, Bobby's favourite journal has started requesting all the raw data, scripts and computational environments used to generate the results to be submitted along with a manuscript. So this is an extra motivation for Bobby to have an up to date GitHub repository with the latest working code, data, documentation on how to run the code, results and any supporting information. 
 
 ## Gerry the Geographer
 * Research assistant in human geography
