@@ -42,7 +42,7 @@ Looking at the list you made earlier, give each item a mark for how:
   - Accessible
   - Interoperable
   - Reuseable
-you think they are.  
+you think they are in themselves. Do they help you work in a FAIR way?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
