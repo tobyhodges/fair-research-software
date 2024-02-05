@@ -20,13 +20,29 @@ exercises: 30
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-::::::::::::::::::::::::::::::::::::: discussion
+::::::::::::::::::::::::::::::::::::: exercise
 
-- What do you understand by the words:
-  - Reproducible research?
-  - Open research?
+- List the tools, platforms and standards you currently use in your research.
+- Note down whether you they could be easily used or understood by:
+  - Someone else in your research group
+  - Another researcher in your field but from a different group
+  - An untrained member of the public
 
-- To what extent do you think your own work is open and reproducible?
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+
+
+::::::::::::::::::::::::::::::::::::: exercise
+
+Looking at the list you made earlier, give each item a mark for how:
+  - Findable
+  - Accessible
+  - Interoperable
+  - Reuseable
+you think they are.  
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
