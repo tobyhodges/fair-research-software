@@ -20,8 +20,15 @@ exercises: 30
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+::::::::::::::::::::::::::::::::::::: discussion
 
-Content of the episode goes here.
+- What do you understand by the words:
+  - Reproducible research?
+  - Open research?
+
+- To what extent do you think your own work is open and reproducible?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ## Acknowledgements
