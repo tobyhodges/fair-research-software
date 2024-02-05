@@ -47,6 +47,36 @@ you think they are.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+
+::::::::::::::::::::::::::::::::::::: exercise
+
+Open a terminal and look at the prompt. Compare with oyur neighbour, does it look different?
+What information is it telling you and why might this be useful?
+
+Hint: The prompt is the `$` character and any text that comes before it, that is shown on every new line before you type in commands.
+
+Solution:
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: exercise
+
+Run the following commands to check you have installed the tools listed in the Setup page. Compare the output with your neightbour and see if you can see any differences.
+
+1. `echo $SHELL`
+2. `pwd`
+3. `whoami`
+4. `python --version`
+5. `which python`
+6. `git --help`
+7. `code`
+
+Solution:
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 ## Acknowledgements
 
 The content of this episode was inspired / heavily borrowed from the following resources:
