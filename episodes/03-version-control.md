@@ -144,18 +144,14 @@ $ git status
 
 The content of this episode was inspired / heavily borrowed from the following resources:
 
-- ...
-- ...
+- [Software Carpentry's Git Novice lesson](https://swcarpentry.github.io/git-novice)
 
 ## Further reading
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
-- ...
-- ...
-
-
-
+- The full [Software Carpentry Git Novice lesson](https://swcarpentry.github.io/git-novice)
+- [_The Turing Way_'s guide to version control](https://the-turing-way.netlify.app/reproducible-research/vcs)
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
