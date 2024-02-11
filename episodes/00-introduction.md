@@ -4,7 +4,17 @@ teaching: 25
 exercises: 0
 ---
 
-## What is and why do reproducible research?
+## Jargon busting
+Before we start with the course, below we cover the terminology and explain terms, phrases, and 
+concepts associated with software development in reproducible research that we will use in this course.
+
+* Reproducible
+* FAIR - an acronym that stands for Findable, Accessible, Interoperable, and Reusable
+* Sustainable
+
+TODO ...
+
+## Why do reproducible research?
 
 Scientific transparency and rigor are key factors in research. Scientific methodology and 
 results need to be published openly and replicated and confirmed by several independent parties.
@@ -14,21 +24,24 @@ This is called [**the reproducibility crisis**](https://en.wikipedia.org/wiki/Re
 methodological crisis in which the results of many scientific studies are difficult or impossible to reproduce.
 
 Reproducible research is a practice that ensures that researchers can repeat the same analysis multiple times with the 
-same results. Those who practice reproducible research benefit from it greatly:
+same results. It offers many benefits to those who practice it:
 
-* Reproducible research helps researchers remember how and why they performed specific analyses; 
+* Reproducible research helps researchers remember how and why they performed specific tasks and analyses; 
 this enables easier explanation of work to collaborators and reviewers. 
 * Reproducible research enables researchers to quickly modify analyses and figures - this is often 
-required at all stages of research and expediting this process saves substantial amounts of time. 
-* Reproducible research enables reusability of previously conducted research tasks so that new projects 
+required at all stages of research and automating this process saves loads of time. 
+* Reproducible research enables reusability of previously conducted tasks so that new projects 
 that require the same or similar tasks become much easier and efficient by reusing or reconfiguring previous work. 
+* Reproducible research has greater impact on professional lives of researchers through the 
+ability to reuse and cite all research outputs - including code and data.
 * Reproducible research is a strong indicator of rigor, trustworthiness, and 
 transparency in scientific research. This can increase the quality and speed of peer review, because reviewers can 
 directly access the analytical process described in a manuscript. It increases the probability that errors are caught 
-early on - by collaborators or during the peer-review process, helping solve the reproducibility crisis.  
+early on - by collaborators or during the peer-review process, helping alleviate the reproducibility crisis.  
 
-However, increasing rigor often requires that researchers implement new practices and learn new tools.
-This course aims to teach some of these practices and tools pertaining to the use of software for reproducible research.
+However, reproducible research often requires that researchers implement new practices and learn new tools.
+This course aims to teach some of these practices and tools pertaining to the use of software to conduct 
+reproducible research.
 
 ## Software in research
 Software is fundamental to modern research - some of it would even be impossible without software [ssi survey reference]. 
@@ -45,31 +58,32 @@ We define "research software" as software or code that is used to generate, proc
 for publication. 
 Even formulas in spreadsheets are considered code - they are a form of computer programming in that allow you to 
 create, calculate, and change data sets in a number of different ways. 
-So, software is not reserved for [computational science](https://en.wikipedia.org/wiki/Computational_science),
-also known as scientific computing, and “traditional” uses of computing capabilities and infrastructures (e.g.
-simulations and computational methods) to understand and solve complex physical problems any more.
-Nor its use is restricted to the "hard" sciences - the use of research software is ubiquitous and 
+So, software is not reserved for [computational science](https://en.wikipedia.org/wiki/Computational_science) 
+(aka scientific computing) and “traditional” uses of computing capabilities and infrastructures (e.g.
+simulations and computational methods) any more.
+Nor its use is restricted to "hard" sciences - the use of research software is ubiquitous and 
 fairly even across all disciplines [ssi survey ref].
 
-Research software is also widely developed - researchers do not just use “off the shelf” software,
+Research software is also widely developed - researchers do not just use “off the shelf” software and
 the majority of researchers develop their own. 
 In order to be able to produce quality software that outputs correct and verifiable results and 
-that can be reused - this course teaches good practises and reproducible working methods that are agnostic of a 
-programming language (although we will use Python as an example language) and hopefully demonstrate 
-how programming tasks should be approached, ultimately providing researchers with the tools and knowledge to 
-feel confident when writing good quality and FAIR software to support their research.
+that can be reused over time - researchers require training.
+This course teaches good practises and reproducible working methods that are agnostic of a 
+programming language (although we will use Python code as examples) and aims to provide 
+researchers with the tools and knowledge to feel confident when writing good quality and sustainable 
+software to support their research. Typically, we think of such software as being FAIR.
 
 ## FAIR software
 
 FAIR stands for Findable, Accessible, Interoperable, and Reusable and comprises a set of principles designed to 
 increase the visibility and usefulness of your research to others. 
 The FAIR data principles [ref] are widely known and applied today. 
-Similar FAIR principles [ref] have now been defined for software too - in general, they mean: 
+Similar FAIR principles [ref] have now been defined for software too. In general, they mean: 
 
 * Findable - software and its associated metadata must be easy to discover by humans and machines alike.
 * Accessible - in order to reuse software, software and its metadata must be retrievable.
-* Interoperable - software must interact other software by exchanging data and/or metadata through 
-standardised protocols and application programming interfaces
+* Interoperable - when interacting with other software it must be done by exchanging data and/or metadata through 
+standardised protocols and application programming interfaces (APIs).
 * Reusable - software should be usable (can be executed) and reusable 
 (can be understood, modified, built upon, or incorporated into other software).
 
@@ -83,27 +97,31 @@ closer to the gold standard of a fully reproducible research.
 * Findable
   * Create a description of your software
   * Place your software in a software repository (and ideally register it in a software registry)
-  * Use a unique and persist identifier for your software (also useful for citations)
+  * Use a unique and persistent identifier for your software (also useful for citations)
 * Accessible
   * Make sure people can download your software
 * Interoperable
   * Explain the functionality of your software 
   * Use standard formats for inputs and outputs
-  * Communicate with other software via standard protocols
+  * Communicate with other software via standard protocols and APIs
 * Reusable
   * Document your software (including its functionality, and how to install and run it) 
   * Follow best practices for software development (including coding conventions, code readability and verifying its correctness)
   * Give a licence to your software clearly stating how it can be reused
   * State how to cite your software
 
-We are going to explore the above practices on an example project we will be working on as part of this 
+We are going to explore the above practices on an example software project we will be working on as part of this 
 course. 
 
 ## Software and data used in this course
 TODO
 
-## References - TODO
+## Acknowledgements and references
+The content of this episode borrows from or references the following work, which we also recommend for further reading:
+
 [1] [A Beginner's Guide to Conducting Reproducible Research](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/bes2.1801), 
 Jesse M. Alston, Jessica A. Rick, https://doi.org/10.1002/bes2.1801
+
+TODO...
 
 [2] SSI survey
