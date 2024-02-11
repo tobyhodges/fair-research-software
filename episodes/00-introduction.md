@@ -8,11 +8,38 @@ exercises: 0
 Before we start with the course, below we cover the terminology and explain terms, phrases, and 
 concepts associated with software development in reproducible research that we will use in this course.
 
-* Reproducible
+* Reproducibility - by reproducibility we mean "computational reproducibility"
+* Reproducible research - work that can be independently recreated from the same data and the same code that 
+the original team used.
 * FAIR - an acronym that stands for Findable, Accessible, Interoperable, and Reusable
-* Sustainable
+* Sustainable software development - software development practice that takes into account longevity and 
+maintainability of code (beyond the end of the project), environmental impact, societal responsibility and ethics in 
+our software practices. 
 
 TODO ...
+
+## What is reproducible research?
+
+[The Turing Way's "Guide to Reproducible Research"](https://the-turing-way.netlify.app/index.html#citing-the-turing-way)
+provides an [excellent overview of definitions of "reproducibility" and "replicability"](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions) found in literature, and their 
+different aspects and levels. According to one definition, *reproducible* means that a measurement can be obtained 
+with a stated precision by a different team using a different experimental setup in a different location on multiple 
+trials (different team, different experimental setup). By the same 
+definition, *replicable* means that a measurement can be obtained with stated precision by a different team 
+using the same measurement procedure, the same measuring system, under the same operating conditions, 
+in the same or a different location on multiple trials (different team, same experimental setup).
+
+We can also further differentiate between:
+
+* Computational reproducibility: when detailed information is provided about code, software, hardware and 
+implementation details.
+* Empirical reproducibility: when detailed information is provided about non-computational empirical scientific 
+experiments and observations. In practice, this is enabled by making the data and details of how it was 
+collected freely available.
+* Statistical reproducibility: when detailed information is provided, for example, about the choice of 
+statistical tests, model parameters, and threshold values. This mostly relates to pre-registration of study design to prevent p-value hacking and other manipulations.
+
+In this course, when we say "reproducible" or "reproducibility", we mean "computational reproducibility".
 
 ## Why do reproducible research?
 
@@ -121,6 +148,7 @@ The content of this episode borrows from or references the following work, which
 
 [1] [A Beginner's Guide to Conducting Reproducible Research](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/bes2.1801), 
 Jesse M. Alston, Jessica A. Rick, https://doi.org/10.1002/bes2.1801
+[2] The Turing Way "Guide for reproducible research", https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions
 
 TODO...
 
