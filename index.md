@@ -2,9 +2,9 @@
 site: sandpaper::sandpaper_site
 ---
 
-This repository contains a short (2-day) course teaching tools and practices for producing and sharing quality and [FAIR 
-(Findable, Accessible, Interoperable and Reusable) research software][fair-software] to support open and reproducible research. 
-
+This repository contains a short (2-day) course teaching tools and practices for producing and sharing quality, 
+sustainable and [FAIR (Findable, Accessible, Interoperable and Reusable) research software][fair-software] 
+to support open and reproducible research. 
 
 ## Target Audience
 
@@ -15,23 +15,27 @@ Check out a few example [learner profiles](./profiles.html), to see if this cour
 
 ## Learning Objectives
 
-After attending this training, participants will:
+After attending this training, you will be able to:
 
-- Understand challenges typically faced by researchers developing software and managing data for modern computational research, including requirements commensurate with the FAIR principles
-- Know the tools and practices to make their research, data and software open and FAIR wherever possible for reuse / repurpose
-- Understand how to automate their research and help replicate their research results by writing software to implement the research methodology
-- Apply a version control to back up and share software using GitHub
-- Undestand and apply best practices for developing and sharing sustainable software (including writing readable code, code documentation, licencing and citation)
-- Know how assess if the code does what it intends to
-- Recognise tools and techniques for collaborative software development and maintainance
+- List challenges typically faced by researchers developing software and managing data for modern computational 
+research, including requirements commensurate with the FAIR (Findable, Accessible, Interoperable, Reusable) principles
+- List some tools and practices that can help make your research, data and software open and FAIR
+- Automate your research and enable replication of your research results by writing software to implement the 
+research methodology
+- Share and version control your software using Git and GitHub
+- List best practices for developing and sharing open and sustainable software (including writing readable code, 
+- code documentation, licencing and citation)
+- Assess if the code does what it intends to do
+- List tools and techniques for collaborative and sustainable software development and maintenance
 
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 
 ## Prerequisites
 
-Before joining this training, participants should have foundational knowledge of Python or another programming language used to write scientific code. 
-For example, attending a [Software Carpentry][swc-lessons]/[Data Carpentry][dc-lessons]/[Library Carpentry][lc-lessons] or a similar introductory Python course could help with this requirement and 
-ganing necesssary prerequisite skills.
+Before joining this training, participants should have foundational knowledge of Python or another programming language 
+used to write scientific code. 
+For example, attending a [Software Carpentry][swc-lessons]/[Data Carpentry][dc-lessons]/[Library Carpentry][lc-lessons] 
+or a similar introductory Python course could help with this requirement and gaining necessary prerequisite skills.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
