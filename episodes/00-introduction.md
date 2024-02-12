@@ -16,6 +16,9 @@ and conditions of analysis; work that can be independently recreated from the sa
 by the Turing Way's "Guide to Reproducible Research")
 * **Reproducible research** - the idea that scientific results should be documented in such a way that their deduction
 is fully transparent ([definition](https://en.wikipedia.org/wiki/Reproducibility) from Wikipedia)
+* **Open research** - research that is openly accessible by others; concerned with making research more transparent, 
+more collaborative, more wide-reaching, and more efficient 
+([definition](https://en.wikipedia.org/wiki/Open_research) from Wikipedia)
 * **FAIR** - an acronym that stands for Findable, Accessible, Interoperable, and Reusable
 * **Sustainable software development** - software development practice that takes into account longevity and 
 maintainability of code (e.g. beyond the lifetime of the project), environmental impact, societal responsibility and ethics in 
