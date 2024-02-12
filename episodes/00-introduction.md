@@ -8,15 +8,22 @@ exercises: 0
 Before we start with the course, below we cover the terminology and explain terms, phrases, and 
 concepts associated with software development in reproducible research that we will use in this course.
 
-* Reproducibility - by reproducibility we mean "computational reproducibility"
-* Reproducible research - work that can be independently recreated from the same data and the same code that 
-the original team used.
-* FAIR - an acronym that stands for Findable, Accessible, Interoperable, and Reusable
-* Sustainable software development - software development practice that takes into account longevity and 
-maintainability of code (beyond the end of the project), environmental impact, societal responsibility and ethics in 
+* **Reproducibility** - the ability to be reproduced or copied; the extent to which consistent results are obtained 
+when an experiment is repeated (definition from [Oxford Languages](https://languages.oup.com/google-dictionary-en/))
+* **Computational reproducibility** - obtaining consistent results using the same input data, computational methods (code),
+and conditions of analysis; work that can be independently recreated from the same data and the same code 
+([definition](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions) 
+by the Turing Way's "Guide to Reproducible Research")
+* **Reproducible research** - the idea that scientific results should be documented in such a way that their deduction
+is fully transparent ([definition](https://en.wikipedia.org/wiki/Reproducibility) from Wikipedia)
+* **FAIR** - an acronym that stands for Findable, Accessible, Interoperable, and Reusable
+* **Sustainable software development** - software development practice that takes into account longevity and 
+maintainability of code (e.g. beyond the lifetime of the project), environmental impact, societal responsibility and ethics in 
 our software practices. 
 
-TODO ...
+::: callout
+In this course, we use the term "reproducibility" as synonym for "computational reproducibility".
+:::
 
 ## What is reproducible research?
 
