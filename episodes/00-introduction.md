@@ -49,7 +49,7 @@ collected freely available.
 * Statistical reproducibility: when detailed information is provided, for example, about the choice of 
 statistical tests, model parameters, and threshold values. This mostly relates to pre-registration of study design to prevent p-value hacking and other manipulations.
 
-In this course, when we say "reproducible" or "reproducibility", we mean "computational reproducibility".
+In this course, we are concerned with computational reproducibility.
 
 ## Why do reproducible research?
 
