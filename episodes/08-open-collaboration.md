@@ -26,7 +26,7 @@ exercises: 30
 
 ## What is licensing and why is it important?
 
-### What is Copyright?
+### Copyright Licenses
 
 The authors of any creative work such as written text, photographs,
 films, music and computer code are protected by Copyright law.  This
@@ -42,6 +42,13 @@ need their permission to do so.
 Copyright licenses don't necessarily require any money to be charged for
 copies and the creator might choose to let anybody copy their work,
 providing they don't change it and keep their name on it.
+
+Copyright is automatically implied, any creative work which doesn't
+specify a license should be assumed to be copyrighted. If it were ever to
+come to a court case then the author might have a problem proving this
+and enforcing their copyright. Technically the work is copyrighted the
+moment it is created, even without any kind of copyright statement,
+registration or license agreement.
 
 ### Copyright and Open Source
 
@@ -129,6 +136,10 @@ federal government are automatically public domain. But in other
 countries works need to be registered as public domain. For this reason
 it isn't recommended to simply make work public domain if you want to
 release it for anybody in the world to freely use.
+
+If you really want to release code under something very similar to public domain then the [unlicense](https://unlicense.org/) could be for you. 
+It states that anybody is free to use the software in any way they like. In jursidictions with public domain, it "dedicates" the software into the public domain.
+
 
 ### Permissive Licenses
 
@@ -239,21 +250,45 @@ code. The Affero GPL or AGPL requires that people running web
 applications licensed under the AGPL make the source code available to
 the users of those web applicaitons. 
 
+### Choosing a License
 
+When choosing a license for your code there's a number of things you might want to consider:
 
-### Tools to help you choose
+* Do you want to ensure that anybody modifying and redistributing your code will release the source code of their changes?
+* Or would you prefer to ensure the least number of restrictions and that your code will be used as widely as possible? Even if that means it might end up in commercial products that don't release their source code.
+* Are you reusing code which is already under an open source license? What obligations do you have under those licenses? 
+* Is there a preferred license in your research community?
 
-* Choosealicense.com
+Don't be tempted to write you're own license (or modify an existing one)
+unless you are a copyright lawyer. The common open source licenses have
+been carefully written by copyright lawyers, many of them have undergone
+multiple iterations in response to cases that have arisen and the
+implications of many different legal jurisidcitons has been considered.
+The common licenses are also well known, meaning that potential users and
+contributors have a better understanding of what their rights and
+responsibilities are leaving less room for misunderstanding.
+
+#### Tools to help you choose
+
+The website [choosealicense.com](choosealicense.com) has some great
+resources to help you choose a license that's appropriate for your needs.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## License selection exercise
 
-Q: choose a license for a scenario
+Q: You have created a library of functions that are commonly used by
+researchers in your field. You would like to share this code with your
+research community and ensure that the code remains as open as possible
+to benefit the community. But you would also like to see it being
+integrated into as many different research codes and even commercial
+products as possible. What would be a good choice of license?
 
 :::::::::::::::: solution
 
-A: 
+A: The LGPL license could be a good choice for library code. It can be
+linked to software that isn't GPL licensed but any modifications to the
+library itself must be released under a GPL compatible license.
 
 :::::::::::::::::::::::::
 
@@ -323,6 +358,7 @@ A:
 :::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
 ## Adding a license to your code/data
