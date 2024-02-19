@@ -59,6 +59,17 @@ make changes to the original work and to redistribute those. When applied
 to software this requires that the source code of the program is
 distributed alongside the executable program. 
 
+### Copyright Statements
+
+A common way to declare your copyright of a program and the license you
+are distributing it under is to include a file called LICENSE in your
+code repository, to display it in comments in a code file or to display
+it on screen when the program is run. At the very least each source file
+should state what license the code is under and tell the reader to refer
+to the LICENSE file. This means that if the code ever gets (accidentally)
+redistributed without the license file then the reader will still know
+about the license that was used. 
+
 ### Free Software
 
 In the early history of computing there were often informal agreements
@@ -66,8 +77,7 @@ where programmers would share source code with each other, but this was
 rarely backed up with any formal copyright license. As the field grew
 this was first formalised in the 1980s by Richard Stallman who formed the
 Free Software Foundation and defined "Free Software" as software which
-stated the Free Software was defined by software which respected users
-freedoms by giving users:
+which respects users freedoms by granting them four freedoms:
 
 1. The freedom to run the program as you wish, for any purpose.
 2. The freedom to study how the program works, and change it so it does your computing as you wish. Access to the source code is a precondition for this.
@@ -282,7 +292,8 @@ researchers in your field. You would like to share this code with your
 research community and ensure that the code remains as open as possible
 to benefit the community. But you would also like to see it being
 integrated into as many different research codes and even commercial
-products as possible. What would be a good choice of license?
+products as possible. What would be a good choice of license? (hint: You
+can use the [choosealicense.com](choosealicense.com) website to help you)
 
 :::::::::::::::: solution
 
@@ -349,22 +360,22 @@ Attribution Share Alike     * CC-BY-NC - Creative Commons Non Commercial
 
 ## License selection exercise 2
 
-Q: choose a license for a scenario involving code and data
-
-:::::::::::::::: solution
-
-A: 
-
-:::::::::::::::::::::::::
+Choose a license for your code and data from the pervious exercises.
+Discuss with your neighbour or the group your choice of license and
+reason for choosing it.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Adding a license to your code/data
 
-* Add a license file
-* Add license statement to the top of every file
+Add a LICENSE file containing the full text of the license you've chosen.
+Add a copyright statement, the name of the license you are using and a
+mention of the LICENSE file to at least one source file 
+
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ::::::::::::::::::::::::::::::::::::: challenge
