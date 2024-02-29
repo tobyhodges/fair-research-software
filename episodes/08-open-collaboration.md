@@ -395,6 +395,8 @@ A:
 
 ## Relicensing 
 
+Is this too much detail for this course?
+
 * License compatibility
 * CC0/PD to anything
 * Permissive to Copyleft
@@ -417,6 +419,18 @@ A:
 :::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::::::::
+
+
+## Working in Parallel with Git Branches
+
+Branching is a feature of Git that allows two or more parallel streams of
+work. Commits can be made to one branch without interferring with
+another. Branches are commonly used as a way for one developer to work on
+a new feature or a bug fix while ohter developers work on other features.
+When those new features or bug fixes are complete the 
+
+
+
 
 ## Sharing your code 
 * Make code public
