@@ -39,31 +39,46 @@ maintainability of code (e.g. beyond the lifetime of the project), environmental
 our software practices. 
 
 ::: callout
+## Computational reproducibility
+
 In this course, we use the term "reproducibility" as synonym for "computational reproducibility".
 :::
 
 ## What is reproducible research?
 
 [The Turing Way's "Guide to Reproducible Research"](https://the-turing-way.netlify.app/index.html#citing-the-turing-way)
-provides an [excellent overview of definitions of "reproducibility" and "replicability"](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions) found in literature, and their 
-different aspects and levels. According to one definition, *reproducible* means that a measurement can be obtained 
-with a stated precision by a different team using a different experimental setup in a different location on multiple 
-trials (different team, different experimental setup). By the same 
-definition, *replicable* means that a measurement can be obtained with stated precision by a different team 
-using the same measurement procedure, the same measuring system, under the same operating conditions, 
-in the same or a different location on multiple trials (different team, same experimental setup).
+provides an [excellent overview of definitions of "reproducibility" and "replicability"](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions) found in literature, 
+and their different aspects and levels. 
+
+In this course, we adopt the Turing Way's definitions: 
+
+* **Reproducible research**: a result is reproducible when the same analysis steps performed on the same data 
+consistently produce the same answer.
+* **Replicable research**: a result is replicable when the same analysis performed on different data produces 
+qualitatively similar answers.
+* **Robust research**: a result is robust when the same data is subjected to different analysis workflows to answer the 
+same research question and a qualitatively similar or identical answer is produced.
+* **Generalisable research**: combining replicable and robust findings allow us to form generalisable results 
+that are broadly applicable to different types of data or contexts.
+
+![Aspects of reproducible research including reproducibility, replicability, robustness and generalisability](https://the-turing-way.netlify.app/_images/reproducible-definition-grid.svg)
+*The Turing Way project illustration of aspects of reproducible research by Scriberia, used under a CC-BY 4.0 licence, [DOI: 10.5281/zenodo.3332807](https://doi.org/10.5281/zenodo.3332807).*
+
+In this course we mainly address reproducibility, as the first step towards generalisability 
+(the ultimate goal of research).
 
 We can also further differentiate between:
 
-* Computational reproducibility: when detailed information is provided about code, software, hardware and 
+* **Computational reproducibility**: when detailed information is provided about code, software, hardware and 
 implementation details.
-* Empirical reproducibility: when detailed information is provided about non-computational empirical scientific 
+* **Empirical reproducibility**: when detailed information is provided about non-computational empirical scientific 
 experiments and observations. In practice, this is enabled by making the data and details of how it was 
 collected freely available.
-* Statistical reproducibility: when detailed information is provided, for example, about the choice of 
+* **Statistical reproducibility**: when detailed information is provided, for example, about the choice of 
 statistical tests, model parameters, and threshold values. This mostly relates to pre-registration of study design to prevent p-value hacking and other manipulations.
 
-In this course, we are concerned with computational reproducibility.
+In this course, we are concerned with computational reproducibility, i.e. when the application of computer science and 
+software engineering is used to aid solving research problems.
 
 ## Why do reproducible research?
 
