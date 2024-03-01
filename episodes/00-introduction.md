@@ -1,8 +1,22 @@
 ---
 title: "Course introduction"
-teaching: 25
+teaching: 30
 exercises: 0
 ---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- What is open, reproducible and FAIR research?
+- Why are these practices important?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Understand the concept of open and reproducible research
+- Understand why these principles are of value in the research community 
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Jargon busting
 Before we start with the course, below we cover the terminology and explain terms, phrases, and 
@@ -108,7 +122,7 @@ that can be reused over time - researchers require training.
 This course teaches good practises and reproducible working methods that are agnostic of a 
 programming language (although we will use Python code as examples) and aims to provide 
 researchers with the tools and knowledge to feel confident when writing good quality and sustainable 
-software to support their research. Typically, we think of such software as being FAIR.
+software to support their research. Typically, we think of such software as being **FAIR**.
 
 ## FAIR software
 
@@ -117,11 +131,11 @@ increase the visibility and usefulness of your research to others.
 The FAIR data principles [ref] are widely known and applied today. 
 Similar FAIR principles [ref] have now been defined for software too. In general, they mean: 
 
-* Findable - software and its associated metadata must be easy to discover by humans and machines alike.
-* Accessible - in order to reuse software, software and its metadata must be retrievable.
-* Interoperable - when interacting with other software it must be done by exchanging data and/or metadata through 
+* **Findable** - software and its associated metadata must be easy to discover by humans and machines alike.
+* **Accessible** - in order to reuse software, software and its metadata must be retrievable.
+* **Interoperable** - when interacting with other software it must be done by exchanging data and/or metadata through 
 standardised protocols and application programming interfaces (APIs).
-* Reusable - software should be usable (can be executed) and reusable 
+* **Reusable** - software should be usable (can be executed) and reusable 
 (can be understood, modified, built upon, or incorporated into other software).
 
 Each of the above principles can be achieved by a number of practices listed below. 
