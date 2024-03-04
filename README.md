@@ -1,6 +1,9 @@
 # Tools and Practices for FAIR Research Software Course
 
-This repository contains a short (2-day) course teaching tools and practices for producing and sharing quality, sustaiable and [FAIR (Findable, Accessible, Interoperable and Reusable) research software](https://www.nature.com/articles/s41597-022-01710-x) to support open and reproducible research.
+This short course is teaching tools and practices for producing and sharing quality, 
+sustainable and [FAIR (Findable, Accessible, Interoperable and Reusable) research software][fair-software] 
+to support open and reproducible research. 
+The course can be delivered over 2 full or 4 half days.
 
 The course is visible at: https://carpentries-incubator.github.io/fair-research-software/ and uses [the Markdown lesson template][workbench-markdown-template] from the [The Carpentries Workbench lesson infrastructure][sandpaper-documentation].
 
