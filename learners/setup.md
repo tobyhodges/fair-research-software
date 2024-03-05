@@ -39,7 +39,7 @@ Git is a program that can be accessed from your command line tool and can be use
 - On Windows, it is recommended to use **Git Bash**, which comes included as part of the [Git For Windows package](https://gitforwindows.org/) and will
   install the Bash command line tool as well as Git.
 - On macOS, Git is included as part of Apple's [Xcode tools](https://en.wikipedia.org/wiki/Xcode)
-  and should be available from the command line as long as you have XCode. If you do not have XCode installed, you can download it from
+  and should be available from the command line as long as you have Xcode. If you do not have Xcode installed, you can download it from
   [Apple's App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12) or you can
   [install Git using alternative methods](https://git-scm.com/download/mac).
 - On Linux, Git can be installed using your favourite package manager.
@@ -121,7 +121,7 @@ you will need to open a free [GitHub](https://github.com/) account unless you do
 In order to access GitHub using Git from your machine securely,
 you need to set up a way of authenticating yourself with GitHub through Git.
 The recommended way to do that for this course is to set up
-[*SSH authentication*](https://www.ssh.com/academy/ssh/public-key-authentication) which requires a pair of keys -
+[**SSH authentication**](https://www.ssh.com/academy/ssh/public-key-authentication) which requires a pair of keys -
 one public that you upload to your GitHub account, and one private that remains on your machine.
 
 GitHub provides full documentation and guides on how to:
