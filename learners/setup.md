@@ -4,18 +4,27 @@ title: Setup
 
 ## Setup
 
-You will need the following software installed and working correctly on your system to be able to follow the course.
+To go through the course material on your own or at a workshop, 
+you will need the following software installed and working correctly on your system:
+
+- Command line tool (such as **Bash**, **Zsh** or **Git Bash**)  
+- Git version control system
+- GitHub account
+- Python 3 
+- Visual Studio Code integrated development environment (IDE)
+
+The installation instructions for all the above tools are below.
 
 ### Command Line Tool
-You will need a command line tool (also referred to as a shell, Bash or a console) in order to run Python scripts and 
-Git version control commands.
+You will need a command line tool (also referred to as a shell, a terminal or a console) 
+in order to run Python scripts, various commands that interact with your filesystem and use Git.
 
-- On Windows, it is **strongly** recommended to use **Git Bash** (which is included in
-  [Git For Windows package](https://gitforwindows.org/) - see the Git installation section below). 
+- On Windows, it is **strongly** recommended to install **Git Bash** (which is included in
+  [Git For Windows package](https://gitforwindows.org/) - see the [Git installation section](../index.html#git-version-control-tool) below). 
 The use of Windows command line tool `cmd` is not suitable for the course. We also advise against using
   [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/) for this course as we do not
   provide instructions for troubleshooting any potential issues between WSL and Visual Studio Code (VS Code).
-- On macOS and Linux, you will already have a Command Line tool available on your system. 
+- On macOS and Linux, you will already have a command line tool available on your system. 
 You can use a command line tool such as [**Bash**](https://www.gnu.org/software/bash/),
   or any other [command line tool that has similar syntax to Bash](https://en.wikipedia.org/wiki/Comparison_of_command_shells),
   since none of the content of this course is specific to Bash. Note that starting with macOS Catalina,
@@ -34,10 +43,11 @@ Wed 21 Apr 2021 11:38:19 BST
 ```
 
 ### Git Version Control Tool
-Git is a program that can be accessed from your command line tool and can be used to interact with GitHub.
+Git is a program that is run from your command line tool to provide version control for your work. 
+Git is also used to interact with online code and project sharing platform GitHub.
 
-- On Windows, it is recommended to use **Git Bash**, which comes included as part of the [Git For Windows package](https://gitforwindows.org/) and will
-  install the Bash command line tool as well as Git.
+- On Windows, it is recommended to use **Git Bash**, which comes included as part of the [Git For Windows package](https://gitforwindows.org/) 
+and will install the Bash command line tool as well as Git.
 - On macOS, Git is included as part of Apple's [Xcode tools](https://en.wikipedia.org/wiki/Xcode)
   and should be available from the command line as long as you have Xcode. If you do not have Xcode installed, you can download it from
   [Apple's App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12) or you can
@@ -99,11 +109,13 @@ to read about a specific subcommand or concept.
 See 'git help git' for an overview of the system.
 ```
 
+#### Git Configuration
+
 When you use Git on a machine for the first time, you also need to configure a few additional things:
 
 * your name,
-* your email address (the one you used to open your GitHub account that will be used to identify your commits),
-* preferred text editor for Git to use (e.g. `nano` or another text editor of your choice),
+* your email address (the one you used to open [your GitHub account](../index.html#github-account) with, which will be used to identify your commits),
+* preferred text editor for Git to use (e.g. **Nano** or another text editor of your choice),
 * whether you want to use these settings globally (i.e. for every Git project on your machine).
 
 This can be done from a command line tool as follows:
@@ -115,8 +127,11 @@ $ git config --global core.editor "nano -w"
 ```
 
 ### GitHub Account
+
 GitHub is a free, online host for Git repositories that you will use during the course to store your work in so
 you will need to open a free [GitHub](https://github.com/) account unless you do not already have one.
+
+#### GitHub Configuration
 
 In order to access GitHub using Git from your machine securely,
 you need to set up a way of authenticating yourself with GitHub through Git.
@@ -134,7 +149,8 @@ A short summary of the commands you need to perform is shown below.
 To generate an SSH key pair, you will need to run the `ssh-keygen` command from your command line tool 
 and provide **your identity for the key pair** (e.g. the email address you used to register with GitHub)
 via the `-C` parameter as shown below.
-It will also prompt you to answer a few questions -
+
+You will then be prompted to answer a few questions -
 e.g. where to save the keys on your machine and a passphrase to use to protect your private key.
 Pressing 'Enter' on these prompts will get `ssh-keygen` to use the default key location (within
 `.ssh` folder in your home directory) and set the passphrase to empty.
@@ -168,7 +184,7 @@ The key's randomart image is:
 
 Next, you need to copy your public key (**not your private key - this is important!**) over to
 your GitHub account. The `ssh-keygen` command above will let you know where your public key is saved 
-(the file should have the extension ".pub"), and you can get its contents (e.g. on a Mac OS system) as follows:
+(the file should have the extension ".pub"), and you can get its contents from a command line tool as follows:
 
 ```bash
 $ cat /Users/<YOUR_USERNAME>/.ssh/id_ed25519.pub
@@ -196,7 +212,7 @@ You may already have Python 3 installed on your system, in which case you do not
 you can check this using the commands below.
 
 ```bash
-$ python3 --version # on Mac/Linux
+$ python3 --version # on macOS/Linux
 $ python --version # on Windows — Windows installation comes with a python.exe file rather than a python3.exe file 
 ```
 
@@ -212,11 +228,32 @@ Then use the appropriate command above for your platform to test your installati
 
 
 If you are using Windows and invoking `python` command causes your Git Bash terminal to hang with no error message 
-or output, you may need to create an alias for the python executable `python.exe`, 
-as explained in the [troubleshooting section](../common-issues/index.html#python-hangs-in-git-bash).
+or output, you may need to create an alias for the python executable `python.exe` like so:
 
+```bash
+$ alias python="winpty python.exe"
+```
+This alias will be valid for the duration of the shell session. For a more permanent solution, from the shell do:
+
+```bash
+$ echo "alias python='winpty python.exe'" >> ~/.bashrc
+```
 
 ## Visual Studio Code (VS Code)
 We will use Microsoft [Visual Studio Code (VS Code)](https://code.visualstudio.com/) as an 
-Integrated Development Environment (IDE) to type and execute Python code and run command line and Git commands.
+Integrated Development Environment (IDE) to type and execute Python code and run command line and Git commands 
+(through its integrations with the tools we have installed separately so far).
+
 Please make sure to [download VS Code](https://code.visualstudio.com/Download) for your platform.
+
+### VS Code Configuration
+
+After installing VS Code - we need to make sure that it knows about all the tools (command line, Git and Python) 
+we have installed previously, so that we can use them all from within VS Code interface and not have to switch 
+between them all the time.
+
+#### Command Line Tool Integration
+
+#### Python Integration
+
+#### Git Integration
