@@ -254,6 +254,18 @@ between them all the time.
 
 #### Command Line Tool Integration
 
+On macOS and Linux systems, VS Code will typically recognise a command line tool you have on your system 
+and you will not need to do anything.
+
+To check command line tool integration - select "Terminal -> New Terminal" from the top level menu. 
+This should open a terminal window within VS Code and tell you which command line tool the terminal is using. 
+If you want to change it - you may do that from the drop-down menu to the right of the window, 
+and you can change the default command line tool from the same menu by using the option "Select Default Profile" (so 
+it will use that one next time you open a terminal window).
+
+![*VS Code terminal window*](episodes/fig/vscode-terminal.png){
+alt='Terminal window in VS Code with "Select Default Profile" option highlighted'}
+
 #### Python Integration
 
 #### Git Integration
