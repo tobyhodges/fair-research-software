@@ -294,15 +294,16 @@ Finally, after installing everything - we need to make sure that VS Code knows a
 between different windows all the time.
 
 
-#### Command Line Tool Integration
+#### Command Line Tool & Git Integration in VS Code
 
-On macOS and Linux systems, VS Code will typically recognise a command line tool you have on your system 
-and you will not need to do anything. 
+On macOS and Linux systems, VS Code will typically recognise a command line tool you already have on your system
+(along with all programs/commands such as Git you can run from it) and you will not need to do anything.
 
 On Windows, if you have [selected VS Code as the default editor](index.html#windows) 
-for Git at the time of installing Git Bash - you should be set.
+for Git at the time of installing Git Bash - VS Code will know about your command line tool Git Bash as well as Git 
+and you should be set.
 
-To check the command line tool integration and that VS Code knows about command line tool(s) installed 
+To check the command line tool integration and that VS Code knows about different command line tool(s) installed 
 on your system select "Terminal -> New Terminal" from the top level menu.
 This should open a terminal window within VS Code. Within the terminal window, the command line tool the terminal is 
 using is indicated towards the right of the window (e.g. in the image below, the current command line tool is `bash`). 
@@ -315,13 +316,5 @@ You can also change the default command line tool from the same drop down menu b
 
 ![*Terminal window in VS Code*](episodes/fig/vscode-terminal.png){alt='Terminal window in VS Code with "Select Default Profile" option highlighted'}
 
-#### Git Integration
 
-On macOS and Linux systems, since VS Code typically recognises a command line tool - it will also recognise all the 
-programs/commands run from it and you will not need to do anything. 
-
-On Windows, as long as you have [selected VS Code as the default editor for Git](index.html#windows) 
-at the time of installing Git Bash and have 
-selected Git Bash as your terminal in VS Code - you should be set.
-
-#### Python 3 Integration
+#### Python 3 Integration in VS Code
