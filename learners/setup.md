@@ -8,9 +8,9 @@ To go through the course material on your own or at a workshop,
 you will need the following software installed and working correctly on your system:
 
 - [Visual Studio Code (VS Code)](index.html#visual-studio-code-vs-code) integrated development environment (IDE)
-- [GitHub account](index.html#github-account)
 - [Command line tool](index.html#command-line-tool) (such as **Bash**, **Zsh** or **Git Bash**)  
 - [Git version control program](index.html#git-version-control-program) for command line
+- [GitHub account](index.html#github-account)
 - [Python 3](index.html#python-3-distribution)
 
 The installation instructions for these tools are below. 
