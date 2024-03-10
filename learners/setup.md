@@ -316,5 +316,21 @@ You can also change the default command line tool from the same drop down menu b
 
 ![*Terminal window in VS Code*](episodes/fig/vscode-terminal.png){alt='Terminal window in VS Code with "Select Default Profile" option highlighted'}
 
+##### VS Code Extentions for Git 
 
-#### Python 3 Integration in VS Code
+You should also install the following VS Code extensions to make your Python experience in VS Code better:
+
+- GitLense - Git Supercharged
+- Git Graph
+
+#### Python Integration in VS Code
+
+If you open a Python file or create a new one from VS Code - it should recognise it as a Python file already.
+VS Code may ask you to select a Python interpreter if you try to run the file, at which point you should select the 
+Python 3 you installed.
+
+##### VS Code Extensions for Python
+
+You should also install the following VS Code extensions to make your Python experience in VS Code better:
+
+- Python extension for Visual Studio Code by Microsoft
