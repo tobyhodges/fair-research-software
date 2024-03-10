@@ -30,7 +30,7 @@ Once all the other tools are installed, we will come back to VS Code to verify t
 
 
 ### Command Line Tool
-You will need a command line tool (also referred to as a shell, a terminal or a console) 
+You will need a command line tool (also referred to as a terminal or a shell) 
 in order to run Python scripts, various commands that interact with your filesystem and use Git.
 
 #### Windows 
@@ -48,7 +48,7 @@ provide instructions for troubleshooting any potential issues between WSL and Vi
 used by Git (as shown below) - this will ensure that VS Code "knows" about Git and Bash command line tool that come as part of 
 Git Bash and to integrate nicely.
 
-![*Setting VS Code as default editor for Git in GitBash installation*](fig/GitBash-default-editor.png){ alt-text="Setting VS Code as  default editor for Git in GitBash installation"}
+![*Setting VS Code as default editor for Git in GitBash installation*](fig/GitBash-default-editor.png){ alt-text="Setting VS Code as  default editor for Git in GitBash installation" .image-with-shadow }
 
 #### macOS and Linux 
 
@@ -320,8 +320,11 @@ You can also change the default command line tool from the same drop down menu b
 
 You should also install the following VS Code extensions to make your Python experience in VS Code better:
 
-- GitLense - Git Supercharged
-- Git Graph
+- GitLense - Git Supercharged (adds a few nice additions to Git support in VS Code)
+- Git Graph (provides nice graphs and visualisations of a Git repository in VS Code)
+
+![*GitLens and Git Graph extensions for VS Code*](fig/vscode-git-extensions.png){ alt-text="GitLens and Git Graph extensions for VS Code" .image-with-shadow }
+
 
 #### Python Integration in VS Code
 
@@ -334,3 +337,5 @@ Python 3 you installed.
 You should also install the following VS Code extensions to make your Python experience in VS Code better:
 
 - Python extension for Visual Studio Code by Microsoft
+
+![*Python extension for VS Code by Microsoft*](fig/vscode-python-extension.png){ alt-text="Python extension for VS Code by Microsoft" .image-with-shadow }
