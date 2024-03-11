@@ -15,9 +15,8 @@ exercises: 30
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Create atomic commits in git to incrementally save work
-- Create branches to separate development work from stable work
+- Inspect logs to review the history of work
 - Push new work from a local machine to a remote server
-- Open Pull Requests to review and merge new work into the stable branch
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -190,7 +189,7 @@ We recommend the following resources for some additional reading on the topic of
 - A version control system is software that tracks and manages changes to a project over time
 - Using version control aids reproducibility since the exact state of the software that produced an output can be recovered
 - A commit represents the smallest unit of change to a project
-- Branches are an integral part of the version control workflow since they separate stable work from developing work, and limit conflicts between collaborators
-- Pull Requests are a mechanism to include changes into the stable branch after passing tests and code review
+- Commit messages describe what each commit contains and should be descriptive
+- Logs can be used to overview the history of a project
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
