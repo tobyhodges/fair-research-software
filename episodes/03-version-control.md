@@ -148,28 +148,6 @@ nothing to commit, working tree clean
 ```
 
 This tells us that everything is up to date.
-If we want to know what we've done recently, we can ask Git to show us the project's history using `git log`:
-
-```bash
-$ git log
-```
-
-```output
-commit a5fa618f9cc9699146ac738bb439b50da6b9917d
-Author: Sarah Gibson <drsarahlgibson@gmail.com>
-Date:   Thu Feb 8 14:12:44 2024 +0000
-
-    Add and example script and dataset to work on
-```
-
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## Where Are My Changes?
-
-If we run `ls` at this point, we will still see just two files, the script and the dataset.
-That's because Git saves information about files' history in the special `.git` directory mentioned earlier so that our filesystem doesn't become cluttered (and so that we can't accidentally edit or delete an old version).
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Make a change
 
@@ -271,6 +249,35 @@ $ git commit -m "Replace space in Python filename with hyphen"
 ```
 
 :::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Commit messages
+
+### Atomic commits
+
+### Git logs
+
+If we want to know what we've done recently, we can ask Git to show us the project's history using `git log`:
+
+```bash
+$ git log
+```
+
+```output
+commit a5fa618f9cc9699146ac738bb439b50da6b9917d
+Author: Sarah Gibson <drsarahlgibson@gmail.com>
+Date:   Thu Feb 8 14:12:44 2024 +0000
+
+    Add and example script and dataset to work on
+```
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Where Are My Changes?
+
+If we run `ls` at this point, we will still see just two files, the script and the dataset.
+That's because Git saves information about files' history in the special `.git` directory mentioned earlier so that our filesystem doesn't become cluttered (and so that we can't accidentally edit or delete an old version).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
