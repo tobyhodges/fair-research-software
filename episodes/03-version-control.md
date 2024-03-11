@@ -171,6 +171,109 @@ That's because Git saves information about files' history in the special `.git` 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Make a change
+
+Did you notice how when we were typing the Python script into the terminal, we had to add a slash before the space like this: `bad\ script.py`?
+Using a backslash in this way is called 'escaping' and it lets the terminal know to treat the space as part of the filename, and not a separate argument.
+However, it is pretty annoying and considered bad practice to have spaces in your filenames like this, especially if you'll be manipulating them from the terminal.
+So let's go ahead and remove the space from the filename altogether and replace it with a hyphen instead.
+You can use the `mv` command again like so:
+
+```bash
+$ mv bad\ code.py bad-code.py
+```
+
+If you run `git status` again, you'll see Git has noticed the change in the filename.
+
+```bash
+$ git status
+```
+
+```output
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    bad code.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	bad-code.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### Add and commit the changed file
+
+Using the Git commands demonstrated so far, save the change you just made to the Python script.
+
+Remember, commit messages should be descriptive and complete the sentence "If applied, this commit will...".
+You can also use `git status` to check the status of your project at any time.
+
+:::::::::::::: solution
+
+### Solution
+
+To save the changes to the renamed Python file, use the following Git commands:
+
+```bash
+$ git add bad\ code.py bad-code.py
+$ git status
+```
+
+```output
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	renamed:    bad code.py -> bad-code.py
+```
+
+```bash
+$ git commit -m "Replace space in Python filename with hyphen"
+```
+
+```output
+[main ef3508f] Replace space in Python filename with hyphen
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename bad code.py => bad-code.py (100%)
+```
+
+### Advanced solution
+
+We initially renamed the Python file using the `mv` command, and we than had to add *both* `bad-code.py` and `bad\ code.py`.
+Alternatively, we could have used Git's own `mv` command like so:
+
+```bash
+$ git mv bad\ code.py bad-code.py
+$ git status
+```
+
+```output
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	renamed:    bad code.py -> bad-code.py
+```
+
+`git mv` is the equivalent of running `mv ...` followed immediately by `git add ...` of the old and new filenames, so the changes have been staged automatically.
+All that needs to be done is to commit them.
+
+```bash
+$ git commit -m "Replace space in Python filename with hyphen"
+```
+
+```output
+[main 20e7004] Replace space in Python filename with hyphen
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename bad code.py => bad-code.py (100%)
+```
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Acknowledgements
 
 The content of this episode was inspired / heavily borrowed from the following resources:
