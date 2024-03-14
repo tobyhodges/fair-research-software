@@ -292,9 +292,10 @@ was changed.
 
 Below are the `diff`s of two commits. A `diff` shows the differences in a file
 (or files!) compared to the previous commit in the history so you can what has
-changed. Compare these two commit `diff`s. Can you understand what the commit
-author was trying to achieve in each commit? How many changes have they tried to
-make in each commit? Discuss in pairs or small groups.
+changed. The lines that begin with `+`s represent additions, and the lines that
+begin with `-`s represent deletions. Compare these two commit `diff`s. Can you
+understand what the commit author was trying to achieve in each commit? How many
+changes have they tried to make in each commit? Discuss in pairs or small groups.
 
 <!-- FIXME: Figure out if ```diff would show diff colours here -->
 1. ```bash
