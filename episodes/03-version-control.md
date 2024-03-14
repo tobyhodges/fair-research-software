@@ -284,6 +284,129 @@ was changed.
 
 ### Atomic commits
 
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### Understanding commit contents
+
+Below are the `diff`s of two commits. A `diff` shows the differences in a file
+(or files!) compared to the previous commit in the history so you can what has
+changed. Compare these two commit `diff`s. Can you understand what the commit
+author was trying to achieve in each commit? How many changes have they tried to
+make in each commit? Discuss in pairs or small groups.
+
+% FIXME: Figure out if ```diff would show diff colours here
+1. ```bash
+    diff --git a/bad-code.py b/bad-code.py
+    index e804094..ba6a0f9 100644
+    --- a/bad-code.py
+    +++ b/bad-code.py
+    @@ -1,3 +1,7 @@
+    +import json
+    +import datetime as dt
+    +import matplotlib.pyplot as myplot
+    +
+    #https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data
+
+    csvfile = open('Extra-vehicular_Activity__EVA__-_US_and_Russia_20240126.csv', 'r')
+    @@ -13,7 +17,6 @@
+            #print(thing)
+            l[fieldnames[thing]] = line[thing]
+
+    -    import json
+        json.dump(l, jsonfile)
+        jsonfile.write('\n')
+
+    @@ -25,8 +28,6 @@
+        data.append(json.loads(line))
+    data.pop(0)
+
+    -import datetime as dt
+    -
+    time = []
+    date =[]
+
+    @@ -49,7 +50,5 @@
+    for i in time:
+        t.append(t[-1]+i)
+
+    -import matplotlib.pyplot as myplot
+    -
+    myplot.plot(date,t[1:])
+    myplot.show()
+   ```
+2. ```bash
+    diff --git a/bad-code.py b/bad-code.py
+    index e804094..333ef14 100644
+    --- a/bad-code.py
+    +++ b/bad-code.py
+    @@ -1,23 +1,25 @@
+    +import json
+    +import datetime as dt
+    +import matplotlib.pyplot as myplot
+    +
+    #https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data
+    
+    csvfile = open('Extra-vehicular_Activity__EVA__-_US_and_Russia_20240126.csv', 'r')
+    -jsonfile= open('file.json', 'a')
+    -fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
+    +jsonfile= open('file.json', 'w')
+    +fieldnames = ("EVA #", "Country", "Crew", "Vehicle", "Date", "Duration", "Purpose")
+    
+    for count in range(370):
+        line = csvfile.readline().split(',')
+    
+    -    #dict
+    -    l = dict()
+    -    for thing in range(len(line[:7])):
+    -        #print(thing)
+    -        l[fieldnames[thing]] = line[thing]
+    -
+    -    import json
+    -    json.dump(l, jsonfile)
+    +    # Create an empty dictionary to store cleaned data in
+    +    data = dict()
+    +    for i in range(7):
+    +        data[fieldnames[i]] = line[i]
+    +    json.dump(data, jsonfile)
+        jsonfile.write('\n')
+    
+    jsonfile.close()
+    +csvfile.close()
+    
+    data=[]
+    
+    @@ -25,8 +27,6 @@
+        data.append(json.loads(line))
+    data.pop(0)
+    
+    -import datetime as dt
+    -
+    time = []
+    date =[]
+    
+    @@ -49,7 +49,5 @@
+    for i in time:
+        t.append(t[-1]+i)
+    
+    -import matplotlib.pyplot as myplot
+    -
+    myplot.plot(date,t[1:])
+    myplot.show()
+   ```
+
+:::::::::::::: solution
+
+### Solution
+
+The git `diff` presented in option (1) is cleaner. The author has only tackled
+one thing: placing the import statements at the top of the file. This kind of
+commit is much easier to review in isolation, and will be easier to track down
+if [`git bisect`](https://git-scm.com/docs/git-bisect) is required.
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ### Git logs
 
 If we want to know what we've done recently, we can ask Git to show us the project's history using `git log`:
