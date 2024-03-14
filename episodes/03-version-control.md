@@ -254,6 +254,34 @@ $ git commit -m "Replace space in Python filename with hyphen"
 
 ### Commit messages
 
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### Good commit messages
+
+Read the two commit messages below. In pairs or small groups, discuss which
+messages help you understand more about what the commit author did. What about
+the commit messages do you find helpful or not?
+
+1. ```output
+   [main 7cf85f6] Change variable
+     1 file changed, 1 insertion(+), 1 deletion(-)
+   ```
+2. ```output
+   [main 8baf69d] Change variable name from columns to column_headers
+    1 file changed, 1 insertion(+), 1 deletion(-)
+   ```
+
+### Solution
+
+Commit message (2) is the better commit message since it is more descriptive about
+what the author did. This message could be improved further by adding a blank line
+then further describing the change discussing, for example, why the variable name
+was changed.
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ### Atomic commits
 
 ### Git logs
@@ -280,6 +308,8 @@ If we run `ls` at this point, we will still see just two files, the script and t
 That's because Git saves information about files' history in the special `.git` directory mentioned earlier so that our filesystem doesn't become cluttered (and so that we can't accidentally edit or delete an old version).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Pushing to a Git server
 
 ## Acknowledgements
 
