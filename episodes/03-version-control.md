@@ -271,6 +271,8 @@ the commit messages do you find helpful or not?
     1 file changed, 1 insertion(+), 1 deletion(-)
    ```
 
+:::::::::::::: solution
+
 ### Solution
 
 Commit message (2) is the better commit message since it is more descriptive about
