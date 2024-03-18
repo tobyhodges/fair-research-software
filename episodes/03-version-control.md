@@ -467,6 +467,39 @@ That's because Git saves information about files' history in the special `.git` 
    and `Extra-vehicular_Activity__EVA__-_US_and_Russia_20240126.csv` visible in
    the GitHub repository, matching what you have locally on your machine.
 
+Let's explain a bit more about what those commands did...
+
+```bash
+git remote add origin https://github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
+```
+
+This command tells Git to create a `remote` called "origin" and link it to the
+URL of your GitHub repository. A `remote` is a version control concept where two
+(or more) repositories are connected to each other in such a way that they can
+be kept in sync by exchanging commits. "origin" is a name used to refer to the
+remote repository. It could be called anything, but "origin" is a convention that
+is often used by default in Git and GitHub since it indicates which repository
+is considered the "source of truth", particularly useful when many people are
+collaborating on the same repository.
+
+```bash
+git branch -M main
+```
+
+`git branch` is a command used to manage branches. We'll discuss branches later
+on in the workshop. This command ensures the branch we are working on is called
+"main". This will be the default branch of the project for everyone working on it.
+
+```bash
+git push -u origin main
+```
+
+The `git push` command is used to update remote references with any changes you
+have made locally. This command tells Git to update the "main" branch on the
+"origin" remote. The `-u` flag (short for `--set-upstream`) will set a tracking
+reference, so that in the future only `git push` can be run without the need to
+specify the remote and reference name.
+
 
 ## Acknowledgements
 
