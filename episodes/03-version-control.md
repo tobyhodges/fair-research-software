@@ -500,6 +500,25 @@ have made locally. This command tells Git to update the "main" branch on the
 reference, so that in the future only `git push` can be run without the need to
 specify the remote and reference name.
 
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### Terminology
+
+In pairs or small groups, discuss the difference between the terms `remote`
+and `origin`. What is the definition of each term?
+
+:::::::::::::: solution
+
+### Solution
+
+- `remote`: a version control concept where two (or more) repositories are linked
+  together in such a way that they can be kept in sync by exchanging commits
+- `origin`: a common Git/GitHub naming convention for the remote repository to
+  designate the source of truth for collaborators
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Acknowledgements
 
