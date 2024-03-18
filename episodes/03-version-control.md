@@ -440,14 +440,22 @@ That's because Git saves information about files' history in the special `.git` 
 1. In your browser, navigate to <https://github.com> and sign into your account
 2. In the top right hand corner of the screen, there is a menu labelled "+" with
    a dropdown. Click the dropdown and select "New repository" from the options.
+
+   ![*Creating a new GitHub repository*](fig/ep03_fig01-create_new_repo.jpg){ alt-text="Selecting the 'New repository' option from GitHub's dropdown menu" .image-with-shadow }
+
 3. You will be presented with some options to fill in or select while creating
    your repository. In the "Repository Name" field, type "spacewalks". This is
-   the name of your project and matches the name of your local folder. Ensure the
-   visibility of the repository is "Public" and leave all other options blank.
-   Since this repository will be connected to a local repository, it needs to be
-   empty which is why we don't initialise with a README or add a license or
-   `.gitignore` file.
-   Click "Create repository" at the bottom of the page.
+   the name of your project and matches the name of your local folder.
+
+   ![*Naming the GitHub repository*](fig/fig/ep03_fig02-repository_name.png){ alt-text="Setting the name of the repository on GitHub" .image-with-shadow }
+
+   Ensure the visibility of the repository is "Public" and leave all other options
+   blank. Since this repository will be connected to a local repository, it needs
+   to be empty which is why we don't initialise with a README or add a license or
+   `.gitignore` file. Click "Create repository" at the bottom of the page.
+
+   ![*Complete GitHub repository creation*](fig/ep03_fig03-create_repository.jpg){ alt-text="Completing the creation of the GitHub repository" .image-with-shadow }
+
 4. Now you have created your repository, you need to send the files and the history
    you have stored on your local computer to GitHub's servers. GitHub provides
    some instructions on how to do that for different scenarios. You want to use
@@ -463,6 +471,9 @@ That's because Git saves information about files' history in the special `.git` 
    You can copy these commands using the button that looks like two overlapping
    squares to the right-hand side of the commands. Paste them into your terminal
    and run them.
+
+   ![*Copy the commands to sync the local and remote repositories*](fig/ep03_fig04-copy_commands.jpg){ alt-text="Copying the commands to sync the local and remote repositories" .image-with-shadow }
+
 5. If you refresh your browser window, you should now see the two files `bad-code.py`
    and `Extra-vehicular_Activity__EVA__-_US_and_Russia_20240126.csv` visible in
    the GitHub repository, matching what you have locally on your machine.
