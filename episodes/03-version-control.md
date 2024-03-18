@@ -437,6 +437,37 @@ That's because Git saves information about files' history in the special `.git` 
 
 ### Pushing to a Git server
 
+1. In your browser, navigate to <https://github.com> and sign into your account
+2. In the top right hand corner of the screen, there is a menu labelled "+" with
+   a dropdown. Click the dropdown and select "New repository" from the options.
+3. You will be presented with some options to fill in or select while creating
+   your repository. In the "Repository Name" field, type "spacewalks". This is
+   the name of your project and matches the name of your local folder. Ensure the
+   visibility of the repository is "Public" and leave all other options blank.
+   Since this repository will be connected to a local repository, it needs to be
+   empty which is why we don't initialise with a README or add a license or
+   `.gitignore` file.
+   Click "Create repository" at the bottom of the page.
+4. Now you have created your repository, you need to send the files and the history
+   you have stored on your local computer to GitHub's servers. GitHub provides
+   some instructions on how to do that for different scenarios. You want to use
+   the instructions under the heading "...or push an existing repository from the
+   command line". These instructions will look like this:
+
+   ```bash
+   git remote add origin https://github.com/<YOUR_GITHUB_HANDLE>/spacewalks.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+   You can copy these commands using the button that looks like two overlapping
+   squares to the right-hand side of the commands. Paste them into your terminal
+   and run them.
+5. If you refresh your browser window, you should now see the two files `bad-code.py`
+   and `Extra-vehicular_Activity__EVA__-_US_and_Russia_20240126.csv` visible in
+   the GitHub repository, matching what you have locally on your machine.
+
+
 ## Acknowledgements
 
 The content of this episode was inspired / heavily borrowed from the following resources:
