@@ -447,7 +447,7 @@ That's because Git saves information about files' history in the special `.git` 
    your repository. In the "Repository Name" field, type "spacewalks". This is
    the name of your project and matches the name of your local folder.
 
-   ![*Naming the GitHub repository*](fig/fig/ep03_fig02-repository_name.png){ alt-text="Setting the name of the repository on GitHub" .image-with-shadow }
+   ![*Naming the GitHub repository*](fig/ep03_fig02-repository_name.png){ alt-text="Setting the name of the repository on GitHub" .image-with-shadow }
 
    Ensure the visibility of the repository is "Public" and leave all other options
    blank. Since this repository will be connected to a local repository, it needs
