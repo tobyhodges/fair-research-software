@@ -129,7 +129,7 @@ When we run `git commit`, Git takes everything we have told it to save by using 
 This permanent copy is called a commit (or revision).
 
 We use the flag `-m` (for message) to record a short, descriptive, and specific comment that will help us remember later on what we did and why.
-If we just run `git commit` without the `-m` option, Git will launch a text editor so that we can write a longer message.
+If we only run `git commit` without the `-m` option, Git will launch a text editor so that we can write a longer message.
 
 Good commit messages start with a brief (<50 characters) statement about the changes made in the commit.
 Generally, the message should complete the sentence "If applied, this commit will".
@@ -153,7 +153,7 @@ This tells us that everything is up to date.
 
 ## Where Are My Changes?
 
-If we run `ls` at this point, we will still see just two files, the script and the dataset.
+If we run `ls` at this point, we will still see only two files, the script and the dataset.
 That's because Git saves information about files' history in the special `.git` directory mentioned earlier so that our filesystem doesn't become cluttered (and so that we can't accidentally edit or delete an old version).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
