@@ -478,6 +478,21 @@ Date:   Thu Feb 8 14:12:44 2024 +0000
 
 ### Pushing to a Git server
 
+One of the benefits of using a distributed version control system, such as Git,
+is its distributed nature. So far we have have been working with a project on our
+local machines and, even though we have been incrementally saving our work in a
+way that is recoverable (version control), if anything happened to our laptops,
+the whole project would be lost. However, we can use the distribution aspect of
+Git to push our projects and histories to a server (someone else's computer) so
+that they are accessible and retrievable if the worst were to happen to our
+machines. Distributing our projects in this way also opens us up to collaboration
+since colleagues would be able to access our projects, make their own copies on
+their machines, and conduct their own work.
+
+We will now go through how to push a local project to [GitHub](https://github.com),
+though other Git hosting services are available, such as [GitLab](https://gitlab.com)
+and [Bitbucket](https://bitbucket.org).
+
 1. In your browser, navigate to <https://github.com> and sign into your account
 2. In the top right hand corner of the screen, there is a menu labelled "+" with
    a dropdown. Click the dropdown and select "New repository" from the options.
