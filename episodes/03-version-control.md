@@ -14,7 +14,7 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Create atomic commits in git to incrementally save work
+- Create self-contained commits in git to incrementally save work
 - Inspect logs to review the history of work
 - Push new work from a local machine to a remote server
 
@@ -284,7 +284,7 @@ was changed.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Atomic commits
+### Self-contained commits
 
 :::::::::::::::::::::::::::::::::::::: challenge
 
