@@ -314,6 +314,22 @@ was changed.
 
 ### Self-contained commits
 
+If we want our commit messages to be descriptive and help us understand the
+changes in the project over time, then we also have to make commits that are
+very self-contained. That is to say that each commit we make should only change
+one, logical thing. By "logical" here, we mean that one aspect of updating the
+files has been achieved to completion - such as adding docstrings or refactoring
+a function - we don't mean that changes are committed line-by-line. See the
+["Things to avoid when creating commits" section](https://wiki.openstack.org/wiki/GitCommitMessages#Things_to_avoid_when_creating_commits)
+of Openstack's "Git Commit Good Practice" documentation for examples of logical,
+self-contained commits, and commits that don't follow this practice.
+
+The reasons that self-contained commits are important are that: it helps with
+reviewing changes if each commit tackles one step; if code breaks, tracking down
+the specific change that caused the break is simpler; if you need to undo changes,
+you can remove them in small increments, rather than losing a lot of unrelated
+work along with the change you do want to remove.
+
 :::::::::::::::::::::::::::::::::::::: challenge
 
 ### Understanding commit contents
