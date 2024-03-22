@@ -254,6 +254,25 @@ $ git commit -m "Replace space in Python filename with hyphen"
 
 ### Commit messages
 
+We have already met the concept of commit messages when we made and stored changes
+to our code files. Commit messages are short descriptions of, and the motivation
+for, what a commit will achieve. It's therefore important to take some time to
+ensure these commit messages are helpful and descriptive, as when work is reviewed
+(by your future self or a collaborator) they provide the context of what change
+was made and why. This can make tracking down specific changes in commits much
+easier, without having to inspect the code or files themselves.
+
+Generally, commit messages should complete the sentence "If applied, this commit
+will...". Most often a short, 50 character (ish) title will suffice, but a longer-form
+description of the changes can also be provided by leaving a blank space between
+the summary line and the rest of the message. There are many different conventions
+that can be used for commit messages that range from very structured (such as
+[conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)) to the
+fun (such as [gitmoji](https://gitmoji.dev/)). The important thing is that it
+is clear to the reader what a commit is doing and why. If a project is using a
+specific commit message convention, this will often be described in their
+[contributing guidelines](https://en.wikipedia.org/wiki/Contributing_guidelines).
+
 :::::::::::::::::::::::::::::::::::::: challenge
 
 ### Good commit messages
@@ -543,6 +562,8 @@ We recommend the following resources for some additional reading on the topic of
 
 - The full [Software Carpentry Git Novice lesson](https://swcarpentry.github.io/git-novice)
 - [_The Turing Way_'s guide to version control](https://the-turing-way.netlify.app/reproducible-research/vcs)
+- [How to Write a Good Commit Message](https://cbea.ms/git-commit/)
+- [Git Commit Good Practice](https://wiki.openstack.org/wiki/GitCommitMessages)
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
