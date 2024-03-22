@@ -282,10 +282,10 @@ On macOS and Linux systems, VS Code will typically recognise a command line tool
 (along with all programs/commands such as Git you can run from it) and you will not need to do anything and 
 it will be available as a "Terminal" in VS Code.
 
-On Windows, if VS Code does not automatically recognise GitBash as a command line tool to be used as a "Terminal", 
+On Windows, if VS Code does not automatically recognise Git Bash as a command line tool to be used as a "Terminal", 
 installing VS Code plugin "Start git-bash" should help.
 
-![*GitBash extension for VS Code on Window*](fig/vscode-gitbash-extension.png){ alt-text="GitBash extension for VS Code on Windows" .image-with-shadow }
+![*Git Bash extension for VS Code on Window*](fig/vscode-gitbash-extension.png){ alt-text="Git Bash extension for VS Code on Windows" .image-with-shadow }
 
 
 To check the command line tool integration and that VS Code knows about different command line tool(s) installed 
