@@ -476,6 +476,31 @@ Date:   Thu Feb 8 14:12:44 2024 +0000
     Add and example script and dataset to work on
 ```
 
+This output demonstrates why it is important to write meaningful and descriptive
+commit messages. Without the messages, we will only have the commit hashes (the
+strings of random numbers and letters after "commit") to identify each commit,
+which would be impossible for us.
+
+We may need to inspect our recent commits to establish where a bug was introduced
+or because we've decided that our recent work isn't suitable and we wish to discard
+it and start again. Once we have identified the last commit we want to keep, we 
+can revert the state of our project back to that commit with a few different
+methods:
+
+- [`git revert`](https://git-scm.com/docs/git-revert): This command reverts a
+  commit by creating a new commit that reverses the action of the supplied commit
+  or list of commits. Because this comand creates new commits, your git history
+  is more complete and tells the story of exactly what work you did, i.e.,
+  deciding to discard some work.
+- [`git reset`](https://git-scm.com/docs/git-reset): This command will recover
+  the state of the project at the specified commit. What is done with the commits
+  you had made is defined by some optional flags:
+  - `--soft`: Any changes you had made would be preserved and left as "Changes to be committed"
+  - `--mixed`: Any changes you had made would be preserved but not marked for commit (this is the default action)
+  - `--hard`: All changes you had made are discarded
+  Using this command produces a "cleaner" history, but does not tell the full
+  story and your work.
+
 ### Pushing to a Git server
 
 One of the benefits of using a distributed version control system, such as Git,
