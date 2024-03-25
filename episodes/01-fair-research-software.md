@@ -119,12 +119,13 @@ Here are some questions to help you assess the FAIRness of the code:
   * If more data was added to the data set later, could you explain exactly which data you used in the original analysis?
 2. **Accessible**
   * If the person who gave you the files left your institution, how could you get access to the files again?
+  * Once you have the files, can you understand the code? Does it make sense to you?
   * Do you need to log into anything to use this? Does it require purchase or subscription to a service, platform or tool?
 3. **Interoperable**
   * Is it clear what kind of input data it can read and what kind of output data is produced? Will you be able to create the input files and read the output files with the tools your community generally uses? 
   * If you wanted to use this tool as part of a larger data processing pipeline, does it allow you to link it with other tools in standard ways such as an API or command-line interface?
 4. **Reusable**
-  * Can you run the code? What programs or libraries do you need to install to make it work (and which versions)? Are these commonly used tools in your field?
+  * Can you run the code on your platform/operating system? What programs or libraries do you need to install to make it work (and which versions)? Are these commonly used tools in your field?
   * Do you have explicit permission to use your collaborators code in your own research and do they expect credit of some form (paper authorship, citation or acknowledgement)? Are you allowed to edit, publish or share the files with others?
   * Is the language used familiar to you and people in your research field? Can you read the variable names in the code and the column names in the data file and understand what they mean?
   * Is the code written in a way that allows you to easily modify or extend it? Can you easily see what parameters to change to make it calculate a different statistic, or run on a different input file?
@@ -157,7 +158,7 @@ The content of this episode was inspired or partially borrowed from some of the 
 recommend for some additional reading on the topic of this episode:
 
 - [The FAIR Guiding Principles for scientific data management and stewardship](https://www.nature.com/articles/sdata201618)
-- [The FAIR Cookbook](https://faircookbook.elixir-europe.org/content/home.html)
+- [The FAIR Cookbook](https://faircookbook.elixir-europe.org/content/home.html) - recipes guiding you through the key steps of a FAIRification journey
 - [The Turing Way Guide for Reproducible Research: Open Research](https://the-turing-way.netlify.app/reproducible-research/open)
 - ["10 easy things to make your research software FAIR"](https://librarycarpentry.org/Top-10-FAIR/files/poster_10things_FAIRsoftware.pdf)
 - ["Five recommendations for FAIR software"](https://fair-software.eu/)
