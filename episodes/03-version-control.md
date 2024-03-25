@@ -20,6 +20,36 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+In this episode, we will begin to cover the basics of version control and explore
+how this tool assists us in producing reproducible and sustainable scientific projects.
+We will create a new project, make some changes to it and track them with
+version control, and then push those changes to a remote server for safe-keeping.
+
+### What is a version control system?
+
+Version control is the practice of tracking and managing changes to files.
+Version control systems are software tools that assist in the management of these
+file changes over time. They keep track of every modification to the files in a
+special database that allows users to "travel through time" and compare earlier
+versions of the files with the current state.
+
+### Motivation for using a version control system
+
+The main motivation as scientists to use version control in our projects is for
+reproducibility purposes. As hinted to above, by tracking and storing every change
+we make, we can more effectively restore the state of the project at any point
+in time. This is incredibly useful if we want to reproduce results from a
+specific version of the code, or track down changes that broke some functionality.
+
+The other benefit we gain is that version control provides us with provenance of
+the project. As we make each change, we also leave a message about what the
+change was and why it was made. This improves the transparency of the project and
+makes it auditable, which is good scientific practice.
+
+Later on in this workshop, we will also see how using a version control system
+allows many people to collaborate on the same project without a lot of manual
+effortto combine different items of work.
+
 ### Create a new repository
 
 Create a new directory in the `Desktop` folder for our work, and then change the current working directory to the newly created one:
