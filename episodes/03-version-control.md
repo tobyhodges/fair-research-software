@@ -613,6 +613,24 @@ and `origin`. What is the definition of each term?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Summary
+
+During this episode, we have covered the basics of using version control to
+track changes to our projects. We have seen how to: create new projects,
+incrementally save progress, construct informative commit messages and content,
+inspect the history of our projects and retrieve the state, and push our projects
+to distributed servers.
+
+These skills are critical to reproducible and sustainable science since using
+version control makes our work self-documenting - the commit messages provide
+the narrative of what changed and why - and we can recover the exact state of
+our projects at a specific time, so we can more reliably run the "same" code
+again.
+
+Version control is a vast topic and we have only covered the absolute basics
+here as a brief introduction. For a deeper and more complete dive into the
+subject matter, please see the "Further reading" section below.
+
 ## Acknowledgements
 
 The content of this episode was inspired / heavily borrowed from the following resources:
