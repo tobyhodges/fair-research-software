@@ -341,7 +341,8 @@ begin with `-`s represent deletions. Compare these two commit `diff`s. Can you
 understand what the commit author was trying to achieve in each commit? How many
 changes have they tried to make in each commit? Discuss in pairs or small groups.
 
-<!-- FIXME: Figure out if ```diff would show diff colours here -->
+<!-- FIXME: Figure out if ```diff would show diff colours here.
+Alternatively, add screenshots from GitHub UI -->
 1. ```bash
     diff --git a/bad-code.py b/bad-code.py
     index e804094..ba6a0f9 100644
