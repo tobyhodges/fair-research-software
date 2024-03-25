@@ -52,10 +52,11 @@ closer to the gold standard of a fully reproducible research.
 
 * Findable
   * Create a description of your software
-  * Place your software in a software repository (and ideally register it in a software registry)
+  * Place your software in a public software repository (and ideally register it in a [software registry](https://github.com/NLeSC/awesome-research-software-registries))
   * Use a unique and persistent identifier for your software (also useful for citations)
 * Accessible
   * Make sure people can freely, legally and easily get a copy your software
+  * Use coding conventions and comments to make your code readable and understandable by people (once they get a copy of it)
 * Interoperable
   * Explain the functionality of your software
   * Use standard formats for inputs and outputs
@@ -63,6 +64,7 @@ closer to the gold standard of a fully reproducible research.
 * Reusable
   * Document your software (including its functionality, and how to install and run it)
   * Follow best practices for software development (including coding conventions, code readability and verifying its correctness)
+  * Test your software and make sure it works on different platforms/operating systems
   * Give a licence to your software clearly stating how it can be reused
   * State how to cite your software
 
@@ -132,6 +134,7 @@ Here are some questions to help you assess the FAIRness of the code:
 ::::::::::::::::::::::::::::::::::::: solution
 
 I would give the following scores:
+
 F - 1/5
   - Positive: None
   - Negative: No descriptive name, identifier or version number. No way to find again except through one person and they might not remember what file you mean.
@@ -147,22 +150,18 @@ R - 2/5
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Acknowledgements
 
-The content of this episode was inspired / heavily borrowed from the following resources:
+## Ackowledgements, further reading & useful links
 
-- ...
-- ...
-
-## Further reading
-
-We recommend the following resources for some additional reading on the topic of this episode:
+The content of this episode was inspired or partially borrowed from some of the resources below, which we also 
+recommend for some additional reading on the topic of this episode:
 
 - [The FAIR Guiding Principles for scientific data management and stewardship](https://www.nature.com/articles/sdata201618)
 - [The FAIR Cookbook](https://faircookbook.elixir-europe.org/content/home.html)
 - [The Turing Way Guide for Reproducible Research: Open Research](https://the-turing-way.netlify.app/reproducible-research/open)
 - ["10 easy things to make your research software FAIR"](https://librarycarpentry.org/Top-10-FAIR/files/poster_10things_FAIRsoftware.pdf)
-- ["Five recommendations for FAIR software"](https://fair-software.eu/))
+- ["Five recommendations for FAIR software"](https://fair-software.eu/)
+- [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries) - a list of research software registries (by country, organisation, domain and programming language) where research software can be registered to help promote its discovery
 
 
 
@@ -170,11 +169,7 @@ We recommend the following resources for some additional reading on the topic of
 
 - Open research means the outputs of publicly funded research are publicly accessible with no or minimal restrictions.
 - Reproducible research means the data and software is available to recreate the analysis.
-- FAIR data and software is:
-  - Findable
-  - Accessible
-  - Interoperable
-  - Reusable
+- FAIR data and software is Findable, Accessible, Interoperable, Reusable.
 - These principles support research and researchers by saving time, reducing barriers to discovery, and increasing impact of the research output.
 
 
