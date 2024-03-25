@@ -655,7 +655,8 @@ These skills are critical to reproducible and sustainable science since using
 version control makes our work self-documenting - the commit messages provide
 the narrative of what changed and why - and we can recover the exact state of
 our projects at a specific time, so we can more reliably run the "same" code
-again.
+again. We can also back up our projects by pushing them to distributed, remote
+servers and reduce the risk of data loss over the course of a project's lifetime.
 
 Version control is a vast topic and we have only covered the absolute basics
 here as a brief introduction. For a deeper and more complete dive into the
