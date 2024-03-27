@@ -20,9 +20,12 @@ Jesse M. Alston, Jessica A. Rick, https://doi.org/10.1002/bes2.1801
 
 [7.] [The FAIR Cookbook][fair-cookbook], online recipes for life scientists that help make and keep data FAIR
 
-[8.] [10 easy things to make your research software FAIR][10-easy-fair-things], poster
+[8.] [Top 10 FAIR Data & Software Things][top-10-fair-things-per-domain] - brief guides for different disciplines that can be used by the research community to understand how they can make their research (data and software) more FAIR
 
-[9.] [Five recommendations for FAIR software][5-fair-software-recommendations], by the Netherlands eScience Center and DANS
+[9.] [10 easy things to make your research software FAIR][10-easy-fair-things], poster, part of [Top 10 FAIR Data & Software Things][top-10-fair-things-per-domain]
+
+[10.] [Five recommendations for FAIR software][5-fair-software-recommendations], by the Netherlands eScience Center and DANS
+
 
 ## Glossary
 

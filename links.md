@@ -33,3 +33,4 @@ any links that you are not going to use.
 [google-oxford-dict]: https://languages.oup.com/google-dictionary-en/
 [fair-cookbook]: https://faircookbook.elixir-europe.org/content/home.html
 [10-easy-fair-things]: https://librarycarpentry.org/Top-10-FAIR/files/poster_10things_FAIRsoftware.pdf
+[top-10-fair-things-per-domain]: https://librarycarpentry.org/Top-10-FAIR/
