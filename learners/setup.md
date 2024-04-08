@@ -317,7 +317,8 @@ You can also change the default command line tool from the same drop down menu b
 
 #### VS Code Extentions for Git 
 
-You could also install the following VS Code extensions to make your Git experience in VS Code better:
+You could also install the following VS Code extensions (from `View > Extensions` top-level menu) 
+to make your Git experience in VS Code better:
 
 - GitLense - Git Supercharged (adds a few nice additions to Git support in VS Code)
 - Git Graph (provides nice graphs and visualisations of a Git repository in VS Code)
@@ -333,7 +334,8 @@ Python 3 you installed.
 
 #### VS Code Extensions for Python
 
-You should also install the Python extension for VS Code by Microsoft to make your Python experience in VS Code better.
+You should also install the Python extension for VS Code by Microsoft (from `View > Extensions` top-level menu) 
+to make your Python experience in VS Code better.
 
 ![*Python extension for VS Code by Microsoft*](fig/vscode-python-extension.png){ alt-text="Python extension for VS Code by Microsoft" .image-with-shadow }
 
