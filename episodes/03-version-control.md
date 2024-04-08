@@ -14,7 +14,7 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Create self-contained commits in git to incrementally save work
+- Create self-contained commits in Git to incrementally save work
 - Inspect logs to review the history of work
 - Push new work from a local machine to a remote server
 
