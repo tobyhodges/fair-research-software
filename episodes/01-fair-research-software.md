@@ -152,7 +152,7 @@ R - 2/5
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## Ackowledgements, further reading & useful links
+## Acknowledgements, further reading & useful links
 
 The content of this episode was inspired or partially borrowed from some of the resources below, which we also 
 recommend for some additional reading on the topic of this episode:
