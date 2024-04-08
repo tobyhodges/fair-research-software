@@ -35,8 +35,8 @@ work or attitude may be different afterwards.
 
 FAIR stands for Findable, Accessible, Interoperable, and Reusable and comprises a set of principles designed to
 increase the visibility and usefulness of your research to others.
-The FAIR data principles, first published [in 2016](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4792175/), are widely known and applied today.
-Similar [FAIR principles for software](https://www.nature.com/articles/s41597-022-01710-x) have now been defined too. In general, they mean:
+The FAIR data principles, first published [in 2016][fair-data-principles], are widely known and applied today.
+Similar [FAIR principles for software][fair-principles-research-software] have now been defined too. In general, they mean:
 
 * **Findable** - software and its associated metadata must be easy to discover by humans and machines.
 * **Accessible** - in order to reuse software, the software and its metadata must be retrievable by standard protocols.
@@ -85,7 +85,7 @@ Give it a score from 1 to 5 in each category (1 - very bad, 2 - bad, 3 - passabl
 
 We are going to follow a fairly typical experience of a new PhD or postdoc joining a research group. 
 They are given some data and an analysis script written by another group member who works on similar things, and they want to run this, check they understand it and then adapt it to their own project.
-You should have downlaoded a CSV data file and a Python code file in the setup for this lesson.
+You should have downloaded a CSV data file and a Python code file in the setup for this lesson.
 
 The CSV file contains data about Extra-vehicular Activity (EVAs or spacewalks) undertaken by astronauts and cosmonauts from 1965 to 2013.
 
@@ -103,7 +103,7 @@ Let's think about how FAIR this piece of software is.
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
-Compare this data and code to the software you chose earler.
+Compare this data and code to the software you chose earlier.
 Do you think it is Findable, Accessible, Interoperable and Reusable? 
 Give it a score from 1 (very bad) to 5 (perfect) in each category and then we will discuss it together.
 
@@ -152,18 +152,14 @@ R - 2/5
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## Acknowledgements, further reading & useful links
+## Further reading
 
-The content of this episode was inspired or partially borrowed from some of the resources below, which we also 
-recommend for some additional reading on the topic of this episode:
-
-- [The FAIR Guiding Principles for scientific data management and stewardship](https://www.nature.com/articles/sdata201618)
-- [The FAIR Cookbook](https://faircookbook.elixir-europe.org/content/home.html) - recipes guiding you through the key steps of a FAIRification journey
-- [The Turing Way Guide for Reproducible Research: Open Research](https://the-turing-way.netlify.app/reproducible-research/open)
-- ["10 easy things to make your research software FAIR"](https://librarycarpentry.org/Top-10-FAIR/files/poster_10things_FAIRsoftware.pdf)
-- ["Five recommendations for FAIR software"](https://fair-software.eu/)
-- [Awesome Research Software Registries](https://github.com/NLeSC/awesome-research-software-registries) - a list of research software registries (by country, organisation, domain and programming language) where research software can be registered to help promote its discovery
-
+- [The Turing Way's "Guide for Reproducible Research"][ttw-guide-reproducible-research]
+- ["Five recommendations for FAIR software"][5-fair-software-recommendations]
+- ["10 easy things to make your research software FAIR"][10-easy-fair-things]
+- [The FAIR guiding principles for scientific data management and stewardship][fair-data-principles] - equivalent principles for FAIR data
+- [The FAIR Cookbook][fair-cookbook] - recipes guiding you through the key steps of a data FAIRification journey
+- [Awesome Research Software Registries][awesome-research-software-registries] - a list of research software registries (by country, organisation, domain and programming language) where research software can be registered to help promote its discovery
 
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
