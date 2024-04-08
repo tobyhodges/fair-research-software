@@ -181,7 +181,7 @@ This tells us that everything is up to date.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Where Are My Changes?
+## Where are my changes?
 
 If we run `ls` at this point, we will still see only two files, the script and the dataset.
 That's because Git saves information about files' history in the special `.git` directory mentioned earlier so that our filesystem doesn't become cluttered (and so that we can't accidentally edit or delete an old version).
