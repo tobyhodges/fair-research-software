@@ -56,3 +56,4 @@ any links that you are not going to use.
 [osd]: https://opensource.org
 [osd-definition]: https://opensource.org/osd/
 [free-software]: https://www.gnu.org/philosophy/free-sw.en.html
+[codecheck]: https://codecheck.org.uk/project/

@@ -71,3 +71,6 @@ and Australian Research Data Commons
 
 - [Open source definition][osd-definition], by the [Open Source Initiative][osd]
 
+- [CODECHECK][codecheck], an approach for independent execution of computations underlying 
+research articles
+
