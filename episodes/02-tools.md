@@ -94,9 +94,11 @@ With a command line interface, your code can be built into automated workflows s
 
 
 
-### Documentation
+### Testing
 
 ## Sharing your code
+
+### Documentation
 
 ### Version control
 
