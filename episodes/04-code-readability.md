@@ -20,10 +20,37 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Variable names
 
+:::::::::::::::::::::::::::::::::::::: challenge
 
-Content of the episode goes here.
+### Give a descriptive name to a variable
 
+Below we have a variable called `var` being set the value of 9.81.
+`var` is not a very descriptive name here as it doesn't tell us what 9.81 means, yet it is a very common constant in orbital mechanics!
+Go online and find out which constant 9.81 relates to and suggest a new name for this variable.
+
+Hint: the units are _metres per second squared_!
+
+```python
+var = 9.81
+```
+
+:::::::::::::: solution
+
+### Solution
+
+Yes, 9.81 m/s^2 is the [gravitational force exerted by the Earth](https://en.wikipedia.org/wiki/Gravity_of_Earth).
+It is often referred to as "little g" to distinguish it from "big G" which is the [Gravitational Constant](https://en.wikipedia.org/wiki/Gravitational_constant).
+A more decriptive name for this variable therefore might be:
+
+```python
+g_earth = 9.81
+```
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Further reading
 
