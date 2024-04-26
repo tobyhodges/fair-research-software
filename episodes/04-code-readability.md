@@ -52,6 +52,51 @@ g_earth = 9.81
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Inline comments
+
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### Add some comments to a code block
+
+Examine lines 7 to 20 of the `bad-code.py` script.
+Add (or change!) as many inline comments as you think is required to help yourself and others understand what that code block is doing.
+
+Hint: Inline comments in Python are denoted by a `#` symbol.
+
+:::::::::::::: solution
+
+### Solution
+
+Some good inline comments may look like the below example.
+
+```python
+# Loop through 370 iterations
+for count in range(370):
+    # Read a line from the CSV file as a string, and split it up into a
+    # list wherever the ',' character appears
+    line = csvfile.readline().split(',')
+
+    # Create a temporary dictionary to store data in
+    l = dict()
+    # Loop over the items in the line from the CSV file
+    for thing in range(len(line[:7])):
+        # Add the item to the temporary dictionary
+        l[fieldnames[thing]] = line[thing]
+
+    # Using the json library, output the dictionary to a json file
+    import json
+    json.dump(l, jsonfile)
+    # Add a newline to the json file ready for the next entry
+    jsonfile.write('\n')
+
+# Close the json file
+jsonfile.close()
+```
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Further reading
 
 We recommend the following resources for some additional reading on the topic of this episode:
