@@ -107,7 +107,7 @@ Below is a function that reads in a JSON file into a dataframe structure using t
 Reorder the lines of code within the function so that the JSON file is read in using the `read_json` function, any incomplete rows are _dropped_, the values are _sorted_ by date, and then the cleaned dataframe is _returned_.
 There is also a `print` statement that will display which file is being read in on the command line for verification.
 
-```{python}
+```python
 import pandas as pd
 
 def read_json_to_dataframe(input_file):
@@ -124,7 +124,7 @@ def read_json_to_dataframe(input_file):
 
 Here is the correct order of the code for the function.
 
-```{python}
+```python
 import pandas as pd
 
 def read_json_to_dataframe(input_file):
