@@ -97,6 +97,48 @@ jsonfile.close()
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Functions
+
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### Create a function
+
+Below is a function that reads in a JSON file into a dataframe structure using the [`pandas` library](https://pandas.pydata.org/) - but the code is out of order!
+Reorder the lines of code within the function so that the JSON file is read in using the `read_json` function, any incomplete rows are _dropped_, the values are _sorted_ by date, and then the cleaned dataframe is _returned_.
+There is also a `print` statement that will display which file is being read in on the command line for verification.
+
+```{python}
+import pandas as pd
+
+def read_json_to_dataframe(input_file):
+    eva_df.sort_values('date', inplace=True)
+    eva_df.dropna(axis=0, inplace=True)
+    print(f'Reading JSON file {input_file}')
+    return eva_df
+    eva_df = pd.read_json(input_file, convert_dates=['date'])
+```
+
+:::::::::::::: solution
+
+### Solution
+
+Here is the correct order of the code for the function.
+
+```{python}
+import pandas as pd
+
+def read_json_to_dataframe(input_file):
+    print(f'Reading JSON file {input_file}')
+    eva_df = pd.read_json(input_file, convert_dates=['date'])
+    eva_df.dropna(axis=0, inplace=True)
+    eva_df.sort_values('date', inplace=True)
+    return eva_df
+```
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Further reading
 
 We recommend the following resources for some additional reading on the topic of this episode:
