@@ -211,7 +211,7 @@ def read_json_to_dataframe(input_file):
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
-- [Introducting Functions from Introduction to Python](http://introtopython.org/introducing_functions.html)
+- [Introducing Functions from Introduction to Python](https://introtopython.org/introducing_functions.html)
 - [W3Schools.com Python Functions](https://www.w3schools.com/python/python_functions.asp)
 
 Also check the [full reference set](learners/reference.md#litref) for the course.
