@@ -139,6 +139,74 @@ def read_json_to_dataframe(input_file):
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Docstrings
+
+:::::::::::::::::::::::::::::::::::::: challenge
+
+### Writing docstrings
+
+Write a docstring for the `read_json_to_dataframe` function from the previous
+exercise. Things you may want to consider when writing your docstring are:
+
+- Describing what the function does
+- What kind of inputs does the function take? Are they required or optional?
+  Do they have default values?
+- What output will the function produce?
+
+Hint: Python docstrings are defined by enclosing the text with `"""` above and
+below. This text is also indented to the same level as the code defined beneath
+it.
+
+:::::::::::::: solution
+
+### Solution
+
+A good enough docstring for this function would look like this:
+
+```python
+def read_json_to_dataframe(input_file):
+    """
+    Read the data from a JSON file into a Pandas dataframe
+    Clean the data by removing any incomplete rows and sort by date
+    """
+    print(f'Reading JSON file {input_file}')
+    eva_df = pd.read_json(input_file, 
+                          convert_dates=['date'])
+    eva_df.dropna(axis=0, inplace=True)
+    eva_df.sort_values('date', inplace=True)
+    return eva_df
+```
+
+Using [numpy's docstring convention](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard),
+the docstring may look more like this:
+
+```python
+def read_json_to_dataframe(input_file):
+    """
+    Ingest data from a JSON file into a pandas DataFrame.
+
+    Parameters
+    ----------
+    input_file
+        The path to the target JSON file
+    
+    Returns
+    -------
+    eva_df : pandas.DataFrame
+        The cleaned and sorted data as a dataframe structure
+    """
+    print(f'Reading JSON file {input_file}')
+    eva_df = pd.read_json(input_file, 
+                          convert_dates=['date'])
+    eva_df.dropna(axis=0, inplace=True)
+    eva_df.sort_values('date', inplace=True)
+    return eva_df
+```
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Further reading
 
 We recommend the following resources for some additional reading on the topic of this episode:
