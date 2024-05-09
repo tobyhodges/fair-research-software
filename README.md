@@ -32,21 +32,6 @@ Current Maintainers of this lesson are:
 
 * [Aleksandra Nenadic](https://github.com/anenadic)
 
-<!-- The Maintainer Team aims to meet at 12:00 UTC on the fourth Friday of each month. -->
-
-## Acknowledgements
-
-This course has been developed by the [Software Sustainability Institute][ssi] and funded by the [UK Reproducibility Network][ukrn].  
-
-The following relevant courses were uses for the inspiration or contents:
-
-* to be added ...
-
-The following people aided the development of this curriculum,
-by providing suggestions, reviews, and inspiration:
-
-* to be added ...
-
 ## Citation
 
 Citation info coming soon...
@@ -54,6 +39,12 @@ Citation info coming soon...
 ## Contact
 
 Please get in touch with [Aleksandra Nenadic](a.nenadic@software.ac.uk) with any questions about this lesson.
+
+## Acknowledgements
+
+This work has been supported by the [UK's Software Sustainability Institute][ssi] via the [EPSRC, BBSRC, ESRC, NERC, AHRC, STFC and MRC grant EP/S021779/1](https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/S021779/1)
+and [UK Reproducibility Network (UKRN)](https://www.ukrn.org/).
+
 
 [sandpaper-documentation]: https://carpentries.github.io/sandpaper-docs/
 [workbench-markdown-template]: https://github.com/carpentries/workbench-template-md/

@@ -83,7 +83,7 @@ The exact wording of this output may be slightly different if you are using a di
 
 ### Add initial files into our repository
 
-During the setup for this lesson, you will have been provided with two files:
+During the [setup](./index.html#astronaut-data-and-analysis-code) for this course, you have been provided with a `.zip` archive with two files:
 
 - `bad code.py`
 - `Extra-vehicular_Activity__EVA__-_US_and_Russia_20240126.csv`
@@ -664,11 +664,15 @@ subject matter, please see the "Further reading" section below.
 
 ## Further reading
 
-- [Software Carpentry's Git novice lesson][swc-git-lesson]
+We recommend the following resources for some additional reading on the topic of this episode:
+
+- [Software Carpentry's Git Novice lesson][swc-git-lesson]
 - [The Turing Way's "Guide to Version Control"][ttw-guide-version-control]
 - ["How Git Works" course on Pluralsight][how-git-works]
 - [How to Write a Good Commit Message][good-commit-message]
 - [Git Commit Good Practice][git-commit-good-practice]
+
+Also check the [full reference set](learners/reference.md#litref) for the course.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 

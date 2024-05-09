@@ -8,7 +8,7 @@ To go through the course material on your own or at a workshop,
 you will need the following software installed and working correctly on your system:
 
 - [Command line tool](index.html#command-line-tool) (such as **Bash**, **Zsh** or **Git Bash**)  
-- [Git version control program](index.html#git-version-control-program) for command line
+- [Git version control program](index.html#git-version-control-program)
 - [GitHub account](index.html#github-account)
 - [Python 3](index.html#python-3-distribution)
 - [Visual Studio Code (VS Code)](index.html#visual-studio-code-vs-code) integrated development environment (IDE)
@@ -340,14 +340,25 @@ to make your Python experience in VS Code better.
 ![*Python extension for VS Code by Microsoft*](fig/vscode-python-extension.png){ alt-text="Python extension for VS Code by Microsoft" .image-with-shadow }
 
 
+#### VS Code Extentions for Viewing Data
+
+You should install the following extensions for viewing and editing data in VS Code:
+
+- Excel Viewer - custom editor and previewer for CSV files and Excel spreadsheets 
+- JSON - custom editor and previewer for JSON files
+
+![*CSV and JSON data editor and viewer extensions for VS Code*](fig/vscode-data-viewer-extensions.png){ alt-text="CSV and JSON data editor and viewer extensions for VS Code" .image-with-shadow }
+
+
 ### Astronaut data and analysis code 
 
 Download the data and code from the 
-[software repository](https://github.com/carpentries-incubator/astronout-data-analyses-bad/) by clicking the
-green `<> Code` button, then `Download ZIP` form the drop-down menu.
+[software repository](https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-good) by clicking the
+green `<> Code` button, then selecting `Download ZIP` option from the drop-down menu.
 
-![*Code download as a zip file from GitHub*](fig/github-code-download.png){ alt-text="Code download as a zip file from GitHub" .image-with-shadow }
+![*Code and data bundle download as a zip file from GitHub*](fig/github-code-download.png){ alt-text="Code download as a zip file from GitHub" .image-with-shadow }
 
-This repository contains data on spacewalks by astronauts and code to analyse this data. 
+This repository contains data on spacewalks (extravehicular activities, EVAs) by astronauts and 
+some code to analyse and plot this data. 
 We will use it for code examples and exercises throughout this course.
 
