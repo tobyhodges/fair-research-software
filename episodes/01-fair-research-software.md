@@ -184,6 +184,7 @@ We recommend the following resources for some additional reading on the topic of
 - [Automating assessment of the FAIR Principles for Research Software (FAIR4RS)][automated-assessment-fairrs]
 - [Short online courses][nesc-rs-support-courses] on various aspects of research software 
 (including [FAIR][nesc-rs-support-course-fair]), by the NESC Research Software Support
+- [CodeRefinery][coderefinery] - training and e-Infrastructure for research software development
 - A [self-assessment checklist for FAIR research software][fair-rs-checklist], by the Netherlands eScience Center
     and Australian Research Data Commons 
 - [Awesome Research Software Registries][awesome-research-software-registries] - a list of research software 
