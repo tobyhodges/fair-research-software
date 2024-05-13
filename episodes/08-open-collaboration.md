@@ -422,6 +422,22 @@ A:
 :::::::::::::::::::::::::::::::::::::::::::::::
 
 
+## Getting Code Ready to Share
+
+In addition to adding a license to our code there are several other important steps to consider before sharing it publicly.
+
+* Make code public
+* Transferring to an organisation
+* Archive to Zenodo
+* Add a DOI
+* Add a citation file
+* Add a codemeta file, FAIR principles
+
+## Tracking Issues with Code
+
+earlier issue from testing, bug with missing values or date stamps failing
+
+
 ## Working in Parallel with Git Branches
 
 Branching is a feature of Git that allows two or more parallel streams of
@@ -487,22 +503,76 @@ And if we go back to the `bugfix` branch it will re-appear.
 git switch bugfix
 ```
 
-### Merging Branches
+If we want to push our changes to a remote such as Github we have to tell the `git push` command which branch to push to. If the branch doesn't exist on the remote (as it currently won't)
+then it will be created. 
 
+```bash
+git push origin bugfix
+```
 
+If we now refresh the Github webpage for this repository we should see the bugfix branch has appeared in the list of branches.
 
-## Sharing your code 
-* Make code public
-* Transferring to an organisation
-* Archive to Zenodo
-* Add a DOI
-* Add a citation file
-* Add a codemeta file, FAIR principles
+If we needed to pull changes from a branch on a remote (for example if we've made changes on another computer or via Github's web based editor), then we can specify a branch on a `git pull` 
+command.
+
+```bash
+git pull origin bugfix
+```
+
+## Merging Branches
+
+When we have completed working on a branch (for example fixing a bug) then we can merge our branch back into the main one (or any other branch). This is done with the `git merge` command.
+
+This must be run on the *TARGET* branch of the merge, so we'll have to use a `git switch` command to set this. 
+
+```bash
+git switch main
+```
+
+Now we're back on the main branch we can go ahead and merge the changes from the bugfix branch:
+
+```bash
+git merge bugfix
+```
 
 ## Pull Requests
- * show pull request workflow
- * get a helper to pull reuqest a change into a file
- * demonstrate review process
+
+On larger projects we might need to have a code review process before changes are merged, especially before they are merged onto the main branch that might be what is being released
+as the public version of the software. Github has a process for this that it calls a "Pull Request", other Git services such as GitLab have different names for this, GitLab calls them "Merge Requests".
+Pull requests are where one developer requests that another merge code from a branch (or "pull" it from another copy of the repository). The person recveing the request then has the
+chance to review the code, write comments suggesting changes or even change the code themselves before merging it. It is also very common for automated checks of code to be run at a pull
+request to ensure the code is of good quality and is passing automated tests.
+
+As a simple example of a pull request we can now create a pull request for the changes we made on the bugfix branch and pushed to Github earlier on. The Github webpage for our repository
+will now be saying something like "bugfix had recent pushes n minutes ago - Compare & Pull request". Click on this button and create a new pull request. 
+
+Give the pull request a title and write a brief description of it, then click the green "Create pull request" button. Github will then check if we can merge this pull request without
+any problems. We'll look at what to do when this isn't possible later on. 
+
+There should be a green "Merge pull request" button, but if we click on the down arrow inside this button there are three options on how to handle this request:
+
+1. Create a merge commit
+2. Squash and merge
+3. Rebase and merge
+
+The default is option 1, which will keep all of the commits made on our branch intact. This can be useful for seeing the whole history of our work, but if we've done a lot of minor
+edits or attempts at fixing a problem to fix one bug it can be excessive to have all of this history saved. This is where the second option comes in, this will place all of our changes from the branch into just 
+a single commit, this might be much more obvious to other developers who will now see our bugfix as a single commit in the history. The third option merges the branch histories together
+in a different way that doesn't make merges as obvious, this can make the history easier to read but effectively rewrites the commit history and will change the commit hash IDs. Some
+projects that you contribute to might have their own rules about what kind of merge they will prefer. For the purposes of this exercise we'll stick with the default merge commit. 
+
+Go ahead and click on "Merge pull request", then "Confirm merge". The changes will now be merged together. Github gives us the option to delete the branch we were working on, since
+it's history is preserved in the main branch there isn't any reason to keep it in this case.
+
+### Using Forks Instead of Branches
+
+A fork is similar to a branch, but instead of it being part of the same repository it is a entirely new copy of the repository. Forks are commonly used by Github users who wish to work
+on a project that they're not a member of. Typically forking will copy the repository to our own namespace (e.g. github.com/username/reponame instead of github.com/projectname/reponame)
+
+To create a fork on github use the "Fork" button to the right of the repository name. After we create our fork we can make some changes and these could even be on the main branch 
+inside our forked repository. Github will track that a fork has been made displays a "Contribute" button to create a pull request back to the original repository. Using this we can
+request that the changes on our fork are incorporated by the upstream project.
+
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -523,7 +593,8 @@ A:
 The content of this episode was inspired / heavily borrowed from the following resources:
 
 - Software carpentry git lesson licensing and citation sections - https://swcarpentry.github.io/git-novice/11-licensing.html and https://swcarpentry.github.io/git-novice/12-citation.html
-- ...
+- Carpentries Github Skill up - https://carpentries-incubator.github.io/github-skill-up-instructors/ and https://carpentries.github.io/github-skill-up-maintainers/
+- RSG Soton Git lesson - https://southampton-rsg.github.io/swc-git-novice/06-collab/index.html
 
 ## Further reading
 
