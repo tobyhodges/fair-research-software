@@ -75,12 +75,10 @@ closer to the gold standard of a fully reproducible research.
 
 FAIR is not a binary metric - there is no such thing as "FAIR or not FAIR".
 
-FAIR describes a set of principles to help you find out where you are 
+FAIR is not a perfect metric, nor does it provide a full and exhaustive software quality checklist. 
+It is tailored to the specific **values** of and describes set of **priciples** for reproducible science and 
+can be a helpful guide if you wish to stick with these principles and find out where you are 
 on the **FAIR spectrum** and help you on a **journey** to make your software more FAIR. 
-
-FAIR is not a perfect metric, nor does it provide a full and exhaustive software quality checklist - 
-it is tailored to the specific values and priciples of open and reproducible science and 
-can be a helpful guide if you wish to stick with these principles.
 
 ::::::
 
