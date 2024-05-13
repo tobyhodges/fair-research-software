@@ -77,7 +77,7 @@ Solution:
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-You may have noticed that our reseacher has received the software project they are meant to be working as a `.zip` archive that was emailed to them. 
+You may have noticed that our researcher has received the software project they are meant to be working as a `.zip` archive via email. 
 In the next episode, we will learn a better practice for sharing and tracking changes to a software project using version control software Git and 
 project sharing and collaboration platform GitHub.
 
