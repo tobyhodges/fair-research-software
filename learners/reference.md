@@ -27,6 +27,8 @@ part of the [The Turing Way: A handbook for reproducible, ethical and collaborat
 collaboration, version control, packaging,  etc.), compiled 
 by the [INTERSECT project](https://intersect-training.org/)
 
+- [Automating assessment of the FAIR Principles for Research Software (FAIR4RS)][automated-assessment-fairrs]
+
 - ["Good Enough Practices in Scientific Computing" course][good-enough-practices]
 
 - [Curated resources][forrt-resources] by the 
