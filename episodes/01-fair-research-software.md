@@ -92,7 +92,7 @@ the new research team member was given.
 Let's unzip this archive and inspect its content in VS Code. 
 
 The software project contains:
-- a JSON file (`data.json`) with data on extra-vehicular activities (EVAs or spacewalks) undertaken by astronauts and cosmonauts from 1965 to 2013, and
+- a JSON file (`data.json`) with data on extra-vehicular activities (EVAs or spacewalks) undertaken by astronauts and cosmonauts from 1965 to 2013 (data provided by NASA via its [Open Data Portal](https://data.nasa.gov/Raw-Data/Extra-vehicular-Activity-EVA-US-and-Russia/9kcy-zwvn/about_data)), and
 - a Python code file (`my code v2.py`) contaning some analysis
 
 ![JSON data file snippet showing EVA/spacewalk data (EVA #, Country, Crew, Vehicle, Date, Duration, Purpose)](episodes/fig/astronaut-data-json-snippet.png)
