@@ -31,6 +31,8 @@ by the [INTERSECT project](https://intersect-training.org/)
 
 - ["Good Enough Practices in Scientific Computing" course][good-enough-practices]
 
+- [CodeRefinery][coderefinery] - training and e-Infrastructure for research software development
+
 - [Curated resources][forrt-resources] by the 
 [Framework for Open and Reproducible Research Training](https://forrt.org/) (FORRT)
 
