@@ -350,9 +350,10 @@ can't redistribute modified versions of it.
 
 Under these rules the following combinations are possible:
 
- * CC-BY - Creative Commons Attribution    * CC-BY-SA - Creative Commons
-Attribution Share Alike     * CC-BY-NC - Creative Commons Non Commercial 
-*  CC-BY-NC-SA - Creative Commons Non Commercial Share Alike
+* CC-BY - Creative Commons Attribution
+* CC-BY-SA - Creative Commons Attribution Share Alike
+* CC-BY-NC - Creative Commons Non Commercial
+* CC-BY-NC-SA - Creative Commons Non Commercial Share Alike
 * CC BY-ND - Creative Commons No Derivatives
 * CC BY-ND-NC - Creative Commons No Derivatives Non Commercial
 
@@ -429,6 +430,64 @@ another. Branches are commonly used as a way for one developer to work on
 a new feature or a bug fix while ohter developers work on other features.
 When those new features or bug fixes are complete the 
 
+### Creating a new Branch
+
+New git branches are created with the `git branch` command. This should be followed by the name of 
+the branch to create, for example running:
+
+```bash
+git branch bugfix
+```
+
+will create a new branch called `bugfix`. We can view the names of all the branches, by default there should be one branch called `main` or perhaps `master` and our new `bugfix` branch.
+by running `git branch` with no parameters. This will put `*` next to the currently active branch.
+
+```output
+  bugfix
+* main
+```
+
+We can see that creating a new branch has not activated that branch. To switch branches we can either
+use the `git switch` or `git checkout` command followed by the branch name. For example:
+
+```bash
+git switch bugfix
+```
+
+To create a branch and change to it in a single command we can use `git switch` with the `-c` option (or `git checkout` with the `-b` option).
+
+```bash
+git switch -c another-bugfix
+```
+
+### Committing to a branch
+
+Once we have switched to a branch any further commits that are made will go to that branch. When we run a `git commit` command we'll see the name of the
+branch we're committing to in the output of `git commit`. Let's edit our bad code example and fix one of the many bugs in `bad-code.py` and commit it. 
+
+```bash
+git commit -m "fixed bug" testfile
+```
+
+In the output of `git commit -m` the first part of the output line will show the name of the branch we just made the commit to.
+
+```output
+[bugfix 330a2b1] fixed bug
+```
+
+If we now switch back to the `main` branch our new commit will no longer be there in the source file.
+
+```bash
+git switch main
+```
+
+And if we go back to the `bugfix` branch it will re-appear.
+
+```bash
+git switch bugfix
+```
+
+### Merging Branches
 
 
 
