@@ -71,7 +71,7 @@ closer to the gold standard of a fully reproducible research.
 
 :::::: callout
 
-## FAIR is a process, not a perfect or binary metric
+## FAIR is a process, not a perfect metric
 
 FAIR is not a binary metric - there is no such thing as "FAIR or not FAIR".
 
