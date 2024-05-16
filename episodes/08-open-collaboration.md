@@ -426,12 +426,32 @@ A:
 
 In addition to adding a license to our code there are several other important steps to consider before sharing it publicly.
 
-* Make code public
-* Transferring to an organisation
-* Archive to Zenodo
-* Add a DOI
-* Add a citation file
-* Add a codemeta file, FAIR principles
+### Making the code public
+
+By default repositories created on Github are private and only their creator can see them. 
+If we're going to be adding an open source license to our repository we probably want to make sure people can actually access it too! 
+
+Go to the Github webpage of your repository (https://github.com/<yourusername>/<yourrepsoitoryname>) and click on the Settings link near the top right corner. 
+Then scroll down to the bottom of the page and the "Danger Zone" settings. Click on "Change Visibility" and you should see a message saying "Change to public",
+if it says "Change to private" then the repository is already public. You'll then be asked to confirm that you want to make the repository public and agree 
+to the warning that the code will now be publicly visible. As a security measure you'll then have to put in your Github password.
+
+### Transferring to an organisation
+
+Currently our repository is under the Github "namespace" of our individual user. This is ok for individual projects where we are the sole or at least main author,
+but for bigger and more complex projects it is common to use a Github organisation named after our project. If we are a member of an organisation and have the appropriate
+permissions then we can transfer a repository from our personal namespace to the organisation's. This can be done with another option in the "Danger Zone" settings, the
+"Transfer ownership" button. Pressing this will then prompt us as to which organisation we want to transfer the repository to. 
+
+### Archiving to Zenodo and Obtaining a DOI
+
+Zenodo is a data archive run by CERN. Anybody can upload datasets up to 50GB to it and receive a Digital Object Identifier (DOI). Zenodo's definition of a dataset is quite
+broad and can include code. This gives us a way to obtain a DOI for our code.
+
+### Adding a citation file
+
+### Adding a codemeta file and FAIR Software Principles
+
 
 ## Tracking Issues with Code
 
