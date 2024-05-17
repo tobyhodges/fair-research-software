@@ -68,6 +68,23 @@ closer to the gold standard of a fully reproducible research.
   * Give a licence to your software clearly stating how it can be reused
   * State how to cite your software
 
+
+:::::: callout
+
+## FAIR is a process, not a perfect metric
+
+FAIR is not a binary metric - there is no such thing as "FAIR or not FAIR".
+
+FAIR is not a perfect metric, nor does it provide a full and exhaustive software quality checklist. 
+
+FAIR refers to the specific **values** of and describes a set of **priciples** for open and reproducible science and 
+can be a helpful guide if you wish to stick to these principles and find out where you are 
+on the **FAIR spectrum** and help you on a **journey** to make your software more FAIR. 
+
+![*FAIR as a 4D spectrum, image by the Netherlands eScience Center licensed under CC-BY 4.0*][https://esciencecenter-digital-skills.github.io/software-support-essentials/stories/_fairsoftware/definition.png]{alt='FAIR represented as as a 4-dimensional spectrum  with 4 axes - findable, accessible, interoperable and reusable, image by the Netherlands eScience Center licensed under CC-BY 4.0'}
+
+::::::
+
 We are going to explore the above practices on an example software project we will be working on as part of this
 course.
 
@@ -77,7 +94,13 @@ Think of a piece of software you use in your research - any computational tool u
 If you have a bit of code or software you wrote yourself, in any language, feel free to use that.
 
 Do you think it is Findable, Accessible, Interoperable and Reusable? 
-Give it a score from 1 to 5 in each category (1 - very bad, 2 - bad, 3 - passable, 4 - good, 5 - perfect).
+Give it a score from 1 to 5 in each category, where:
+
+- 1 - requires loads of improvement
+- 2 - on a good path, but improvements still needed
+- 3 - decent, a few things could still be improved
+- 4 - very good, only tiny things to improve upon
+- 5 - excellent
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -106,7 +129,7 @@ Let's think about how FAIR this piece of software is.
 
 Compare this data and code to the software you chose earlier.
 Do you think it is Findable, Accessible, Interoperable and Reusable? 
-Give it a score from 1 (very bad) to 5 (perfect) in each category and then we will discuss it together.
+Give it a score from 1 to 5 in each category, as in the previous exercise, and then we will discuss it together.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -158,8 +181,10 @@ We recommend the following resources for some additional reading on the topic of
 
 - ["Five recommendations for FAIR software"][5-fair-software-recommendations]
 - ["10 easy things to make your research software FAIR"][10-easy-fair-things]
+- [Automating assessment of the FAIR Principles for Research Software (FAIR4RS)][automated-assessment-fairrs]
 - [Short online courses][nesc-rs-support-courses] on various aspects of research software 
 (including [FAIR][nesc-rs-support-course-fair]), by the NESC Research Software Support
+- [CodeRefinery][coderefinery] - training and e-Infrastructure for research software development
 - A [self-assessment checklist for FAIR research software][fair-rs-checklist], by the Netherlands eScience Center
     and Australian Research Data Commons 
 - [Awesome Research Software Registries][awesome-research-software-registries] - a list of research software 
