@@ -78,6 +78,47 @@ g_earth = 9.81
 
 ### Inline comments
 
+Commenting is a very useful practice to help convey the context of the code.
+It can be helpful as a reminder for your future self or your collaborators as to why code is written in a certain way, how it is achieving a specific task, or the real-world implications of your code.
+
+There are many ways to add comments to code, the most common of which is inline comments.
+
+```python
+# In Python, inline comments begin with the `#` symbol and a single space.
+```
+
+Again, there are few hard and fast rules to using comments, just apply your best judgment.
+But here are a few things to keep in mind when commenting your code:
+
+- **Avoid using comments to explain _what_ your code does.** If your code is too complex for other programmers to understand, consider rewriting it for clarity rather than adding comments to explain it.
+- Focus on the **_why_** and the **_how_**.
+- Make sure you're not reiterating something that your code already conveys on its own. Comments shouldn't echo your code.
+- Keep them short and concise. Large blocks of text quickly become unreadable and difficult to maintain.
+- Comments that contradict the code are worse than no comments. Always make a priority of keeping comments up-to-date when code changes.
+
+#### Examples of helpful vs. unhelpful comments
+
+##### Unhelpful:
+
+```python
+statetax = 1.0625  # Assigns the float 1.0625 to the variable 'statetax'
+citytax = 1.01  # Assigns the float 1.01 to the variable 'citytax'
+specialtax = 1.01  # Assigns the float 1.01 to the variable 'specialtax'
+```
+
+The comments in this code simply tells us what the code does, which is easy enough to figure out without the inline comments.
+
+##### Helpful:
+
+```python
+statetax = 1.0625  # State sales tax rate is 6.25% through Jan. 1
+citytax = 1.01  # City sales tax rate is 1% through Jan. 1
+specialtax = 1.01  # Special sales tax rate is 1% through Jan. 1
+```
+
+In this case, it might not be immediately obvious what each variable represents, so the comments offer helpful, real-world context.
+The date in the comment also indicates when the code might need to be updated.
+
 :::::::::::::::::::::::::::::::::::::: challenge
 
 ### Add some comments to a code block
@@ -94,26 +135,22 @@ Hint: Inline comments in Python are denoted by a `#` symbol.
 Some good inline comments may look like the below example.
 
 ```python
-# Loop through 370 iterations
 for count in range(370):
-    # Read a line from the CSV file as a string, and split it up into a
-    # list wherever the ',' character appears
     line = csvfile.readline().split(',')
 
     # Create a temporary dictionary to store data in
     l = dict()
-    # Loop over the items in the line from the CSV file
+    # For each item in the line from the CSV file, store
+    # the item in the temporary dictionary
     for thing in range(len(line[:7])):
-        # Add the item to the temporary dictionary
         l[fieldnames[thing]] = line[thing]
 
-    # Using the json library, output the dictionary to a json file
     import json
     json.dump(l, jsonfile)
+
     # Add a newline to the json file ready for the next entry
     jsonfile.write('\n')
 
-# Close the json file
 jsonfile.close()
 ```
 
@@ -235,6 +272,8 @@ def read_json_to_dataframe(input_file):
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
+- [PEP 8 Style Guide for Python](https://peps.python.org/pep-0008/#comments)
+- [Coursera: Inline commenting in Python](https://www.coursera.org/tutorials/python-comment#inline-commenting-in-python)
 - [Introducing Functions from Introduction to Python](https://introtopython.org/introducing_functions.html)
 - [W3Schools.com Python Functions](https://www.w3schools.com/python/python_functions.asp)
 
