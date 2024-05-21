@@ -17,8 +17,8 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-Issues around research software and data ethics encompass a broad range of concerns related to how 
-software is developed, used, and the data it handles. While these concerns do not strictly fall under
+
+Research software development and its use (along with data it handles) does not happen in a vacuum - it can pose a number of ethical concerns and challenges for society and the environment, such as contributing to social inequality, compromising privacy and security, increasing environmental impact, and creating social and psychological issues. While these concerns do not strictly fall under
 the FAIR principles, they all contribute to research software quality, reliability and responsibility.
 
 Some of the ethical considerations around software are listed below.
