@@ -22,26 +22,31 @@ exercises: 30
 
 ### Variable names
 
-Variables are the most common thing you will assign when coding, and it's really important that it is clear what each variable contains in order to understand what the code is doing.
-If you return to your code after a long time of doing something else, or share your code with a colleague, it should be easy enough to pick up what variables are involved in your code from their names.
+Variables are the most common thing you will assign when coding, and it's really important that it is clear what each variable means in order to understand what the code is doing.
+If you return to your code after a long time doing something else, or share your code with a colleague, it should be easy enough to understand what variables are involved in your code from their names.
 Therefore we need to give them clear names, but we also want to keep them concise so the code stays readable.
 There are no "hard and fast rules" here, and it's often a case where you will need to use your best judgment.
 
 Some useful tips for naming variables are:
 
 - Short words are better than single character names
+  - For example, if we were creating a variable to store the speed to read a file, `s` (for 'speed') is not descriptive enough but `MBReadPerSecondAverageAfterLastFlushToLog` is too long to read and prone to mispellings.
+    `ReadSpeed` (or `read_speed`) would suffice.
+  - If you're finding it difficult to come up with a variable name that is _both_ short and descriptive, go with the short version and use an inline comment to desribe it further (more on those in the next section!)
   - This guidance doesn't necessarily apply if your variable is a well-known constant in your domain, for example, _c_ represents the speed of light in Physics
 - Try to be descriptive where possible, and avoid names like `foo`, `bar`, `var`, `thing`, and so on
-- Keep it short, since variable names that are too long will make the rest of the code difficult to read
-  - If you're finding it difficult to come up with a variable name that is _both_ short and descriptive, go with the short version and use an inline comment to desribe it further (more on those in the next section!)
 
 There are also some gotchas to consider when naming variables:
 
+- There may be some restrictions on which characters you can use in your variable names.
+  For instance in Python, only alphanumeric characters and underscores are permitted.
 - Particularly in Python, you cannot _begin_ your variable names with numerical characters as this will raise a syntax error.
   - Numerical characters can be included in a variable name, just not as the first character.
     For example, `thing1` is a valid variable name, but `1thing` isn't.
     (This behaviour may be different for other programming languages.)
-- Programming languages often have global functions, such as `input`, which you may also be inclined to use as a variable name.
+- In some programming languages, such as Python, variable names are case sensitive.
+  So `speed_of_light` and `Speed_Of_Light` will not be equivalent.
+- Programming languages often have global functions, such as `input`, which you may accidentally overwrite if you assign a variable with the same name.
   - Again in Python, you would actually reassign the `input` name and no longer be able to access the original `input` function if you used this as a variable name.
     So in this case opting for something like `input_data` would be preferable.
     (This behaviour may be explicitly disallowed in other programming languages.)
