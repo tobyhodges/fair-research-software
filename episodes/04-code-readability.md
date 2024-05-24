@@ -165,12 +165,22 @@ jsonfile.close()
 
 ### Functions
 
+Functions are a fundamental concept in writing software and are one of the core ways you can organise your code to improve its readability.
+A function is an isolated section of code that performs a single, _specific_ task that can be simple or complex.
+It can then be called multiple times with different inputs throughout a codebase, but it's definition only needs to appear once.
+
+Breaking up code into functions in this manner benefits readability since the smaller sections are easier to read and understand.
+Since functions can be reused, codebases naturally begin to follow the [Don't Repeat Yourself principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) which prevents software from becoming overly long and confusing.
+The software also becomes easier to maintain because, if the code needs to change, it only needs updating in one place instead of many.
+As we will learn in a future episode, testing code also becomes simpler when code is written in functions.
+Each function can be individually checked to ensure it is doing what is intended, which improves confidence in the software as a whole.
+
 :::::::::::::::::::::::::::::::::::::: challenge
 
 ### Create a function
 
 Below is a function that reads in a JSON file into a dataframe structure using the [`pandas` library](https://pandas.pydata.org/) - but the code is out of order!
-Reorder the lines of code within the function so that the JSON file is read in using the `read_json` function, any incomplete rows are _dropped_, the values are _sorted_ by date, and then the cleaned dataframe is _returned_.
+Reorder the lines of code within the function so that the JSON file is read in using the `read_json` method, any incomplete rows are _dropped_, the values are _sorted_ by date, and then the cleaned dataframe is _returned_.
 There is also a `print` statement that will display which file is being read in on the command line for verification.
 
 ```python
