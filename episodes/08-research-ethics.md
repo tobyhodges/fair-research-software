@@ -101,7 +101,7 @@ Also check the [full reference set](learners/reference.md#litref) for the course
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Free and open source research software and data, along with FAIR and ethical considerations, offer viable ways to 
+- Free and open source research software and data, along with FAIR, ethical and environmental considerations, offer viable ways to 
 make more transparent, reliable and accountable science, allowing other research scientists to verify  
 research findings. 
 - Building research software requires a ongoing commitment to the FAIR principles as well as engagement with 
