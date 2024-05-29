@@ -211,6 +211,9 @@ def read_json_to_dataframe(input_file):
     return eva_df
 ```
 
+We have chosen to create a function for reading in data files since this is a very common task within research software.
+While this isn't that many lines of code, thanks to using pandas inbuilt methods, it can be useful to package this together into a function if you need to read in a lot of similarly structured files and process them in the same way.
+
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
