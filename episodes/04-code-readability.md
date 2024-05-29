@@ -220,6 +220,50 @@ While this isn't that many lines of code, thanks to using pandas inbuilt methods
 
 ### Docstrings
 
+Docstrings are a very specific type of documentation that are provided within functions, and their cousins [classes](https://docs.python.org/3/tutorial/classes.html).
+A function docstring should explain what the isolated code is doing, what parameters the function needs (these are inputs) and what form they should take, what the function outputs (you may see words like 'returns' or 'yields' here), and errors (if any) that might be raised.
+
+Providing these docstrings helps improve code readability since it makes the code more transparent and helps understanding.
+Particularly, docstrings that provide information on the input and output of functions make it a quick process to reuse them in other parts of the code, without having to read the full function to understand what needs to be provided and what will be returned.
+
+Docstrings are another case where there are no hard and fast rules for writing them.
+Acceptable docstring formats can range from single- to multi-line.
+You can use your best judgment on how much documentation a particular function needs.
+
+**Example of a single-line docstring:**
+
+```python
+def add(x, y):
+    """Add two numbers together"""
+    return x + y
+```
+
+**Example of a multi-line docstring:**
+
+```python
+def add(x, y = 1.0):
+    """
+    Add two integers together
+
+    Parameters
+    ----------
+    x         : A number to be included in the addition
+    y (float) : A float number to be included in the addition. Default: 1.0.
+
+    Returns
+    -------
+    float : The sum of x and y. This value will be a float type since y takes
+            float type.
+    """
+    return x + y
+```
+
+Some projects may have their own guidelines on how to write docstrings, such as [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard).
+If you are contributing code to a wider project or community, try to follow the guidelines and standards they provide for codestyle.
+
+As your code grows and becomes more complex, the docstrings begin to map the technical reference that documents the design and operation of your codebase.
+Hence, it is common to find tools that will automatically extract docstrings from your code and generate a website where people can learn about your code without downloading/installing and reading the code files - such as [sphinx for Python](https://www.sphinx-doc.org/en/master/tutorial/automatic-doc-generation.html).
+
 :::::::::::::::::::::::::::::::::::::: challenge
 
 ### Writing docstrings
