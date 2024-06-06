@@ -24,6 +24,8 @@ exercises: 30
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+# Licensing
+
 ## What is licensing and why is it important?
 
 ### Copyright Licenses
@@ -408,6 +410,7 @@ A:
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+# Sharing your code to encourage collaboration
 
 ## Getting Code Ready to Share
 
@@ -463,22 +466,65 @@ Although we can write the CITATION.cff file by hand, an easier opton can be to u
 tool which will ask us a series of questions and then create a file for us to download and include. We can also use this tool to validate
 an existing file is correctly formatted. 
 
+
+
+::: callout
+
+### Going further with publishing code
+
+We now have our code published online, licensed as open source, archived with Zenodo, accessible via a DOI and with a citation file to encourage people to cite it. 
+What else might we want to do in order to improve how findable, accessible or reusable it is?
+One further step we could take is to publish the code with a peer reviewed journal. Some traditional journals will accept software submissions, although these are usually
+as a supplementary material for a paper. There also journals which specialise in research software such as the [https://openresearchsoftware.metajnl.com/](Journal of Open Research Software),
+[https://joss.theoj.org/](The Jornal of Open Source Software) or [https://www.sciencedirect.com/journal/softwarex](SoftwareX). With these the submission will be the software
+itself and not a paper, although a short abstract or description of the software is often required.
+:::
+
+
+# Working with collaborators
+
+The strength of online collaboration tools such as Github doesn't just lie in the ability to share code, but also in the ability to track problems with that code and 
+for multiple developers to work on it independently and bring their changes together and to review those changes before they are accepted.
+
+## Tracking Issues with Code
+
+A key feature of Github (as opposed to Git itself) is the issue tracker. This provides us a place to keep track of any problems or bugs in the code and to discuss them
+with other developers. Sometimes advanced users will also use issue trackers of public projects to report problems they are having (and sometimes this is misused by users
+seeking help using documented features of the program).
+
+In the testing chapter earlier on we identified a bug in our code with missing values or date stamps failing (***DOUBLE CHECK THIS IS REALLY THE PROBLEM***). 
+Let's go ahead and create a new issue in our Github repository to describe this problem. A good issue description should include:
+
+ - What the problem is, including any error messages that are displayed.
+ - What version of the software it occured with.
+ - Any relevant information about the system running it, for example the operating system being used.
+ - Versions of any dependent libraries.
+ - How to reproduce it.
+
+After the issue is created it will be assigned a sequential ID number. 
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Add a CITATION.cff to our code
+## Write an issue to describe our bug
 
-Let's go ahead and add a CITATION.cff file to our Git repository. We can either use the cff-initalizer or write it by hand.
-If it is written by hand then it is a good idea to validate it with the cff-initalizer. 
+Create a new issue in your repository's issue tracker by doing the following:
+
+ - Go to the Github webpage for your code
+ - Click on the Issues tab
+ - Click on the "New issue" button
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+### Disscussing an issue
 
+Once the issue is created, further discussion can take place with additional comments. These can include code snippets and file attachments such as screenshots or logfiles.
+We can also reference other issues by writing a # symbol and the number of the other issue. This is sometimes used to identify related issues or if an issue is a duplicate.
 
-## Tracking Issues with Code
+### Closing an issue
 
-earlier issue from testing, bug with missing values or date stamps failing
-
+Once an issue is solved then it can be closed. This can be done either by pressing the "Close" button in the Github web interface or by making a commit which includes the word
+"fixes", "fixed", "close", "closed" or "closes" followed by a # symbol and the issue number.
 
 ## Working in Parallel with Git Branches
 
@@ -486,22 +532,25 @@ Branching is a feature of Git that allows two or more parallel streams of
 work. Commits can be made to one branch without interferring with
 another. Branches are commonly used as a way for one developer to work on
 a new feature or a bug fix while ohter developers work on other features.
-When those new features or bug fixes are complete the 
+When those new features or bug fixes are complete the branch will be merged back with the main (sometimes called master) branch.
 
 ### Creating a new Branch
 
 New git branches are created with the `git branch` command. This should be followed by the name of 
-the branch to create, for example running:
+the branch to create. It is common practice when the bug we are fixing has a corresponding issue to name the branch after the issue number and name. 
+For example we might call the branch `01-missing-values-bug` instead of something less descriptive like `bugfix`. 
+
+or example running:
 
 ```bash
-git branch bugfix
+git branch 01-missing-values-bug
 ```
 
-will create a new branch called `bugfix`. We can view the names of all the branches, by default there should be one branch called `main` or perhaps `master` and our new `bugfix` branch.
+will create a new branch called `01-missing-values-bug`. We can view the names of all the branches, by default there should be one branch called `main` or perhaps `master` and our new `01-missing-values-bug` branch.
 by running `git branch` with no parameters. This will put `*` next to the currently active branch.
 
 ```output
-  bugfix
+  01-missing-values-bug
 * main
 ```
 
@@ -509,13 +558,13 @@ We can see that creating a new branch has not activated that branch. To switch b
 use the `git switch` or `git checkout` command followed by the branch name. For example:
 
 ```bash
-git switch bugfix
+git switch 01-missing-values-bug
 ```
 
 To create a branch and change to it in a single command we can use `git switch` with the `-c` option (or `git checkout` with the `-b` option).
 
 ```bash
-git switch -c another-bugfix
+git switch -c 02-another-bug
 ```
 
 ### Committing to a branch
@@ -530,7 +579,7 @@ git commit -m "fixed bug" testfile
 In the output of `git commit -m` the first part of the output line will show the name of the branch we just made the commit to.
 
 ```output
-[bugfix 330a2b1] fixed bug
+[bugfix 330a2b1] fixes missing values bug, closes #01 
 ```
 
 If we now switch back to the `main` branch our new commit will no longer be there in the source file.
@@ -539,17 +588,17 @@ If we now switch back to the `main` branch our new commit will no longer be ther
 git switch main
 ```
 
-And if we go back to the `bugfix` branch it will re-appear.
+And if we go back to the `01-missing-values-bug` branch it will re-appear.
 
 ```bash
-git switch bugfix
+git switch 01-missing-values-bug
 ```
 
 If we want to push our changes to a remote such as Github we have to tell the `git push` command which branch to push to. If the branch doesn't exist on the remote (as it currently won't)
 then it will be created. 
 
 ```bash
-git push origin bugfix
+git push origin 01-missing-values-bug
 ```
 
 If we now refresh the Github webpage for this repository we should see the bugfix branch has appeared in the list of branches.
@@ -558,7 +607,7 @@ If we needed to pull changes from a branch on a remote (for example if we've mad
 command.
 
 ```bash
-git pull origin bugfix
+git pull origin 01-missing-values-bug
 ```
 
 ## Merging Branches
@@ -574,7 +623,7 @@ git switch main
 Now we're back on the main branch we can go ahead and merge the changes from the bugfix branch:
 
 ```bash
-git merge bugfix
+git merge 01-missing-values-bug
 ```
 
 ## Pull Requests
@@ -644,8 +693,6 @@ We recommend the following resources for some additional reading on the topic of
 
 - Open source definition - https://opensource.org/osd/
 - What is free software - https://www.gnu.org/philosophy/free-sw.en.html
-
-
 
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
