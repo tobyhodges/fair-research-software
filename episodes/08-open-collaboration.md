@@ -370,25 +370,12 @@ reason for choosing it.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Adding a license to your code/data
+## Adding a license to your code
 
-Add a LICENSE file containing the full text of the license you've chosen.
+Add a LICENSE file containing the full text of the license you've chosen to the Git repository of your code from previous chapters of this lesson.
 Add a copyright statement, the name of the license you are using and a
-mention of the LICENSE file to at least one source file 
-
-:::::::::::::::::::::::::::::::::::::::::::::::
-
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## License file exercise
-Q: add a license file to your git repo
-
-:::::::::::::::: solution
-
-A: 
-
-:::::::::::::::::::::::::
+mention of the LICENSE file to at least one source file  
+Push your changes to your Github repository. Check the "About" section of your repository's Github webpage and see if there is now a license listed.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -450,7 +437,42 @@ broad and can include code. This gives us a way to obtain a DOI for our code.
 
 ### Adding a citation file
 
-### Adding a codemeta file and FAIR Software Principles
+Now that we have our DOI it is good practice to include a citation file in our Git repository to tell other people how to cite it. 
+There are a few common formats used for this, we will use the [https://citation-file-format.github.io/](Citation File Format) (CFF).
+
+Below is an example citation file, this will typically be called CITATION.cff. It is written in a YAML format with single line
+identifiers being followed by a : and multiline options being indented by two spaces and starting with a - symbol on the first line.
+If there need to be multiple instances of a multiline option (such as author) then each one will start with a new - symbol. 
+
+```yaml
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Bloggs
+    given-names: Jo
+    orcid: https://orcid.org/1234-5678-9101-1121
+title: "My Research Software"
+version: 2.0.1
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.1234
+date-released: 2024-06-01
+```
+
+Although we can write the CITATION.cff file by hand, an easier opton can be to use the [https://citation-file-format.github.io/cff-initializer-javascript/#/](cff-initalizer) 
+tool which will ask us a series of questions and then create a file for us to download and include. We can also use this tool to validate
+an existing file is correctly formatted. 
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Add a CITATION.cff to our code
+
+Let's go ahead and add a CITATION.cff file to our Git repository. We can either use the cff-initalizer or write it by hand.
+If it is written by hand then it is a good idea to validate it with the cff-initalizer. 
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
 ## Tracking Issues with Code
