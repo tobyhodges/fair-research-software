@@ -91,7 +91,7 @@ We will show different ways to test your code for different purposes. You need t
 
 ### Documentation
 
-Docuemtnation comes in many forms - from the names of variables and functions in your code, additional comments that explain some lines, up to a whole webiste full of documentation in function definitions and usage, tutorials and guides. You many not need as much documentation as a large commercial software product, but making your code Reusable relies on other people being able to understand what your code does and how to use it.
+Docuemtnation comes in many forms - from the names of variables and functions in your code, additional comments that explain some lines, up to a whole website full of documentation in function definitions and usage, tutorials and guides. You many not need as much documentation as a large commercial software product, but making your code Reusable relies on other people being able to understand what your code does and how to use it.
 
 ### Licences and citation
 
