@@ -383,13 +383,29 @@ Push your changes to your Github repository. Check the "About" section of your r
 
 
 
-## Relicensing 
+## Relicensing
 
-Is this too much detail for this course?
+meaning Release somebody else's code under a license of your choice
 
-* License compatibility
-* CC0/PD to anything
-* Permissive to Copyleft
+### License Compatibility
+
+Generally you can relicense code under more permissive licenses to less permissive ones. For example MIT to GPL. This is because nothing in the GPL contradicts anything in the MIT
+license, but you'll have to display both licenses. 
+
+Creative commons zero or public domain can be relicensed to any open source license. 
+
+Sometimes there are contradictory statements in licenses which prevent relicensing. For example Apache 2 has some provisions about software patents, you won't be able to relicense
+Apache 2 code under MIT since it doesn't have an equivalent patent clause.
+
+https://www.gnu.org/licenses/license-list.en.html
+
+
+### Getting agreement to relicense
+
+all the developers can agree to change the license of a product for future versions
+
+some projects require contributor license agreements
+
 
 ## Going commercial 
 * Dual licensing
@@ -570,16 +586,30 @@ git switch -c 02-another-bug
 ### Committing to a branch
 
 Once we have switched to a branch any further commits that are made will go to that branch. When we run a `git commit` command we'll see the name of the
-branch we're committing to in the output of `git commit`. Let's edit our bad code example and fix one of the many bugs in `bad-code.py` and commit it. 
+branch we're committing to in the output of `git commit`. Let's edit our code and fix the lack of default values bug that we entere into the issue tracker earlier on.
+
+Change your code from
+
+```python
+<call to pandas without checks identified in testing section>
+```
+
+to:
+
+```python
+<call to pandas with checks identified in testing section>
+```
+
+and now commit it.
 
 ```bash
-git commit -m "fixed bug" testfile
+git commit -m "fixed bug" eva_data_analysis.py
 ```
 
 In the output of `git commit -m` the first part of the output line will show the name of the branch we just made the commit to.
 
 ```output
-[bugfix 330a2b1] fixes missing values bug, closes #01 
+[01-missing-values-bug 330a2b1] fixes missing values bug, closes #01 
 ```
 
 If we now switch back to the `main` branch our new commit will no longer be there in the source file.
@@ -669,7 +699,16 @@ request that the changes on our fork are incorporated by the upstream project.
 
 ## Pull Request Exercise
 
-Q: add yourself to the authors or citation file and submit a pull request
+Q: Work in pairs for this exercise. Share the Github link of your repository with your partner. 
+If you have set your repository to private, you'll need to add them as a collaborator. Go to the settings page on your Github repository's webpage, click on Collaborators from 
+the left hand menu and then click the green "Add People" button and enter the Github username or email address of your partner. 
+They will get an email and an alert within Github to accept your invitation to work on this repository, without doing this they won't be able to access it.
+
+ - Now make a fork of your partners repository. 
+ - Edit the authors or citation file and add your name to it.
+ - Commit these changes to your fork
+ - Create a pull request back to the original repository
+ - Your partner will now receive your pull request and can review 
 
 :::::::::::::::: solution
 
