@@ -6,7 +6,7 @@ exercises: 30
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What tools are available to help us work in a FAIR way?
+- What tools are available to help us develop research software in a FAIR way?
 - How do the tools fit together to enable FAIR research?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
