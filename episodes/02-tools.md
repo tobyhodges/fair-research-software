@@ -19,7 +19,7 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-In this course we will introduce you to a group of tools and practices that are commonly used in research to help your work in a FAIR way. You should already have these tools installed on your machine following the setup instructions. Here we will give an overview of the tools, how they help you achieve the aims of FAIR research software and how they work together. In later episodes we will describe some tools in more detail.
+In this course we will introduce you to a group of tools and practices that are commonly used in research to help you develop software in a FAIR way. You should already have these tools installed on your machine following the setup instructions. Here we will give an overview of the tools, how they help you achieve the aims of FAIR research software and how they work together. In later episodes we will describe some tools in more detail.
 
 The table below summarises which tools and practices help to meet which parts of the FAIR software guidelines.
 
