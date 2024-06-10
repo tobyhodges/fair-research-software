@@ -40,7 +40,7 @@ The table below summarises which tools and practices help to meet which parts of
 ### Development environment
 
 One of the first choices we make when writing code is what tool to use to do the writing.
-You can use a simple text editor such as Notepad, a terminal based tool such as Vim or Emacs, or one of many Integrated Developmet Environments (IDEs) which give you the tools to write, run and debug your code and inspect the output all in one place. 
+You can use a simple text editor such as Notepad, a terminal based editor with syntax highlighting such as Vim or Emacs, or one of many Integrated Development Environments (IDEs) which give you the tools to write, run and debug your code and inspect the output all in one place. 
 (Note that you should not use word processing software such as Microsoft Word or Apple Pages to write code - these tools are designed to create nicely formatted text for humans to read, so they may add or change formatting, or insert invisible characters that the programming language can't interpret. 
 Try opening a Word document in Notepad to see an example.)
 
@@ -85,7 +85,7 @@ We will be using the Git version control system, which can be used through the c
 
 ### Testing
 
-Testing ensures that your program is correct. When you write code you often feel very confident that it is perfect, but when writing bigger codes or code that is meant to do complex operations it is very hard to consider all possible edge cases or notice every single typing mistake. Testing also gives other people confidence in your code as they can see an example of how it is meant to run and be assured that it does work correctly on their machine.
+Testing ensures that your code is correct and does what it is set out to do. When you write code you often feel very confident that it is perfect, but when writing bigger codes or code that is meant to do complex operations it is very hard to consider all possible edge cases or notice every single typing mistake. Testing also gives other people confidence in your code as they can see an example of how it is meant to run and be assured that it does work correctly on their machine.
 
 We will show different ways to test your code for different purposes. You need to think about what it is that is important to you and any future users or collaborators to decide what kind of testing is most useful for you.
 
