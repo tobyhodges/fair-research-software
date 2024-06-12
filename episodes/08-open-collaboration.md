@@ -385,42 +385,82 @@ Push your changes to your Github repository. Check the "About" section of your r
 
 ## Relicensing
 
-meaning Release somebody else's code under a license of your choice
-
 ### License Compatibility
 
-Generally you can relicense code under more permissive licenses to less permissive ones. For example MIT to GPL. This is because nothing in the GPL contradicts anything in the MIT
-license, but you'll have to display both licenses. 
+Generally you can relicense someone else's code under more permissive
+licenses to less permissive ones without their permission. For example
+you could relicense code from the MIT license to the GPL. This is because
+nothing in the GPL contradicts anything in the MIT license, but you'll
+still have to display the MIT license for the original code and the GPL
+for your modifications. 
 
-Creative commons zero or public domain can be relicensed to any open source license. 
+This doesn't work the other way though, you can't take code released
+under GPL and relicense it as MIT since MIT is a more liberal license
+that doesn't match the terms of the GPL.
 
-Sometimes there are contradictory statements in licenses which prevent relicensing. For example Apache 2 has some provisions about software patents, you won't be able to relicense
-Apache 2 code under MIT since it doesn't have an equivalent patent clause.
+Creative commons zero or public domain code can usually be relicensed to
+any open source license (or a commercial license for that matter). 
 
-https://www.gnu.org/licenses/license-list.en.html
+Sometimes there are contradictory statements in licenses which prevent
+relicensing.  For example Apache 2 has some provisions about software
+patents, you won't be able to relicense Apache 2 code under MIT since it
+doesn't have an equivalent patent clause.
 
+The GNU project has a
+[https://www.gnu.org/licenses/license-list.en.html](useful guide) to
+license compatibility on their website.
 
 ### Getting agreement to relicense
 
-all the developers can agree to change the license of a product for future versions
+Sometimes the developers of a program will wish to change the license it
+is distributed under. In order to do this they'll need the agreement of
+all the copyright holders of the program and typically this will mean
+everyone who contributed code to it. This is fine if you only have a
+handful of contributors to your project, but gets harder when the project
+starts to grow bigger.
 
-some projects require contributor license agreements
+Some projects work around this by having contributors agree to a
+"contributor license agreement". This will set out the terms under which
+the code is contributed to the project. It might include a copyright
+assignment or just granting certain rights to the project. This usually
+allows the company (or non-profit foundation as many open source projects
+are based on non-profit foundations) running the project to relicense the
+code in future and to take legal action against people who violate the
+license.
 
+### Going commercial
 
-## Going commercial 
-* Dual licensing
-* Contributor license agreements
-* Don't try to write your own
+It is possible to sell software that is licensed under an open source
+license commercially, you will need to supply the source code along with
+the binaries. However, under any license meeting the Open Source
+Definition or the Four Freedoms the person receiving the software can
+make copies and give (or sell) them to anybody else. 
+
+It is also possible to release software under a two licenses, one open
+source and one commercial. This has been done by a few open source
+projects who wish to sell the software to some customers (sometimes with
+extra custom modifications) and give it to others. 
+
+### Don't write your own license
+
+Unless you are a lawyer specialising in software license don't try to write your own license! A lot of lawyers with expertise in software licenses have spent a lot of time writing open source licenses, use one of the existing licenses that is well known and perhaps even tested in court.
+
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Relicensing exercise
 
-Q: somebody has code under license X, can they relicense under Y?
+Q: Find the webpage of a major open source project that is relevant to
+your research. See if you can find a contributor license agreement. Add a
+link to this in the chat/etherpad/hackmd. 
 
 :::::::::::::::: solution
 
-A: 
+A: Python - https://www.python.org/psf/contrib/    
+
+   Scipy - https://github.com/scipy/scipy/blob/main/CONTRIBUTING.rst
+
+   Matplotlib - https://matplotlib.org/stable/project/license.html
 
 :::::::::::::::::::::::::
 
