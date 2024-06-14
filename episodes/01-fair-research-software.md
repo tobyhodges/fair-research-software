@@ -1,4 +1,4 @@
-<img width="842" alt="astronaut-data-json-snippet" src="https://github.com/carpentries-incubator/fair-research-software/assets/631719/e5de146d-afff-402f-981c-507f3286a597">---
+---
 title: "FAIR research software"
 teaching: 45
 exercises: 15
