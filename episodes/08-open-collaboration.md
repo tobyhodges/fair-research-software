@@ -675,7 +675,7 @@ use the `git switch` or `git checkout` command followed by the branch name. For 
 git switch 01-missing-values-bug
 ```
 
-To create a branch and change to it in a single command we can use `git switch` with the `-c` option (or `git checkout` with the `-b` option).
+To create a branch and change to it in a single command we can use `git switch` with the `-c` option (or `git checkout` with the `-b` option, `git switch` is only found in more recent versions of Git).
 
 ```bash
 git switch -c 02-another-bug
@@ -684,7 +684,7 @@ git switch -c 02-another-bug
 ### Committing to a branch
 
 Once we have switched to a branch any further commits that are made will go to that branch. When we run a `git commit` command we'll see the name of the
-branch we're committing to in the output of `git commit`. Let's edit our code and fix the lack of default values bug that we entere into the issue tracker earlier on.
+branch we're committing to in the output of `git commit`. Let's edit our code and fix the lack of default values bug that we entered into the issue tracker earlier on.
 
 Change your code from
 
@@ -710,7 +710,7 @@ In the output of `git commit -m` the first part of the output line will show the
 [01-missing-values-bug 330a2b1] fixes missing values bug, closes #01 
 ```
 
-If we now switch back to the `main` branch our new commit will no longer be there in the source file.
+If we now switch back to the `main` branch our new commit will no longer be there in the source file or the output of `git log`.
 
 ```bash
 git switch main
@@ -759,10 +759,10 @@ git merge 01-missing-values-bug
 On larger projects we might need to have a code review process before changes are merged, especially before they are merged onto the main branch that might be what is being released
 as the public version of the software. Github has a process for this that it calls a "Pull Request", other Git services such as GitLab have different names for this, GitLab calls them "Merge Requests".
 Pull requests are where one developer requests that another merge code from a branch (or "pull" it from another copy of the repository). The person recveing the request then has the
-chance to review the code, write comments suggesting changes or even change the code themselves before merging it. It is also very common for automated checks of code to be run at a pull
+chance to review the code, write comments suggesting changes or even change the code themselves before merging it. It is also very common for automated checks of code to be run on a pull
 request to ensure the code is of good quality and is passing automated tests.
 
-As a simple example of a pull request we can now create a pull request for the changes we made on the bugfix branch and pushed to Github earlier on. The Github webpage for our repository
+As a simple example of a pull request we can now create a pull request for the changes we made on our `01-missing-values-bug` branch and pushed to Github earlier on. The Github webpage for our repository
 will now be saying something like "bugfix had recent pushes n minutes ago - Compare & Pull request". Click on this button and create a new pull request. 
 
 Give the pull request a title and write a brief description of it, then click the green "Create pull request" button. Github will then check if we can merge this pull request without
@@ -781,7 +781,7 @@ in a different way that doesn't make merges as obvious, this can make the histor
 projects that you contribute to might have their own rules about what kind of merge they will prefer. For the purposes of this exercise we'll stick with the default merge commit. 
 
 Go ahead and click on "Merge pull request", then "Confirm merge". The changes will now be merged together. Github gives us the option to delete the branch we were working on, since
-it's history is preserved in the main branch there isn't any reason to keep it in this case.
+it's history is preserved in the main branch there isn't any reason to keep it.
 
 ### Using Forks Instead of Branches
 
@@ -828,19 +828,26 @@ The content of this episode was inspired / heavily borrowed from the following r
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
-- Open source definition - https://opensource.org/osd/
-- What is free software - https://www.gnu.org/philosophy/free-sw.en.html
+- [https://opensource.org/osd/](Open source definition)
+- [https://www.gnu.org/philosophy/free-sw.en.html](GNU Project - What is free software?)
 
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Open source applies Copyright licenses permitting others to reuse and adapt your code or data.
-- Permissive licenses
-- Copyleft licenses
-- Creative commons
-- Open source software can be sold
-- Add license file to your repo, add a license to each file in case it gets detached
-- Unless you are a lawyer don't try to create your own license.
+- Permissive licenses allow code to be used in other products providing the copyright statement is displayed.
+- Copyleft licenses require the source code of any modifications to be released under a copyleft license.
+- Creative commons licenses are suitable for non-code files such as documentation and images.
+- Open source software can be sold, but you must supply the source code and the people you sell it to can give it away to somebody else.
+- Add license file to your repository and add a license to each file in case it gets detached.
+- Zenodo can be used to archive a Github repository and obtain a DOI for it.
+- We can include a CITATION file to tell people how to cite our code.
+- Github can track bugs or issues with a program.
+- Git branches can be used to allow multiple developers to work on the same part of a program in parallel.
+- The `git branch` command shows the list of branches and can create new branches.
+- The `git switch` command changes which branch we are working on.
+- The `git merge` command merges another branch into the current one.
+- Pull requests allow developers to work on their own branch/fork and then request other developers review their changes before they are merged.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
