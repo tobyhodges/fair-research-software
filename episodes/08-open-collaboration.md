@@ -11,15 +11,19 @@ exercises: 30
 - Understand your rights and obligations under the GPL, MIT, BSD, Apache 2 and Creative Commons licenses.
 - Recall that open source software can be sold and used in commercial products but that license declaration will need to be included and any other terms of the license adhered to.
 - Apply an appropriate open source license to a code repository that is shared on Github.
-- Understand how to write a citation file that can be included with code shared on Github.
+- Understand how to archive code to Zenodo and write a citation file that can be included with code shared on Github.
+- Understand how to track issues with Github.
+- Understand how to use Git branches for working on code in parallel and how to merge code back using pull requests.
+- Apply issue tracking, branching and pull requests together to fix bugs while allowing other developers to work on the same code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
--  What licensing information should I include with my code and data?
--  How do I share my code on Github?
--  How do I ensure my code is citable?
+- What licensing information should I include with my code and data?
+- How do I share my code on Github?
+- How do I ensure my code is citable?
+- How do I track bugs in Github repositories and ensure that multiple developers can work on the same files simultaneously?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
