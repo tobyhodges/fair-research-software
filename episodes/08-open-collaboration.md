@@ -55,11 +55,11 @@ registration or license agreement.
 ### Copyright and Open Source
 
 An Open Source license is a form of copyright license that gives anybody
-who receives a copy of a work to make additional copies and distribute
-them to anybody they like. It also allows anybody who receives a copy to
+who receives a copy of a work the right to make additional copies and distribute
+them to anybody else. It also allows anybody who receives a copy to
 make changes to the original work and to redistribute those. When applied
-to software this requires that the source code of the program is
-distributed alongside the executable program. 
+to software this usually requires that anybody supplying the executable binary of a program 
+must also supply the source code if requested.
 
 ### Copyright Statements
 
@@ -101,14 +101,14 @@ to cover media or distribution costs), nothing in the four freedoms and
 the software licenses that were designed around it prohibits charging for
 software. 
 
-In 1998 the Open Source Defintion was created in 1998 and says that
+In 1998 the Open Source Defintion was created and says that
 software which is open source must be distributed under the a license
 which allows the following:
 
 1. Free Redistribution must be allowed
 2. Source Code must be included
 3. Derived Works must be allowed
-4. Integrity of The Author’s Source Code - Restrict distribution of modifications if patches can be distributed instead. Must explicitly permit distribution of software built from modified source code. The license may require derived works to carry a different name or version number from the original software.
+4. Integrity of The Author’s Source Code - There can only be restrictions on the distribution of modifications if patches can be distributed instead. Must explicitly permit distribution of software built from modified source code. The license may require derived works to carry a different name or version number from the original software.
 5. No Discrimination Against Persons or Groups
 6. No Discrimination Against Fields of Endeavor
 7. Distribution of License - License applies to anyone the software is distributed to
@@ -147,7 +147,7 @@ with a declaration within the work. In the USA works produced by the
 federal government are automatically public domain. But in other
 countries works need to be registered as public domain. For this reason
 it isn't recommended to simply make work public domain if you want to
-release it for anybody in the world to freely use.
+release it for use across the world.
 
 If you really want to release code under something very similar to public domain then the [unlicense](https://unlicense.org/) could be for you. 
 It states that anybody is free to use the software in any way they like. In jursidictions with public domain, it "dedicates" the software into the public domain.
@@ -170,28 +170,30 @@ their closed source program.
 
 The MIT License is very simple and a very popular choice of license, it is only three paragraphs long. It
 states that:
-* Anybody receiving the software can copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software to anybody they like.
-* That they must include the license text and copyright statement when they redistribute it.
-* That there's no warranty included and you can't hold the authors liable for any problems or damages that might arise.
+
+ * Anybody receiving the software can copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software to anybody they like.
+ * That they must include the license text and copyright statement when they redistribute it.
+ * That there's no warranty included and you can't hold the authors liable for any problems or damages that might arise.
 
 #### BSD 
 
 The BSD license is very similar to the MIT license, but it has several
 variants. The oldest is the 4 clause version which requires:
 
-* Source code redistributions must include the copyright statement and license text.
-* Binary redistributions must include the copyright notice and license text in their documentation.
-* Any advertising for the software incorporating this software must include a statement saying that it includes software written by the author.
-* That the author doesn't endorse any derived products.
-* That the author doesn't provide a warranty.
+ * Source code redistributions must include the copyright statement and license text.
+ * Binary redistributions must include the copyright notice and license text in their documentation.
+ * Any advertising for the software incorporating this software must include a statement saying that it includes software written by the author.
+ * That the author doesn't endorse any derived products.
+ * That the author doesn't provide a warranty. (this is written in a separate section and isn't one of the 4 clauses)
 
-The acknowledgement clause caused some controversey and some people
+The acknowledgement/advertising clause caused some controversey and some people
 thought that it didn't meet the open source definition or comply with the
-four freedoms. To address this a new version of the license known as the
+four freedoms. It also became impractical and lead to very long statements where there were multiple authors of large 
+pieces of software.
+
+To address this a new version of the license known as the
 3 clause BSD license was created. This removed the acknowledgement
-clause. An even simpler 2 clause version was launched that simply
-required the copyright notices to be included in both source and binary
-forms and still included the text about there being no warranty. 
+clause. An even simpler 2 clause version removes the endorsement clause.
 
 #### Apache 2.0
 
@@ -225,8 +227,7 @@ The mostly commonly known copyleft license is the GNU Public License or
 GPL. There are several versions of the GPL available, the oldest GPL
 version 1.0, but this version was quickly replaced with version 2.0 and
 was rarely used. Version 2 is much more common and is used by a lot of
-popular software including the Linux Kernel and much of the GNU operating
-system that is key to many Linux systems. Compared with the permissive
+popular software including the Linux Kernel. Compared with the permissive
 license the GPL is quite a long license agreement and many of its clauses
 can be quite difficult for non-lawyers to fully understand.
 
@@ -236,8 +237,8 @@ The GPL version 3 was introduced to try and prevent patenting of software
 under the license and to require that people distributing GPL code on
 embedded systems must also give users the ability to rebuild that
 software and use it in their device. It is an even longer document than
-GPL version 2 and has proved controversial with some and hasn't been as
-widely adopted as version 2. 
+GPL version 2 and has proved controversial with some and despite coming out in 2007
+hasn't been adopted by many projects which used GPL version 2.
 
 #### LGPL
 
@@ -282,7 +283,7 @@ responsibilities are leaving less room for misunderstanding.
 
 #### Tools to help you choose
 
-The website [choosealicense.com](choosealicense.com) has some great
+The website [choosealicense.com](https://choosealicense.com) has some great
 resources to help you choose a license that's appropriate for your needs.
 
 ::::::::::::::::::::::::::::::::::::: challenge
@@ -295,7 +296,7 @@ research community and ensure that the code remains as open as possible
 to benefit the community. But you would also like to see it being
 integrated into as many different research codes and even commercial
 products as possible. What would be a good choice of license? (hint: You
-can use the [choosealicense.com](choosealicense.com) website to help you)
+can use the [choosealicense.com](https://choosealicense.com) website to help you)
 
 :::::::::::::::: solution
 
@@ -441,10 +442,6 @@ source and one commercial. This has been done by a few open source
 projects who wish to sell the software to some customers (sometimes with
 extra custom modifications) and give it to others. 
 
-### Don't write your own license
-
-Unless you are a lawyer specialising in software license don't try to write your own license! A lot of lawyers with expertise in software licenses have spent a lot of time writing open source licenses, use one of the existing licenses that is well known and perhaps even tested in court.
-
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -456,7 +453,9 @@ link to this in the chat/etherpad/hackmd.
 
 :::::::::::::::: solution
 
-A: Python - https://www.python.org/psf/contrib/    
+A: Here are a few examples:
+
+   Python - https://www.python.org/psf/contrib/
 
    Scipy - https://github.com/scipy/scipy/blob/main/CONTRIBUTING.rst
 
@@ -477,7 +476,7 @@ In addition to adding a license to our code there are several other important st
 By default repositories created on Github are private and only their creator can see them. 
 If we're going to be adding an open source license to our repository we probably want to make sure people can actually access it too! 
 
-Go to the Github webpage of your repository (https://github.com/<yourusername>/<yourrepsoitoryname>) and click on the Settings link near the top right corner. 
+Go to the Github webpage of your repository (`https://github.com/<yourusername>/<yourrepsoitoryname>`) and click on the Settings link near the top right corner. 
 Then scroll down to the bottom of the page and the "Danger Zone" settings. Click on "Change Visibility" and you should see a message saying "Change to public",
 if it says "Change to private" then the repository is already public. You'll then be asked to confirm that you want to make the repository public and agree 
 to the warning that the code will now be publicly visible. As a security measure you'll then have to put in your Github password.
@@ -492,14 +491,56 @@ permissions then we can transfer a repository from our personal namespace to the
 ### Archiving to Zenodo and Obtaining a DOI
 
 Zenodo is a data archive run by CERN. Anybody can upload datasets up to 50GB to it and receive a Digital Object Identifier (DOI). Zenodo's definition of a dataset is quite
-broad and can include code. This gives us a way to obtain a DOI for our code.
+broad and can include code. This gives us a way to obtain a DOI for our code. We can archive our Github repository to Zenodo by doing the following:
+
+ 1. Go to the [Zenodo Login page](https://zenodo.org/login) and choose to login with Github.
+ 2. Authorise Zenodo to connect to Github. 
+ 3. Go to the [Github page](https://zenodo.org/account/settings/github/) in your Zenodo account. This can be found in the pull down menu with your user name in the top right corner of the screen.
+ 4. You'll now have a list of all of your Github repositories. Next to each will be an "On" button. If you have created a new repository you might need to press the "Sync" button to update the list of repositories Zenodo knows about.
+ 5. Press the "On" button for the repository you want to archive. If this was successful you'll be told to refresh the page.
+ 6. The repository should now appear in the list of Enabled repositories at the top of the screen. But it doesn't yet have a DOI. To get one we have to make a release on Github. Click on the repository and then press the green button to create a release. This will take you to Github's release page where you'll be asked to give a title and description of the release. You will also have to create a tag, this is a way of having a friendly name for the version of some code in Git instead of using a long hash code. Often we'll create a sequential version number for each release of the software and have the tag name match this, for example v1.0 or just 1.0.
+ 7. If we now refresh the Zenodo page for this repository we will see that it has been assigned a DOI.
+
+The DOI doesn't just link to Github, Zenodo will have taken a copy of our repository at the point where we tagged the release. This means that even if we delete it from Github
+or even if Github were ever to go away or remove it, they'll still be a copy on Zenodo. Zenodo will allow people to download the entire repository as a single Zip file. 
+
+Zenodo will have actually created two DOIs for you. One represents the latest version of the software and will always represent the latest if you make more releases. 
+The other is specfic to the release you made and will always point to that version. We can see both of these by clicking on the DOI link in the Zenodo page for the repository.
+One of the things which is displayed on this page is a badge image that you can copy the link for and add to the README file in your Git repository so that people can find
+the Zenodo version of the repository. If you click on the DOI image in the Details section of the Zenodo page then you will be shown instructions for obtaining a link to the DOI badge in various formats including Markdown.
+Here is the badge for this repository: 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11869450.svg)](https://doi.org/10.5281/zenodo.11869450)
+
+
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Archive your repository to Zenodo
+
+ * Create an account on Zenodo that is linked to your Github account.
+ * Use Zenodo to create a release for your repository and obtain a DOI for it.
+ * Get the link to the DOI badge for your repository and add a link to this image to your README file in markdown format. Check that this is the DOI for the latest version and not the DOI for a specific version, if not you'll be updating this every time you make a release.
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::: callout
+
+## Problems with Github and Zenodo integration
+
+The integration between Github and Zenodo does not interact well with some browser privacy features and extensions. Firefox can be particularly problematic with this and 
+might open new tabs to login to Github and then give an error saying: `Your browser did something unexpected. Please try again. If the error continues, try disabling all browser extensions.`
+If this happens try disabling the extra privacy features/extensions or using another browser such as Chrome.
+
+:::
 
 ### Adding a citation file
 
 Now that we have our DOI it is good practice to include a citation file in our Git repository to tell other people how to cite it. 
-There are a few common formats used for this, we will use the [https://citation-file-format.github.io/](Citation File Format) (CFF).
+There are a few common formats used for this, we will use the [Citation File Format](https://citation-file-format.github.io/) (CFF).
 
-Below is an example citation file, this will typically be called CITATION.cff. It is written in a YAML format with single line
+Below is an example citation file, this will typically be called `CITATION.cff`. It is written in a YAML format with single line
 identifiers being followed by a : and multiline options being indented by two spaces and starting with a - symbol on the first line.
 If there need to be multiple instances of a multiline option (such as author) then each one will start with a new - symbol. 
 
@@ -522,6 +563,13 @@ Although we can write the CITATION.cff file by hand, an easier opton can be to u
 tool which will ask us a series of questions and then create a file for us to download and include. We can also use this tool to validate
 an existing file is correctly formatted. 
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Add a citation file to your repository
+
+Create a CITATION.cff file for your code and add it to your Github repository. Be sure to include the DOI you were allocated earlier on.
+
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ::: callout
@@ -531,25 +579,28 @@ an existing file is correctly formatted.
 We now have our code published online, licensed as open source, archived with Zenodo, accessible via a DOI and with a citation file to encourage people to cite it. 
 What else might we want to do in order to improve how findable, accessible or reusable it is?
 One further step we could take is to publish the code with a peer reviewed journal. Some traditional journals will accept software submissions, although these are usually
-as a supplementary material for a paper. There also journals which specialise in research software such as the [https://openresearchsoftware.metajnl.com/](Journal of Open Research Software),
-[https://joss.theoj.org/](The Jornal of Open Source Software) or [https://www.sciencedirect.com/journal/softwarex](SoftwareX). With these the submission will be the software
+as a supplementary material for a paper. There also journals which specialise in research software such as the [Journal of Open Research Software](https://openresearchsoftware.metajnl.com/),
+[The Jornal of Open Source Software](https://joss.theoj.org/) or [SoftwareX](https://www.sciencedirect.com/journal/softwarex). With these the submission will be the software
 itself and not a paper, although a short abstract or description of the software is often required.
 :::
 
 
 # Working with collaborators
 
-The strength of online collaboration tools such as Github doesn't just lie in the ability to share code, but also in the ability to track problems with that code and 
+The strength of online collaboration tools such as Github doesn't just lie in the ability to share code. They also allow us to track problems with that code, 
 for multiple developers to work on it independently and bring their changes together and to review those changes before they are accepted.
 
 ## Tracking Issues with Code
 
 A key feature of Github (as opposed to Git itself) is the issue tracker. This provides us a place to keep track of any problems or bugs in the code and to discuss them
 with other developers. Sometimes advanced users will also use issue trackers of public projects to report problems they are having (and sometimes this is misused by users
-seeking help using documented features of the program).
+seeking help using documented features of the program). 
 
 In the testing chapter earlier on we identified a bug in our code with missing values or date stamps failing (***DOUBLE CHECK THIS IS REALLY THE PROBLEM***). 
-Let's go ahead and create a new issue in our Github repository to describe this problem. A good issue description should include:
+Let's go ahead and create a new issue in our Github repository to describe this problem. We can find the issue tracker on the "Issues" tab in the top left of the Github 
+page for the repository. Click on this and then click on the green "New Issue" button on the right hand side of the screen. We can then enter a title and description of our issue.
+
+A good issue description should include:
 
  - What the problem is, including any error messages that are displayed.
  - What version of the software it occured with.
@@ -557,7 +608,7 @@ Let's go ahead and create a new issue in our Github repository to describe this 
  - Versions of any dependent libraries.
  - How to reproduce it.
 
-After the issue is created it will be assigned a sequential ID number. 
+After the issue is created it will be assigned a sequential ID number.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -568,6 +619,8 @@ Create a new issue in your repository's issue tracker by doing the following:
  - Go to the Github webpage for your code
  - Click on the Issues tab
  - Click on the "New issue" button
+ - Enter a title and description for the issue
+ - Click the "Submit Issue" button to create the issue.
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::
@@ -587,7 +640,7 @@ Once an issue is solved then it can be closed. This can be done either by pressi
 Branching is a feature of Git that allows two or more parallel streams of
 work. Commits can be made to one branch without interferring with
 another. Branches are commonly used as a way for one developer to work on
-a new feature or a bug fix while ohter developers work on other features.
+a new feature or a bug fix while other developers work on other features.
 When those new features or bug fixes are complete the branch will be merged back with the main (sometimes called master) branch.
 
 ### Creating a new Branch
@@ -596,7 +649,7 @@ New git branches are created with the `git branch` command. This should be follo
 the branch to create. It is common practice when the bug we are fixing has a corresponding issue to name the branch after the issue number and name. 
 For example we might call the branch `01-missing-values-bug` instead of something less descriptive like `bugfix`. 
 
-or example running:
+For example, the command:
 
 ```bash
 git branch 01-missing-values-bug
@@ -604,6 +657,11 @@ git branch 01-missing-values-bug
 
 will create a new branch called `01-missing-values-bug`. We can view the names of all the branches, by default there should be one branch called `main` or perhaps `master` and our new `01-missing-values-bug` branch.
 by running `git branch` with no parameters. This will put `*` next to the currently active branch.
+
+```bash
+git branch
+```
+
 
 ```output
   01-missing-values-bug
