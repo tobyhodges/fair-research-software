@@ -45,7 +45,7 @@ There are also some gotchas to consider when naming variables:
     For example, `thing1` is a valid variable name, but `1thing` isn't.
     (This behaviour may be different for other programming languages.)
 - In some programming languages, such as Python, variable names are case sensitive.
-  So `speed_of_light` and `Speed_Of_Light` will not be equivalent.
+  So `speed_of_light` and `Speed_Of_Light` will **not** be equivalent.
 - Programming languages often have global functions, such as `input`, which you may accidentally overwrite if you assign a variable with the same name.
   - Again in Python, you would actually reassign the `input` name and no longer be able to access the original `input` function if you used this as a variable name.
     So in this case opting for something like `input_data` would be preferable.
@@ -95,11 +95,15 @@ There are many ways to add comments to code, the most common of which is inline 
 Again, there are few hard and fast rules to using comments, just apply your best judgment.
 But here are a few things to keep in mind when commenting your code:
 
-- **Avoid using comments to explain _what_ your code does.** If your code is too complex for other programmers to understand, consider rewriting it for clarity rather than adding comments to explain it.
+- **Avoid using comments to explain _what_ your code does.**
+  If your code is too complex for other programmers to understand, consider rewriting it for clarity rather than adding comments to explain it.
 - Focus on the **_why_** and the **_how_**.
-- Make sure you're not reiterating something that your code already conveys on its own. Comments shouldn't echo your code.
-- Keep them short and concise. Large blocks of text quickly become unreadable and difficult to maintain.
-- Comments that contradict the code are worse than no comments. Always make a priority of keeping comments up-to-date when code changes.
+- Make sure you're not reiterating something that your code already conveys on its own.
+  Comments shouldn't echo your code.
+- Keep them short and concise.
+  Large blocks of text quickly become unreadable and difficult to maintain.
+- Comments that contradict the code are worse than no comments.
+  Always make a priority of keeping comments up-to-date when code changes.
 
 #### Examples of helpful vs. unhelpful comments
 
@@ -111,7 +115,7 @@ citytax = 1.01  # Assigns the float 1.01 to the variable 'citytax'
 specialtax = 1.01  # Assigns the float 1.01 to the variable 'specialtax'
 ```
 
-The comments in this code simply tells us what the code does, which is easy enough to figure out without the inline comments.
+The comments in this code simply tell us what the code does, which is easy enough to figure out without the inline comments.
 
 ##### Helpful:
 
@@ -223,14 +227,14 @@ While this isn't that many lines of code, thanks to using pandas inbuilt methods
 Docstrings are a very specific type of documentation that are provided within functions, and their cousins [classes](https://docs.python.org/3/tutorial/classes.html).
 A function docstring should explain what the isolated code is doing, what parameters the function needs (these are inputs) and what form they should take, what the function outputs (you may see words like 'returns' or 'yields' here), and errors (if any) that might be raised.
 
-Providing these docstrings helps improve code readability since it makes the code more transparent and helps understanding.
+Providing these docstrings helps improve code readability since it makes the code more transparent and aids understanding.
 Particularly, docstrings that provide information on the input and output of functions make it a quick process to reuse them in other parts of the code, without having to read the full function to understand what needs to be provided and what will be returned.
 
 Docstrings are another case where there are no hard and fast rules for writing them.
 Acceptable docstring formats can range from single- to multi-line.
 You can use your best judgment on how much documentation a particular function needs.
 
-**Example of a single-line docstring:**
+#### Example of a single-line docstring:
 
 ```python
 def add(x, y):
@@ -238,7 +242,7 @@ def add(x, y):
     return x + y
 ```
 
-**Example of a multi-line docstring:**
+#### Example of a multi-line docstring:
 
 ```python
 def add(x, y = 1.0):
@@ -272,7 +276,8 @@ Write a docstring for the `read_json_to_dataframe` function from the previous
 exercise. Things you may want to consider when writing your docstring are:
 
 - Describing what the function does
-- What kind of inputs does the function take? Are they required or optional?
+- What kind of inputs does the function take?
+  Are they required or optional?
   Do they have default values?
 - What output will the function produce?
 
