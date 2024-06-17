@@ -20,6 +20,22 @@ exercises: 30
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+In this episode, we will introduce the concept of readable code and consider how it can help create reusable scientific software and empower collaboration between researchers.
+
+### Motivation for code readability
+
+When someone writes code, they do so based on requirements that are likely to change in the future.
+Requirements change because software interacts with the real world, which is dynamic.
+When these requirements change, the developer (who is not necessarily the same person who wrote the original code) must implement the new requirements.
+They do this by reading the original code to understand the different abstractions, and identify what needs to change.
+Readable code facilitates the reading and understanding of the abstraction phases and, as a result, facilitates the evolution of the codebase.
+Readable code saves future developers' time and effort.
+
+In order to develop readable code, we should ask ourselves: "If I re-read this piece of code in fifteen days or one year, will I be able to understand what I have done and why?"
+Or even better: "If a new person who just joined the project reads my software, will they be able to understand what I have written here?"
+
+We will now learn about a few software best practices we can follow to help create readable code.
+
 ### Variable names
 
 Variables are the most common thing you will assign when coding, and it's really important that it is clear what each variable means in order to understand what the code is doing.
@@ -335,10 +351,24 @@ def read_json_to_dataframe(input_file):
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Summary
+
+During this episode, we have discussed the importance of code readability and explored some software engineering practices that help facilitate this.
+
+Code readability is important because it makes it simpler and quicker for a person (future you or a collaborator) to understand what purpose the code is serving, and therefore begin working on it or with it more easily, saving time and effort.
+
+Some best practices we have covered towards code readability include:
+
+- Variable naming practices for descriptive yet concise code
+- Inline comments to provide real-world context
+- Functions to isolate specific code sections for re-use
+- Docstrings for documenting functions to facilitate their re-use
+
 ## Further reading
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
+- ['Code Readability Matters' from the Guardian's engineering blog](https://www.theguardian.com/info/2019/jan/29/code-readability-matters)]
 - [PEP 8 Style Guide for Python](https://peps.python.org/pep-0008/#comments)
 - [Coursera: Inline commenting in Python](https://www.coursera.org/tutorials/python-comment#inline-commenting-in-python)
 - [Introducing Functions from Introduction to Python](https://introtopython.org/introducing_functions.html)
