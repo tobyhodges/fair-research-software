@@ -44,8 +44,8 @@ any links that you are not going to use.
 [git-commit-avoid]: https://wiki.openstack.org/wiki/GitCommitMessages#Things_to_avoid_when_creating_commits
 [9-rs-principles]: https://rsecon24.society-rse.org/about/research-software-development-principles/
 [9-rs-principles-keynote]: https://rsecon24.society-rse.org/about/research-software-development-principles/#neil-chue-hong-rse23-keynote
-[nesc-rs-support-courses]: https://esciencecenter-digital-skills.github.io/research-software-support/
-[nesc-rs-support-course-fair]: https://esciencecenter-digital-skills.github.io/research-software-support/modules/fairsoftware/info
+[nesc-rs-support-courses]: https://esciencecenter-digital-skills.github.io/software-support-essentials/
+[nesc-rs-support-course-fair]: https://esciencecenter-digital-skills.github.io/software-support-essentials/fairsoftware
 [good-enough-practices]: https://carpentries-lab.github.io/good-enough-practices/index.html
 [10-reproducible-research-things]: https://guereslib.github.io/ten-reproducible-research-things/
 [repro4everyone]: https://www.repro4everyone.org/
@@ -57,6 +57,19 @@ any links that you are not going to use.
 [osd-definition]: https://opensource.org/osd/
 [free-software]: https://www.gnu.org/philosophy/free-sw.en.html
 [codecheck]: https://codecheck.org.uk/project/
-[fair4rs-working-group/]: https://force11.org/groups/fair-4-research-software-fair4rs-working-group/
-[automated-assessment-fairrs]: https://zenodo.org/records/11096498
-[coderefinery]: https://coderefinery.org/lessons/
+[python-201-documentation]: https://python-tutorial.dev/201/tutorial/documentation.html
+[python-irsd-reuse-and-release]: https://carpentries-incubator.github.io/python-intermediate-development/42-software-reuse/index.html
+[coderefinery-documenting]:https://coderefinery.github.io/documentation/
+[grch-documenting]: https://goodresearch.dev/docs
+[art-of-readme]: https://github.com/hackergrrl/art-of-readme#bonus-the-readme-checklist
+[realpython-mkdocs]: https://realpython.com/python-project-documentation-with-mkdocs/
+[ssi-blog-docs]: https://www.software.ac.uk/blog/what-are-best-practices-research-software-documentation
+[mk-docs-deploy]: https://www.mkdocs.org/user-guide/deploying-your-docs/
+[turing-way-citation]: https://book.the-turing-way.org/communication/citable/citable-cff.html
+[cffinit-webapp]: https://bit.ly/cffinit
+[write-the-docs]: https://www.writethedocs.org/
+[the-good-docs-project]: https://www.thegooddocsproject.dev/
+[diataxis-framework]: https://diataxis.fr/
+
+
+
