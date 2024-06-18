@@ -86,9 +86,11 @@ Free Software Foundation and defined "Free Software" as software which
 which respects users freedoms by granting them four freedoms:
 
 1. The freedom to run the program as you wish, for any purpose.
-2. The freedom to study how the program works, and change it so it does your computing as you wish. Access to the source code is a precondition for this.
+2. The freedom to study how the program works, and change it so it does your computing as you wish. 
+Access to the source code is a precondition for this.
 3. The freedom to redistribute copies so you can help your neighbor.
-4. The freedom to distribute copies of your modified versions to others. By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.
+4. The freedom to distribute copies of your modified versions to others. By doing this you can give the whole 
+community a chance to benefit from your changes. Access to the source code is a precondition for this.
 
 The term "Free" in English often causes some confusion here as it can
 mean both "free as in freedom" and "free as in beer" (no charge). The
@@ -105,25 +107,28 @@ to cover media or distribution costs), nothing in the four freedoms and
 the software licenses that were designed around it prohibits charging for
 software. 
 
-In 1998 the Open Source Defintion was created and says that
+In 1998 the Open Source Definition was created and says that
 software which is open source must be distributed under the a license
 which allows the following:
 
 1. Free Redistribution must be allowed
 2. Source Code must be included
 3. Derived Works must be allowed
-4. Integrity of The Author’s Source Code - There can only be restrictions on the distribution of modifications if patches can be distributed instead. Must explicitly permit distribution of software built from modified source code. The license may require derived works to carry a different name or version number from the original software.
+4. Integrity of The Author’s Source Code - There can only be restrictions on the distribution of modifications if 
+patches can be distributed instead. Must explicitly permit distribution of software built from modified source code. 
+The license may require derived works to carry a different name or version number from the original software.
 5. No Discrimination Against Persons or Groups
 6. No Discrimination Against Fields of Endeavor
 7. Distribution of License - License applies to anyone the software is distributed to
 8. License Must Not Be Specific to a Product - the program can be extracted from other software it is distributed with
-9. License Must Not Restrict Other Software, e.g. can't insist it is only distribted alongside other open source software.
+9. License Must Not Restrict Other Software, e.g. can't insist it is only distributed alongside other open source 
+software.
 10. License Must Be Technology-Neutral
 
 ### Free and Open Source Software
 
 Because of these two terms many people use the term "Free and Open Source
-Sofware" (FOSS), while other's simple say "Open Source Software" and some
+Software" (FOSS), while other's simple say "Open Source Software" and some
 will say "Free Software". In reality these all have very similar meanings
 that will respect the four freedoms and the open source definition. For
 the rest of this chapter we will refer to "Open Source", but could have
@@ -143,18 +148,20 @@ Public Domain. This is a concept in some countries (but not all) where a
 work is not protected by copyright. These works have no license from
 their creators and typically anybody can do anything they like with them.
 Copyrights are usually time limited to between 50 and 100 years and in
-many jurisidictions when Copyrights expire the works enter the public
+many jurisdictions when Copyrights expire the works enter the public
 domain. It is for this reason that the works of Charles Dickens are no
 longer subject to Copyright and anybody can make a copy of them. In some
-jursidicitons works can be placed straight into the public domain simply
+jurisdictions works can be placed straight into the public domain simply
 with a declaration within the work. In the USA works produced by the
 federal government are automatically public domain. But in other
 countries works need to be registered as public domain. For this reason
 it isn't recommended to simply make work public domain if you want to
 release it for use across the world.
 
-If you really want to release code under something very similar to public domain then the [unlicense](https://unlicense.org/) could be for you. 
-It states that anybody is free to use the software in any way they like. In jursidictions with public domain, it "dedicates" the software into the public domain.
+If you really want to release code under something very similar to public domain then the 
+[unlicense](https://unlicense.org/) could be for you. 
+It states that anybody is free to use the software in any way they like. In jurisdictions with public domain, 
+it "dedicates" the software into the public domain.
 
 
 ### Permissive Licenses
@@ -166,7 +173,7 @@ authors. But they do not require any modifications to release their
 source code alongside the executable program. This allows software
 released under these licenses to be made into part of a closed source
 program and all the creator of the closed source program needs to do is
-dsitribute the license text and perhaps some crediting statement to the
+distribute the license text and perhaps some crediting statement to the
 original author, but they don't need to redistribute the source code with
 their closed source program.
 
@@ -175,7 +182,8 @@ their closed source program.
 The MIT License is very simple and a very popular choice of license, it is only three paragraphs long. It
 states that:
 
- * Anybody receiving the software can copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software to anybody they like.
+ * Anybody receiving the software can copy, modify, merge, publish, distribute, sublicense, and/or sell copies of 
+the software to anybody they like.
  * That they must include the license text and copyright statement when they redistribute it.
  * That there's no warranty included and you can't hold the authors liable for any problems or damages that might arise.
 
@@ -186,11 +194,12 @@ variants. The oldest is the 4 clause version which requires:
 
  * Source code redistributions must include the copyright statement and license text.
  * Binary redistributions must include the copyright notice and license text in their documentation.
- * Any advertising for the software incorporating this software must include a statement saying that it includes software written by the author.
+ * Any advertising for the software incorporating this software must include a statement saying that it includes 
+software written by the author.
  * That the author doesn't endorse any derived products.
  * That the author doesn't provide a warranty. (this is written in a separate section and isn't one of the 4 clauses)
 
-The acknowledgement/advertising clause caused some controversey and some people
+The acknowledgement/advertising clause caused some controversy and some people
 thought that it didn't meet the open source definition or comply with the
 four freedoms. It also became impractical and lead to very long statements where there were multiple authors of large 
 pieces of software.
@@ -220,7 +229,7 @@ license. If there are any incompatible terms in the other license then
 this can prevent the two codebases from being combined. 
 
 The main advantage of copyleft licenses is that anybody else who
-incorpoates the code into another product must also keep that product
+incorporates the code into another product must also keep that product
 open and this makes it harder for it to be subsumed into a commercial
 product that doesn't contribute improvements to the code back to the
 community which created it.
@@ -260,19 +269,21 @@ user's own computers, but on remote web servers that they connect to
 through their web browser. When a user run's one of these web
 applications they aren't receiving a copy of the software's executable
 binaries, but are interacting with them over a computer network such as
-the internet. This doesn't meet the GPL's definition of dsitributing the
-binaries, so even if the web applicaiton is under the GPL, the person
+the internet. This doesn't meet the GPL's definition of distributing the
+binaries, so even if the web application is under the GPL, the person
 running the server has no obligation to supply users with the source
 code. The Affero GPL or AGPL requires that people running web
 applications licensed under the AGPL make the source code available to
-the users of those web applicaitons. 
+the users of those web applications. 
 
 ### Choosing a License
 
 When choosing a license for your code there's a number of things you might want to consider:
 
-* Do you want to ensure that anybody modifying and redistributing your code will release the source code of their changes?
-* Or would you prefer to ensure the least number of restrictions and that your code will be used as widely as possible? Even if that means it might end up in commercial products that don't release their source code.
+* Do you want to ensure that anybody modifying and redistributing your code will release the source code of their 
+changes?
+* Or would you prefer to ensure the least number of restrictions and that your code will be used as 
+widely as possible? Even if that means it might end up in commercial products that don't release their source code.
 * Are you reusing code which is already under an open source license? What obligations do you have under those licenses? 
 * Is there a preferred license in your research community?
 
@@ -379,10 +390,12 @@ reason for choosing it.
 
 ## Adding a license to your code
 
-Add a LICENSE file containing the full text of the license you've chosen to the Git repository of your code from previous chapters of this lesson.
+Add a LICENSE file containing the full text of the license you've chosen to the Git repository of your code from 
+previous chapters of this lesson.
 Add a copyright statement, the name of the license you are using and a
 mention of the LICENSE file to at least one source file  
-Push your changes to your Github repository. Check the "About" section of your repository's Github webpage and see if there is now a license listed.
+Push your changes to your Github repository. Check the "About" section of your repository's Github webpage and see 
+if there is now a license listed.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -407,7 +420,7 @@ Creative commons zero or public domain code can usually be relicensed to
 any open source license (or a commercial license for that matter). 
 
 Sometimes there are contradictory statements in licenses which prevent
-relicensing.  For example Apache 2 has some provisions about software
+relicensing. For example Apache 2 has some provisions about software
 patents, you won't be able to relicense Apache 2 code under MIT since it
 doesn't have an equivalent patent clause.
 
@@ -478,40 +491,69 @@ In addition to adding a license to our code there are several other important st
 ### Making the code public
 
 By default repositories created on Github are private and only their creator can see them. 
-If we're going to be adding an open source license to our repository we probably want to make sure people can actually access it too! 
+If we're going to be adding an open source license to our repository we probably want to make sure people can actually 
+access it too! 
 
-Go to the Github webpage of your repository (`https://github.com/<yourusername>/<yourrepsoitoryname>`) and click on the Settings link near the top right corner. 
-Then scroll down to the bottom of the page and the "Danger Zone" settings. Click on "Change Visibility" and you should see a message saying "Change to public",
-if it says "Change to private" then the repository is already public. You'll then be asked to confirm that you want to make the repository public and agree 
-to the warning that the code will now be publicly visible. As a security measure you'll then have to put in your Github password.
+Go to the Github webpage of your repository (`https://github.com/<yourusername>/<yourrepsoitoryname>`) and click on 
+the Settings link near the top right corner. 
+Then scroll down to the bottom of the page and the "Danger Zone" settings. Click on "Change Visibility" and you 
+should see a message saying "Change to public",
+if it says "Change to private" then the repository is already public. You'll then be asked to confirm that you want 
+to make the repository public and agree 
+to the warning that the code will now be publicly visible. As a security measure you'll then have to put in your 
+Github password.
 
 ### Transferring to an organisation
 
-Currently our repository is under the Github "namespace" of our individual user. This is ok for individual projects where we are the sole or at least main author,
-but for bigger and more complex projects it is common to use a Github organisation named after our project. If we are a member of an organisation and have the appropriate
-permissions then we can transfer a repository from our personal namespace to the organisation's. This can be done with another option in the "Danger Zone" settings, the
-"Transfer ownership" button. Pressing this will then prompt us as to which organisation we want to transfer the repository to. 
+Currently our repository is under the Github "namespace" of our individual user. This is ok for individual projects 
+where we are the sole or at least main author,
+but for bigger and more complex projects it is common to use a Github organisation named after our project. 
+If we are a member of an organisation and have the appropriate
+permissions then we can transfer a repository from our personal namespace to the organisation's. 
+This can be done with another option in the "Danger Zone" settings, the
+"Transfer ownership" button. Pressing this will then prompt us as to which organisation we want to transfer 
+the repository to. 
 
 ### Archiving to Zenodo and Obtaining a DOI
 
-Zenodo is a data archive run by CERN. Anybody can upload datasets up to 50GB to it and receive a Digital Object Identifier (DOI). Zenodo's definition of a dataset is quite
-broad and can include code. This gives us a way to obtain a DOI for our code. We can archive our Github repository to Zenodo by doing the following:
+Zenodo is a data archive run by CERN. Anybody can upload datasets up to 50GB to it and receive a 
+Digital Object Identifier (DOI). 
+Zenodo's definition of a dataset is quite broad and can include code. 
+This gives us a way to obtain a DOI for our code. We can archive our Github repository to Zenodo by doing the following:
 
  1. Go to the [Zenodo Login page](https://zenodo.org/login) and choose to login with Github.
  2. Authorise Zenodo to connect to Github. 
- 3. Go to the [Github page](https://zenodo.org/account/settings/github/) in your Zenodo account. This can be found in the pull down menu with your user name in the top right corner of the screen.
- 4. You'll now have a list of all of your Github repositories. Next to each will be an "On" button. If you have created a new repository you might need to press the "Sync" button to update the list of repositories Zenodo knows about.
+ 3. Go to the [Github page](https://zenodo.org/account/settings/github/) in your Zenodo account. 
+This can be found in the pull down menu with your user name in the top right corner of the screen.
+ 4. You'll now have a list of all of your Github repositories. Next to each will be an "On" button. 
+If you have created a new repository you might need to press the "Sync" button to update the list of repositories 
+Zenodo knows about.
  5. Press the "On" button for the repository you want to archive. If this was successful you'll be told to refresh the page.
- 6. The repository should now appear in the list of Enabled repositories at the top of the screen. But it doesn't yet have a DOI. To get one we have to make a release on Github. Click on the repository and then press the green button to create a release. This will take you to Github's release page where you'll be asked to give a title and description of the release. You will also have to create a tag, this is a way of having a friendly name for the version of some code in Git instead of using a long hash code. Often we'll create a sequential version number for each release of the software and have the tag name match this, for example v1.0 or just 1.0.
+ 6. The repository should now appear in the list of Enabled repositories at the top of the screen.
+But it doesn't yet have a DOI. To get one we have to make a release on Github. Click on the repository and 
+then press the green button to create a release. 
+This will take you to Github's release page where you'll be asked to give a title and description of the release. 
+You will also have to create a tag, this is a way of having a friendly name for the version of some code in 
+Git instead of using a long hash code. 
+Often we'll create a sequential version number for each release of the software and have the tag name match this, 
+for example v1.0 or just 1.0.
  7. If we now refresh the Zenodo page for this repository we will see that it has been assigned a DOI.
 
-The DOI doesn't just link to Github, Zenodo will have taken a copy of our repository at the point where we tagged the release. This means that even if we delete it from Github
-or even if Github were ever to go away or remove it, they'll still be a copy on Zenodo. Zenodo will allow people to download the entire repository as a single Zip file. 
+The DOI doesn't just link to Github, Zenodo will have taken a copy of our repository at the point 
+where we tagged the release. 
+This means that even if we delete it from Github or even if Github were ever to go away or remove it, 
+they'll still be a copy on Zenodo. 
+Zenodo will allow people to download the entire repository as a single Zip file. 
 
-Zenodo will have actually created two DOIs for you. One represents the latest version of the software and will always represent the latest if you make more releases. 
-The other is specfic to the release you made and will always point to that version. We can see both of these by clicking on the DOI link in the Zenodo page for the repository.
-One of the things which is displayed on this page is a badge image that you can copy the link for and add to the README file in your Git repository so that people can find
-the Zenodo version of the repository. If you click on the DOI image in the Details section of the Zenodo page then you will be shown instructions for obtaining a link to the DOI badge in various formats including Markdown.
+Zenodo will have actually created two DOIs for you. One represents the latest version of the software and 
+will always represent the latest if you make more releases. 
+The other is specfic to the release you made and will always point to that version. 
+We can see both of these by clicking on the DOI link in the Zenodo page for the repository.
+One of the things which is displayed on this page is a badge image that you can copy the link for and add to the 
+README file in your Git repository so that people can find
+the Zenodo version of the repository. 
+If you click on the DOI image in the Details section of the Zenodo page then you will be shown instructions for 
+obtaining a link to the DOI badge in various formats including Markdown.
 Here is the badge for this repository: 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11869450.svg)](https://doi.org/10.5281/zenodo.11869450)
@@ -524,7 +566,9 @@ Here is the badge for this repository:
 
  * Create an account on Zenodo that is linked to your Github account.
  * Use Zenodo to create a release for your repository and obtain a DOI for it.
- * Get the link to the DOI badge for your repository and add a link to this image to your README file in markdown format. Check that this is the DOI for the latest version and not the DOI for a specific version, if not you'll be updating this every time you make a release.
+ * Get the link to the DOI badge for your repository and add a link to this image to your README file in 
+Markdown format. Check that this is the DOI for the latest version and not the DOI for a specific version, 
+if not you'll be updating this every time you make a release.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -533,8 +577,10 @@ Here is the badge for this repository:
 
 ## Problems with Github and Zenodo integration
 
-The integration between Github and Zenodo does not interact well with some browser privacy features and extensions. Firefox can be particularly problematic with this and 
-might open new tabs to login to Github and then give an error saying: `Your browser did something unexpected. Please try again. If the error continues, try disabling all browser extensions.`
+The integration between Github and Zenodo does not interact well with some browser privacy features and extensions. 
+Firefox can be particularly problematic with this and 
+might open new tabs to login to Github and then give an error saying: `Your browser did something unexpected. 
+Please try again. If the error continues, try disabling all browser extensions.`
 If this happens try disabling the extra privacy features/extensions or using another browser such as Chrome.
 
 :::
@@ -544,9 +590,12 @@ If this happens try disabling the extra privacy features/extensions or using ano
 Now that we have our DOI it is good practice to include a citation file in our Git repository to tell other people how to cite it. 
 There are a few common formats used for this, we will use the [Citation File Format](https://citation-file-format.github.io/) (CFF).
 
-Below is an example citation file, this will typically be called `CITATION.cff`. It is written in a YAML format with single line
-identifiers being followed by a : and multiline options being indented by two spaces and starting with a - symbol on the first line.
-If there need to be multiple instances of a multiline option (such as author) then each one will start with a new - symbol. 
+Below is an example citation file, this will typically be called `CITATION.cff`. 
+It is written in a YAML format with single line
+identifiers being followed by a : and multiline options being indented by two spaces and 
+starting with a - symbol on the first line.
+If there need to be multiple instances of a multiline option (such as author) then each one 
+will start with a new - symbol. 
 
 ```yaml
 cff-version: 1.2.0
@@ -832,9 +881,11 @@ The content of this episode was inspired / heavily borrowed from the following r
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
-- [https://opensource.org/osd/](Open source definition)
-- [https://www.gnu.org/philosophy/free-sw.en.html](GNU Project - What is free software?)
+- Licencing and citation episodes from the [Software Carpentry's Git Novice lesson][swc-git-lesson]
+- [Open source definition][osd-definition], by the [Open Source Initiative][osd]
+- [What is free software?][free-software]
 
+Also check the [full reference set](learners/reference.md#litref) for the course.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 

@@ -49,3 +49,8 @@ docs/
 # translation temp files
 po/*~
 
+# JetBrains project files
+.idea/
+
+# Mac OS files
+.DS_Store
