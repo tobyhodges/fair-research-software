@@ -70,6 +70,15 @@ any links that you are not going to use.
 [write-the-docs]: https://www.writethedocs.org/
 [the-good-docs-project]: https://www.thegooddocsproject.dev/
 [diataxis-framework]: https://diataxis.fr/
-
+[python-novice-defensive]: https://swcarpentry.github.io/python-novice-inflammation/10-defensive.html
+[incubator-python-testing]: https://carpentries-incubator.github.io/python-testing/
+[ssi-blog-python-check]: https://www.software.ac.uk/blog/using-python-double-check-your-work
+[python-201-testing]:  https://python-tutorial.dev/201/tutorial/testing.html
+[python-irsd-automated-testing]: https://carpentries-incubator.github.io/python-intermediate-development/21-automatically-testing-software/index.html
+[york-tdd-blog]: https://researchcodingclub.github.io/2019-11-13-test-driven-development/
+[eser-testing]: https://imperialcollegelondon.github.io/grad_school_software_engineering_course/l2-02-testing_writing_unit_tests/index.html
+[grch-testing]: https://goodresearch.dev/testing.html
+[coderefinery-testing]: https://coderefinery.github.io/testing/
+[ds-testing]: https://ubc-dsci.github.io/reproducible-and-trustworthy-workflows-for-data-science/materials/lectures/06-intro-to-testing-code.html
 
 
