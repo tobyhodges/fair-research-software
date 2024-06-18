@@ -62,7 +62,7 @@ There are also some gotchas to consider when naming variables:
     (This behaviour may be different for other programming languages.)
 - In some programming languages, such as Python, variable names are case sensitive.
   So `speed_of_light` and `Speed_Of_Light` will **not** be equivalent.
-- Programming languages often have global functions, such as `input`, which you may accidentally overwrite if you assign a variable with the same name.
+- Programming languages often have global pre-built functions, such as `input`, which you may accidentally overwrite if you assign a variable with the same name.
   - Again in Python, you would actually reassign the `input` name and no longer be able to access the original `input` function if you used this as a variable name.
     So in this case opting for something like `input_data` would be preferable.
     (This behaviour may be explicitly disallowed in other programming languages.)
@@ -72,7 +72,7 @@ There are also some gotchas to consider when naming variables:
 ### Give a descriptive name to a variable
 
 Below we have a variable called `var` being set the value of 9.81.
-`var` is not a very descriptive name here as it doesn't tell us what 9.81 means, yet it is a very common constant in orbital mechanics!
+`var` is not a very descriptive name here as it doesn't tell us what 9.81 means, yet it is a very common constant in physics!
 Go online and find out which constant 9.81 relates to and suggest a new name for this variable.
 
 Hint: the units are _metres per second squared_!
@@ -191,7 +191,7 @@ It can then be called multiple times with different inputs throughout a codebase
 
 Breaking up code into functions in this manner benefits readability since the smaller sections are easier to read and understand.
 Since functions can be reused, codebases naturally begin to follow the [Don't Repeat Yourself principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) which prevents software from becoming overly long and confusing.
-The software also becomes easier to maintain because, if the code needs to change, it only needs updating in one place instead of many.
+The software also becomes easier to maintain because, if the code encapsulated in a function needs to change, it only needs updating in one place instead of many.
 As we will learn in a future episode, testing code also becomes simpler when code is written in functions.
 Each function can be individually checked to ensure it is doing what is intended, which improves confidence in the software as a whole.
 
@@ -240,11 +240,11 @@ While this isn't that many lines of code, thanks to using pandas inbuilt methods
 
 ### Docstrings
 
-Docstrings are a very specific type of documentation that are provided within functions, and their cousins [classes](https://docs.python.org/3/tutorial/classes.html).
+Docstrings are a specific type of documentation that are provided within functions, and [classes](https://docs.python.org/3/tutorial/classes.html) too.
 A function docstring should explain what the isolated code is doing, what parameters the function needs (these are inputs) and what form they should take, what the function outputs (you may see words like 'returns' or 'yields' here), and errors (if any) that might be raised.
 
-Providing these docstrings helps improve code readability since it makes the code more transparent and aids understanding.
-Particularly, docstrings that provide information on the input and output of functions make it a quick process to reuse them in other parts of the code, without having to read the full function to understand what needs to be provided and what will be returned.
+Providing these docstrings helps improve code readability since it makes the function code more transparent and aids understanding.
+Particularly, docstrings that provide information on the input and output of functions makes it easier to reuse them in other parts of the code, without having to read the full function to understand what needs to be provided and what will be returned.
 
 Docstrings are another case where there are no hard and fast rules for writing them.
 Acceptable docstring formats can range from single- to multi-line.
@@ -281,7 +281,7 @@ def add(x, y = 1.0):
 Some projects may have their own guidelines on how to write docstrings, such as [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard).
 If you are contributing code to a wider project or community, try to follow the guidelines and standards they provide for codestyle.
 
-As your code grows and becomes more complex, the docstrings begin to map the technical reference that documents the design and operation of your codebase.
+As your code grows and becomes more complex, the docstrings can form the content of a reference guide allowing developers to quickly look up how to use the APIs, functions, and classes defined in your codebase.
 Hence, it is common to find tools that will automatically extract docstrings from your code and generate a website where people can learn about your code without downloading/installing and reading the code files - such as [sphinx for Python](https://www.sphinx-doc.org/en/master/tutorial/automatic-doc-generation.html).
 
 :::::::::::::::::::::::::::::::::::::: challenge
@@ -299,7 +299,7 @@ exercise. Things you may want to consider when writing your docstring are:
 
 Hint: Python docstrings are defined by enclosing the text with `"""` above and
 below. This text is also indented to the same level as the code defined beneath
-it.
+it, which is 4 whitespaces.
 
 :::::::::::::: solution
 
@@ -355,7 +355,7 @@ def read_json_to_dataframe(input_file):
 
 During this episode, we have discussed the importance of code readability and explored some software engineering practices that help facilitate this.
 
-Code readability is important because it makes it simpler and quicker for a person (future you or a collaborator) to understand what purpose the code is serving, and therefore begin working on it or with it more easily, saving time and effort.
+Code readability is important because it makes it simpler and quicker for a person (future you or a collaborator) to understand what purpose the code is serving, and therefore begin contributing to it more easily, saving time and effort.
 
 Some best practices we have covered towards code readability include:
 
@@ -368,7 +368,7 @@ Some best practices we have covered towards code readability include:
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
-- ['Code Readability Matters' from the Guardian's engineering blog](https://www.theguardian.com/info/2019/jan/29/code-readability-matters)]
+- ['Code Readability Matters' from the Guardian's engineering blog](https://www.theguardian.com/info/2019/jan/29/code-readability-matters)
 - [PEP 8 Style Guide for Python](https://peps.python.org/pep-0008/#comments)
 - [Coursera: Inline commenting in Python](https://www.coursera.org/tutorials/python-comment#inline-commenting-in-python)
 - [Introducing Functions from Introduction to Python](https://introtopython.org/introducing_functions.html)
