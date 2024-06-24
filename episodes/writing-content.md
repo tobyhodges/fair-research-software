@@ -42,7 +42,7 @@ associated with the lessons. They appear in the "Instructor View"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge 
+:::  challenge 
 
 ## Challenge 1: Can you do it?
 
@@ -52,7 +52,7 @@ What is the output of this command?
 paste("This", "new", "lesson", "looks", "good")
 ```
 
-:::::::::::::::::::::::: solution 
+:::  solution 
 
 ## Output
  
@@ -65,7 +65,7 @@ paste("This", "new", "lesson", "looks", "good")
 
 ## Challenge 2: how do you nest solutions within challenge blocks?
 
-:::::::::::::::::::::::: solution 
+:::  solution 
 
 You can add a line with at least three colons and a `solution` tag.
 
