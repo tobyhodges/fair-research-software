@@ -183,7 +183,7 @@ Checking Git and GitHub:
 10. `git config --list`
 11. `ssh -T git@github.com`
 
-Checking VSCode:
+Checking VS Code:
 12. `code`
 13. `code --list-extensions`
 
