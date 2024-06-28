@@ -82,5 +82,6 @@ any links that you are not going to use.
 [grch-testing]: https://goodresearch.dev/testing.html
 [coderefinery-testing]: https://coderefinery.github.io/testing/
 [ds-testing]: https://ubc-dsci.github.io/reproducible-and-trustworthy-workflows-for-data-science/materials/lectures/06-intro-to-testing-code.html
+[mkdocs-org]: https://www.mkdocs.org/
 
 
