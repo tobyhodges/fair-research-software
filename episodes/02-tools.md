@@ -226,8 +226,9 @@ project sharing and collaboration platform GitHub.
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
-- ...
-- ...
+- [Python IDEs and Code Editors (Guide) - Real Python][real-python-ides]
+- [The Zenodo data repository][zenodo-org]
+- [The Fair Cookbook - Depositing to generic repositories - Zenodo use case][fair-cookbook-zenodo]
 
 Also check the [full reference set](learners/reference.md#litref) for the course.
 
