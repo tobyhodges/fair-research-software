@@ -386,6 +386,10 @@ Discuss in pairs or small groups.
 1. ![Example Diff 1](fig/ex-diff-1.png)
 2. ![Example Diff 2](fig/ex-diff-2.png)
 
+
+To find out more about how to generate `diffs`, you can read the [Git documentation](git-diff-docs) or the [Tracking Changes episode][swc-git-lesson-track]
+from the [Software Carpentry Version control with Git lesson][swc-git-lesson].
+
 :::  solution
 
 ### Solution
