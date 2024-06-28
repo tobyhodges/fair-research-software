@@ -97,7 +97,7 @@ software engineering is used to aid solving research problems.
 Scientific transparency and rigor are key factors in research. Scientific methodology and 
 results need to be published openly and replicated and confirmed by several independent parties.
 However, research papers often lack the full details required for independent replication. 
-Many attempts at replicating the results of well-known scientific studies have failed in a variety of disciplines [reference].
+Many attempts at replicating the results of scientific studies have failed in a variety of disciplines ranging from  psychology ([The Open Science Collaboration (2015)][replication-crisis-osc]) to cancer sciences ([Errington et al (2021)][replication-crisis-errington]).
 This is called [**the reproducibility crisis**][reproducibility-crisis] - an ongoing 
 methodological crisis in which the results of many scientific studies are difficult or impossible to reproduce.
 
