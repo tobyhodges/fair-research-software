@@ -232,8 +232,7 @@ project sharing and collaboration platform GitHub.
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
-- ...
-- ...
+- [CodeRefinery: Reproducible research - preparing code to be usable by you and others in the future][coderefinery-tools]
 
 Also check the [full reference set](learners/reference.md#litref) for the course.
 
