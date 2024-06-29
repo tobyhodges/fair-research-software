@@ -257,7 +257,7 @@ hasn't been adopted by many projects which used GPL version 2.
 #### LGPL
 
 In order to allow library software to be combined with ("linked" in
-technical terms) other software that's not GPLed, a special version of the
+technical terms) other software that is not GPLed, a special version of the
 GPL called the LGPL (L for "Lesser" or "Library") was created. This is
 used by many popular libraries including the GNU C library that is linked
 to every C program compiled on a Linux system.  
