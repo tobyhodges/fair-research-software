@@ -426,8 +426,7 @@ patents, you won't be able to relicense Apache 2 code under MIT since it
 doesn't have an equivalent patent clause.
 
 The GNU project has a
-[https://www.gnu.org/licenses/license-list.en.html](useful guide) to
-license compatibility on their website.
+[useful guide][gnu-license-guide] to license compatibility on their website.
 
 ### Getting agreement to relicense
 
