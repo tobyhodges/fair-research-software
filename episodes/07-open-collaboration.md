@@ -465,8 +465,10 @@ extra custom modifications) and give it to others.
 ## Relicensing exercise
 
 Q: Find the webpage of a major open source project that is relevant to
-your research. See if you can find a contributor license agreement. Add a
+your research or the `Spacewalks` codebase we have been working with. See if you can find a contributor license agreement. Add a
 link to this in the chat/etherpad/hackmd. 
+
+Hint: try looking at Matplotlib - https://matplotlib.org which Spacewalks uses for plotting
 
 :::  solution
 
