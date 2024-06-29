@@ -860,7 +860,7 @@ the left hand menu and then click the green "Add People" button and enter the Gi
 They will get an email and an alert within Github to accept your invitation to work on this repository, without doing this they won't be able to access it.
 
  - Now make a fork of your partners repository. 
- - Edit the authors or citation file and add your name to it.
+ - Edit the CITATION.cff file and add your name to it.
  - Commit these changes to your fork
  - Create a pull request back to the original repository
  - Your partner will now receive your pull request and can review 
