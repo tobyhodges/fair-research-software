@@ -556,11 +556,13 @@ README file in your Git repository so that people can find
 the Zenodo version of the repository. 
 If you click on the DOI image in the Details section of the Zenodo page then you will be shown instructions for 
 obtaining a link to the DOI badge in various formats including Markdown.
-Here is the badge for this repository: 
+Here is the badge for this repository and the corresponding Markdown: 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11869450.svg)](https://doi.org/10.5281/zenodo.11869450)
 
-
+```text
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11869450.svg)](https://doi.org/10.5281/zenodo.11869450)
+```
 
 :::  challenge
 
