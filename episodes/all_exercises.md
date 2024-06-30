@@ -382,7 +382,7 @@ after the new tests have been added?
 ## Episode: Documenting code
 
 ### Exercise: 
-## READMEs and The FAIR Principles
+### READMEs and The FAIR Principles
 
 Think about the question below. Your instructors may ask you to share your answer in a shared notes document and/or discuss them with other participants.
 
@@ -402,17 +402,14 @@ Here are some of the major sections you might find in a typical README. Which ar
 
 
 ### Exercise: 
-## Spacewalks README
+### Spacewalks README
 
 Extend the README for Spacewalks by adding
 a. Installation instructions
 b. A simple usage example
 
-## Episode: My Software
-## Episode: Spacetravel
-
 ### Exercise: 
-## `Spacewalks` Software Citation
+### `Spacewalks` Software Citation
 
 Write a software citation file for the Spacewalks code and add it to the root
 folder of our project.
@@ -423,10 +420,8 @@ folder of our project.
 + Use the commit hash of your most recent commit to indicate the code
   version your citation file refers to.
 
-## Episode: Spacewalks
-
 ### Exercise: 
-## A `Spacewalks` How-to Guide
+### A Spacewalks How-to Guide
 
 a. Review the Diataxis guidance page on writing a How-to guide. Identify
 three features of an effective how-to guide.
