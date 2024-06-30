@@ -95,7 +95,7 @@ A README file acts as a “landing page” for your code repository on GitHub an
 
 ::::::::::::::::::::::::::::::::::::: discussion 
 
-## READMEs and The FAIR Principles
+### READMEs and The FAIR Principles
 
 Think about the question below. Your instructors may ask you to share your answer in a shared notes document and/or discuss them with other participants.
 
@@ -208,7 +208,7 @@ installed. You will also need the following libraries (minimum versions in brack
 
 :::  challenge
 
-## Spacewalks README
+### Spacewalks README
 
 Extend the README for Spacewalks by adding
 a. Installation instructions
@@ -345,7 +345,7 @@ Further information is available from the [Turing Way's guide to software citati
 
 :::  challenge
 
-## `Spacewalks` Software Citation
+### `Spacewalks` Software Citation
 
 Write a software citation file for the Spacewalks code and add it to the root
 folder of our project.
@@ -406,7 +406,7 @@ consider how we will distribute our documentation to our users.
 
 Options include:
 
-+ A `docs/` folder of markdown files.
++ A `docs/` folder of Markdown files.
 + Adding a Wiki to our repository.
 + Creating a set of web pages for our documentation using a static site generator for our documentation such
   as Sphinx or MkDocs
@@ -417,7 +417,7 @@ automatically generate a reference manual from any docstrings we have added to o
 
 ### MkDocs
 
-Let's setup MkDocs
+Let's setup MkDocs.
 
 ```bash
 python -m pip install mkdocs
@@ -430,11 +430,11 @@ Let's check that MkDocs has been setup correctly:
 python -m pip list
 ```
 
-Let's create a mkdocs.yml file to configure mkdocs
+Let's create a `mkdocs.yml` file to configure `mkdocs` package installation.
 
 ```bash
 # In ~/Desktop/spacewalks
-$ touch  mkdocs.yml
+touch mkdocs.yml
 ```
 
 ```yaml
@@ -453,7 +453,7 @@ nav:
 
 Note font-false is for GDPR compliance
 
-Let's add support of mkdocstrings this will allow us to automatically our docstrings
+Let's add support for `mkdocstrings` - this will allow us to automatically our docstrings
 into our documentation using a simple tag.
 
 ```yaml
@@ -474,14 +474,15 @@ plugins:
 
 ```
 
-Let's populate our reference file with the docstrings we created
+Let's populate our reference file with the docstrings we created.
 
 ```markdown
 This file documents the key functions in the Spacewalks tool.
 It is provided as a reference manual.
 ```
 
-Let's build our documentation
+Let's build our documentation.
+
 ```bash
 mkdocs build
 ```
@@ -561,7 +562,7 @@ provide a range of resources including documentation templates to help to help u
 
 :::  challenge
 
-## A `Spacewalks` How-to Guide
+### A Spacewalks How-to Guide
 
 a. Review the Diataxis guidance page on writing a How-to guide. Identify
 three features of an effective how-to guide.

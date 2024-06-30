@@ -37,7 +37,7 @@ any links that you are not going to use.
 [awesome-research-software-registries]: https://github.com/NLeSC/awesome-research-software-registries
 [beginner-guide-reproducible-research]: https://esajournals.onlinelibrary.wiley.com/doi/10.1002/bes2.1801
 [swc-git-lesson]: https://swcarpentry.github.io/git-novice
-[swc-git-lession-track]: https://swcarpentry.github.io/git-novice/04-changes.html
+[swc-git-lesson-track]: https://swcarpentry.github.io/git-novice/04-changes.html
 [git-diff-docs]: https://git-scm.com/docs/git-diff
 [ttw-guide-version-control]: https://the-turing-way.netlify.app/reproducible-research/vcs
 [how-git-works]: https://www.pluralsight.com/courses/how-git-works
@@ -93,3 +93,8 @@ any links that you are not going to use.
 [zenodo-org]: https://zenodo.org/
 [coderefinery-tools]: https://coderefinery.github.io/reproducible-research/
 [google-doc-string]: https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
+[google-copilot]: https://github.com/features/copilot
+[codegen]: https://www.codegen.com/
+[ai-pair-programmers]: https://www.codium.ai/glossary/pair-programming/#:~:text=Ethics%20in%20AI%20Pair%20Programming
+[ethics-ucl]: https://www.ucl.ac.uk/research-ethics/sites/research_ethics/files/research_using_apps_guidance_1.2.docx
+[ethics-software]: https://medium.com/@zoyajahidshaikh/ethical-considerations-in-software-development-e1e4ebad2670
