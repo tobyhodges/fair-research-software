@@ -92,3 +92,4 @@ any links that you are not going to use.
 [fair-cookbook-zenodo]: https://faircookbook.elixir-europe.org/content/recipes/findability/zenodo-deposition.html
 [zenodo-org]: https://zenodo.org/
 [coderefinery-tools]: https://coderefinery.github.io/reproducible-research/
+[google-doc-string]: https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html

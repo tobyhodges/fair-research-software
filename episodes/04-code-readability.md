@@ -335,19 +335,16 @@ def add(x, y):
 #### Example of a multi-line docstring:
 
 ``` python
-def add(x, y = 1.0):
+def add(x, y=1.0):
     """
-    Add two integers together
+    Adds two numbers together.
 
-    Parameters
-    ----------
-    x         : A number to be included in the addition
-    y (float) : A float number to be included in the addition. Default: 1.0.
+    Args:
+        x: A number to be included in the addition.
+        y (float, optional): A float number to be included in the addition. Defaults to 1.0.
 
-    Returns
-    -------
-    float : The sum of x and y. This value will be a float type since y takes
-            float type.
+    Returns:
+        float: The sum of x and y.
     """
     return x + y
 ```
@@ -389,23 +386,20 @@ def read_json_to_dataframe(input_file):
     return eva_df
 ```
 
-Using [numpy's docstring convention](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard), the docstring may look more like this:
+Using [Google's docstring convention](google-doc-string), the docstring may look more like this:
 
 ``` python
 def read_json_to_dataframe(input_file):
     """
-    Ingest data from a JSON file into a pandas DataFrame.
+    Read the data from a JSON file into a Pandas dataframe.
+    Clean the data by removing any incomplete rows and sort by date
 
-    Parameters
-    ----------
-    input_file
-        The path to the target JSON file
-    
-    Returns
-    -------
-    eva_df : pandas.DataFrame
-        The cleaned and sorted data as a dataframe structure
-    """
+    Args:
+        input_file_ (str): The path to the JSON file.
+
+    Returns:
+         eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
+    """        
     print(f'Reading JSON file {input_file}')
     eva_df = pd.read_json(input_file, 
                           convert_dates=['date'])
