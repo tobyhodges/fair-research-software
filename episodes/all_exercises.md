@@ -150,10 +150,25 @@ var = 9.81
 ```
 
 
+### Exercise: 
+Let's apply this to `eva_data_analysis.py`.
+
+a. Edit the code as follows to use descriptive variable names:
+
+    - Change data_f to input_file
+    - Change data_t to output_file
+    - Change g_file to graph_file
+    - Change data to eva_df
+    
+b. Commit your changes to your repository. Remember to use an informative commit message.
+
+
+
 ### Exercise: ### Add some comments to a code block
 
-Examine lines 7 to 20 of the `bad-code.py` script.
-Add (or change!) as many inline comments as you think is required to help yourself and others understand what that code block is doing.
+a. Examine `eva_data_analysis.py`.
+Add as many inline comments as you think is required to help yourself and others understand what that code is doing.
+b. Commit your changes to your repository. Remember to use an informative commit message.
 
 Hint: Inline comments in Python are denoted by a `#` symbol.
 
@@ -161,6 +176,7 @@ Hint: Inline comments in Python are denoted by a `#` symbol.
 ### Exercise: ### Create a function
 
 Below is a function that reads in a JSON file into a dataframe structure using the [`pandas` library](https://pandas.pydata.org/) - but the code is out of order!
+
 Reorder the lines of code within the function so that the JSON file is read in using the `read_json` method, any incomplete rows are *dropped*, the values are *sorted* by date, and then the cleaned dataframe is *returned*.
 There is also a `print` statement that will display which file is being read in on the command line for verification.
 
@@ -408,6 +424,7 @@ Extend the README for Spacewalks by adding
 a. Installation instructions
 b. A simple usage example
 
+
 ### Exercise: 
 ### `Spacewalks` Software Citation
 
@@ -419,6 +436,7 @@ folder of our project.
 + Add at least two key words under the "Keywords" section
 + Use the commit hash of your most recent commit to indicate the code
   version your citation file refers to.
+
 
 ### Exercise: 
 ### A Spacewalks How-to Guide
