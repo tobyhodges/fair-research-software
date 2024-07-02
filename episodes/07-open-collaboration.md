@@ -592,8 +592,7 @@ If this happens try disabling the extra privacy features/extensions or using ano
 ### Adding a DOI and ORCID to the citation file
 
 Now that we have our DOI it is good practice to include this information
-in our citation file. In the previous part of this lesson we created a
-`CITATION.cff` file with information about how to cite our code.
+in our citation file. In the previous part of this lesson we created a `CITATION.cff` file with information about how to cite our code.
 There are a few fields we can add that are related to the DOI, one of these is the `version` file which covers the version number of the software.
 We can add a DOI to the file in the `identifiers` section with a type of `doi` and `value` with the URL.
 Optionally we can also add a `date-released` field indicating the date we released this software.
