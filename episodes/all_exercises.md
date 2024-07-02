@@ -424,6 +424,8 @@ Extend the README for Spacewalks by adding
 a. Installation instructions
 b. A simple usage example
 
+## Episode: My Software
+## Episode: Spacetravel
 
 ### Exercise: 
 ### `Spacewalks` Software Citation
@@ -437,6 +439,7 @@ folder of our project.
 + Use the commit hash of your most recent commit to indicate the code
   version your citation file refers to.
 
+## Episode: Spacewalks
 
 ### Exercise: 
 ### A Spacewalks How-to Guide
