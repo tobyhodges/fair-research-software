@@ -593,24 +593,30 @@ If this happens try disabling the extra privacy features/extensions or using ano
 
 Now that we have our DOI it is good practice to include this information
 in our citation file. In the previous part of this lesson we created a
-`CITATION.cff` file with information about how to cite our code. 
-We can add a DOI to this in the `identifiers` section of the file with a type of `doi` and `value` with the URL.
+`CITATION.cff` file with information about how to cite our code.
+There are a few fields we can add that are related to the DOI, one of these is the `version` file which covers the version number of the software.
+We can add a DOI to the file in the `identifiers` section with a type of `doi` and `value` with the URL.
 Optionally we can also add a `date-released` field indicating the date we released this software.
-Another optional field we can add is the `orcid` field.
+Here is an updated version of our CITATION.cff from the previous episode with a version number, DOI and release date added.
 
- ```yaml
-cff-version: 1.2.0 
-message: "If you use this software, please cite it as below."
-authors:   
-  - family-names: Bloggs     
-    given-names: Jo    
-orcid: https://orcid.org/1234-5678-9101-1121 
-title: "My Research Software" 
-version: 2.0.1 
-identifiers:   
-  - type: doi     
-    value: 10.5281/zenodo.1234 
-date-released: 2024-06-01 ```
+```yaml
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+cff-version: 1.2.0
+title: My Software
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Anne
+    family-names: Researcher
+version: 1.0.1
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.1234
+date-released: 2024-06-01
+```
 
 :::  challenge
 
