@@ -7,7 +7,7 @@ The course can be delivered over 2 full or 4 half days.
 
 The course is visible at: https://carpentries-incubator.github.io/fair-research-software/ and uses [the Markdown lesson template][workbench-markdown-template] from the [The Carpentries Workbench lesson infrastructure][sandpaper-documentation].
 
-🚧 **This curriculum is currently under development.** 🚧
+The accompanying [slides](./slides) to aid with course delivery are also available.
 
 Launch this lesson on mybinder! 👉 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/carpentries-incubator/fair-research-software/HEAD?urlpath=rstudio)
 
