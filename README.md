@@ -7,6 +7,9 @@ The course can be delivered over 2 full or 4 half days.
 
 The course is visible at: https://carpentries-incubator.github.io/fair-research-software/ and uses [the Markdown lesson template][workbench-markdown-template] from the [The Carpentries Workbench lesson infrastructure][sandpaper-documentation].
 
+The course uses the [software repository with code that does not follow FAIR research software practices](https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-good) 
+and gradually improves it over the course of the lesson.
+
 The accompanying [slides](https://docs.google.com/presentation/d/1KahaD7EGxJWXaCDKWAG6Wva4a9zo9Lp-qFyyofgM0vw/edit?usp=sharing) to aid with course delivery are also available.
 
 Launch this lesson on mybinder! 👉 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/carpentries-incubator/fair-research-software/HEAD?urlpath=rstudio)
