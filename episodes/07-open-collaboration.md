@@ -808,7 +808,7 @@ git switch main
 Now we're back on the main branch we can go ahead and merge the changes from the bugfix branch:
 
 ```bash
-git merge 01-extra-brakcet-bug
+git merge 01-extra-bracket-bug
 ```
 
 ## Pull Requests
@@ -819,7 +819,7 @@ Pull requests are where one developer requests that another merge code from a br
 chance to review the code, write comments suggesting changes or even change the code themselves before merging it. It is also very common for automated checks of code to be run on a pull
 request to ensure the code is of good quality and is passing automated tests.
 
-As a simple example of a pull request, we can now create a pull request for the changes we made on our `01-extra-brakcet-bug` branch and pushed to Github earlier on. The Github webpage for our repository
+As a simple example of a pull request, we can now create a pull request for the changes we made on our `01-extra-bracket-bug` branch and pushed to Github earlier on. The Github webpage for our repository
 will now be saying something like "bugfix had recent pushes n minutes ago - Compare & Pull request". Click on this button and create a new pull request. 
 
 Give the pull request a title and write a brief description of it, then click the green "Create pull request" button. Github will then check if we can merge this pull request without
