@@ -658,7 +658,7 @@ page for the repository. Click on this and then click on the green "New Issue" b
 A good issue description should include:
 
  - What the problem is, including any error messages that are displayed.
- - What version of the software it occured with.
+ - What version of the software it occurred with.
  - Any relevant information about the system running it, for example the operating system being used.
  - Versions of any dependent libraries.
  - How to reproduce it.
@@ -693,7 +693,7 @@ Once an issue is solved then it can be closed. This can be done either by pressi
 ## Working in Parallel with Git Branches
 
 Branching is a feature of Git that allows two or more parallel streams of
-work. Commits can be made to one branch without interferring with
+work. Commits can be made to one branch without interfering with
 another. Branches are commonly used as a way for one developer to work on
 a new feature or a bug fix while other developers work on other features.
 When those new features or bug fixes are complete, the branch will be merged back with the main (sometimes called master) branch.
