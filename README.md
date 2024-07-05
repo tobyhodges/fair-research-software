@@ -27,7 +27,8 @@ and is a good opportunity for a new contributor to get involved.
 To learn more about how this lesson site is built and how you can edit the pages, see [the Introduction to The Carpentries Workbench][sandpaper-docs].
 
 ## Author(s)
-The list of authors of the lesson is available in [AUTHORS.md](AUTHORS.md).
+
+The list of authors of the course is available in [CITATION.cff](CITATION.cff).
 
 ## Maintainer(s)
 
@@ -37,7 +38,7 @@ Current Maintainers of this lesson are:
 
 ## Citation
 
-Citation info coming soon...
+Information on how to cite this work is available in [CITATION.cff](CITATION.cff).
 
 ## Contact
 
