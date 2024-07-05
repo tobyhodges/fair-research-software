@@ -28,7 +28,7 @@ To learn more about how this lesson site is built and how you can edit the pages
 
 ## Author(s)
 
-The list of authors of the course is available in [CITATION.cff](CITATION.cff).
+The list of authors of the course is available in [CITATION.cff](CITATION.cff) (also in [AUTHORS.md](AUTHORS.md)).
 
 ## Maintainer(s)
 
