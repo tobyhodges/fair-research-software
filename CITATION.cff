@@ -1,0 +1,34 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Tools and Practices for FAIR Research Software Course
+message: >-
+  Course material for "Tools and Practices for FAIR Research
+  Software" training
+type: software
+authors:
+  - given-names: Sarah
+    family-names: Gibson
+  - given-names: Sarah
+    family-names: Jaffa
+  - given-names: 'Kamilla '
+    family-names: Kopec-Harding
+  - given-names: Aleksandra
+    family-names: Nenadic
+  - given-names: Colin
+    family-names: Sauze
+repository-code: >-
+  https://github.com/carpentries-incubator/fair-research-software/tree/main
+url: >-
+  https://carpentries-incubator.github.io/fair-research-software/index.html
+abstract: >-
+  A  course on tools and practices for developing and
+  collaborating on open, sustainable and FAIR (Findable,
+  Accessible, Interoperable and Reusable) research software.
+keywords:
+  - FAIR
+  - research software
+  - good practices
+  - Carpentries Incubator
+license: CC-BY-4.0
