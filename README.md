@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/699755985.svg)](https://zenodo.org/doi/10.5281/zenodo.12666088)
+
 # Tools and Practices for FAIR Research Software Course
 
 This short course is teaching tools and practices for producing and sharing quality, 
