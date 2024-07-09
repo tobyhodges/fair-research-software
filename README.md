@@ -26,7 +26,7 @@ This indicates that the issue does not require in-depth knowledge of the project
 and lesson infrastructure,
 and is a good opportunity for a new contributor to get involved.
 
-To learn more about how this lesson site is built and how you can edit the pages, see [the Introduction to The Carpentries Workbench][sandpaper-docs].
+To learn more about how this lesson site is built and how you can edit the pages, see [the Introduction to The Carpentries Workbench](https://carpentries.github.io/sandpaper-docs/).
 
 ## Author(s)
 
