@@ -40,7 +40,9 @@ Current Maintainers of this lesson are:
 
 ## Citation
 
-Information on how to cite this work is available in [CITATION.cff](CITATION.cff).
+Aleksandra Nenadic, Kamilla Kopec-Harding, & S Jaffa. (2024). carpentries-incubator/astronaut-data-analysis-fair: alpha-July-2024 (alpha-July-2024). Zenodo. https://doi.org/10.5281/zenodo.12698943
+
+Information on how to cite this work is also available in [CITATION.cff](CITATION.cff).
 
 ## Contact
 
