@@ -18,6 +18,10 @@ authors:
     family-names: Nenadic
   - given-names: Colin
     family-names: Sauze
+identifiers:
+  - type: url
+    value: 'https://zenodo.org/records/12666089'
+    description: Zenodo DOI record for alpha-July-2024 release
 repository-code: >-
   https://github.com/carpentries-incubator/fair-research-software/tree/main
 url: >-
@@ -32,3 +36,5 @@ keywords:
   - good practices
   - Carpentries Incubator
 license: CC-BY-4.0
+version: alpha-July-2024
+date-released: '2024-07-09'
