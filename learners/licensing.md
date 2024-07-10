@@ -230,3 +230,156 @@ better understanding of what their rights and responsibilities are leaving less 
 The website [choosealicense.com](https://choosealicense.com) has some great
 resources to help you choose a license that is appropriate for your needs.
 ::::::
+
+### Creative Commons Licenses
+
+All of the licenses we've discussed so far are really only intended for
+source code. They are not suitable for documentation, datasets, drawings,
+logos, music, maps etc. To solve this problem there are the Creative
+Commons licenses, which are expressly built for anything other than
+source code. Creative commons has now gone through four versions with the
+latest being version 4.0, generally you should use version 4.0 as this is
+more suited for use around the world
+
+There are several different types of Creative Commons licenses:
+
+#### CC0
+
+Creative Commons Zero or CC0 is the simplest license and is effectively a
+public domain license, but is suitable for use world wide.
+
+####  Attribution (BY)
+
+All the Creative Commons licenses apart from CC0 require you to give
+credit to the original creator. This is very similar to what is required
+by all of the permissive code licenses.
+
+#### Share-a-like (SA)
+
+Share-a-Like Creative Commons licenses requires any derivative works to
+be released under a compatible creative commons license. This is very
+similar to the way that Copyleft licenses work.
+
+#### Non-Commercial (NC)
+
+Non-commercial creative commons licenses only allow for non-commercial
+use of the work.
+
+
+#### No Derivatives (ND)
+
+No derivatives creative commons licenses require that users of the work
+can't redistribute modified versions of it.
+
+#### Combinations of Creative Commons Licenses
+
+Under these rules the following combinations are possible:
+
+* CC-BY - Creative Commons Attribution
+* CC-BY-SA - Creative Commons Attribution Share Alike
+* CC-BY-NC - Creative Commons Non Commercial
+* CC-BY-NC-SA - Creative Commons Non Commercial Share Alike
+* CC BY-ND - Creative Commons No Derivatives
+* CC BY-ND-NC - Creative Commons No Derivatives Non Commercial
+
+::::::  challenge
+
+### Select a license
+
+You have created a library of functions that are commonly used by
+researchers in your field. You would like to share this code with your
+research community and ensure that the code remains as open as possible
+to benefit the community. But you would also like to see it being
+integrated into as many different research codes and even commercial
+products as possible. What would be a good choice of license?
+
+:::  solution
+
+The LGPL license could be a good choice for library code. It can be
+linked to software that is not GPL licensed but any modifications to the
+library itself must be released under a GPL compatible license.
+
+:::
+::::::
+
+
+## Relicensing
+
+### License compatibility
+
+Generally, you can relicense someone else's code under more permissive
+licenses to less permissive ones without their permission. For example,
+you could relicense code from the MIT license to the GPL. This is because
+nothing in the GPL contradicts anything in the MIT license, but you will
+still have to display the MIT license for the original code and the GPL
+for your modifications.
+
+This does not work the other way though, you cannot take code released
+under GPL and relicense it as MIT since MIT is a more liberal license
+that does not match the terms of the GPL.
+
+Creative Commons Zero (CC0) or public domain code can usually be relicensed to
+any open source license (or a commercial license for that matter).
+
+Sometimes there are contradictory statements in licenses which prevent
+relicensing. For example, the Apache 2.0 license has some provisions about software
+patents, you will not be able to relicense the Apache 2.0 code under the 
+MIT license since the latter does not have an equivalent patent clause.
+
+The GNU project has a
+[useful guide on license compatibility][gnu-license-guide].
+
+### Getting agreement to relicense
+
+Sometimes the developers of a program will wish to change the license it
+is distributed under. In order to do this they'll need the agreement of
+all the copyright holders of the program and typically this will mean
+everyone who contributed code to it. This is fine if you only have a
+handful of contributors to your project, but gets harder when the project
+starts to grow bigger.
+
+Some projects work around this by having contributors agree to a
+"contributor license agreement". This will set out the terms under which
+the code is contributed to the project. It might include a copyright
+assignment or just granting certain rights to the project. This usually
+allows the company (or non-profit foundation as many open source projects
+are based on non-profit foundations) running the project to relicense the
+code in future and to take legal action against people who violate the
+license.
+
+### Going commercial
+
+It is possible to sell software that is licensed under an open source
+license commercially, you will need to supply the source code along with
+the binaries. However, under any license meeting the Open Source
+Definition or the Four Freedoms the person receiving the software can
+make copies and give (or sell) them to anybody else.
+
+It is also possible to release software under two licenses, one open
+source and one commercial. This has been done by a few open source
+projects who wish to sell the software to some customers (sometimes with
+extra custom modifications) and give it to others.
+
+
+::::::  challenge
+
+### Relicensing code
+
+Find the website of a major open source project that is relevant to your research or the `Spacewalks` codebase we have 
+been working with. 
+See if you can find a contributor license agreement - share a link to this in the shared notes document.
+
+::: hint
+Hint: try looking at Matplotlib - https://matplotlib.org which Spacewalks uses for plotting.
+:::
+
+:::  solution
+
+Here are a few examples:
+
+- Python - https://www.python.org/psf/contrib/
+- Scipy - https://github.com/scipy/scipy/blob/main/CONTRIBUTING.rst
+- Matplotlib - https://matplotlib.org/stable/project/license.html
+
+:::
+::::::
