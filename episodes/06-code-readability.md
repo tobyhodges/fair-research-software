@@ -21,8 +21,6 @@ After completing this episode, participants should be able to:
 In this episode, we will introduce the concept of readable code and consider how it can help create reusable 
 scientific software and empower collaboration between researchers.
 
-## Motivation for code readability
-
 When someone writes code, they do so based on requirements that are likely to change in the future.
 Requirements change because software interacts with the real world, which is dynamic.
 When these requirements change, the developer (who is not necessarily the same person who wrote the original code) 
@@ -39,12 +37,13 @@ what I have written here?"
 
 We will now learn about a few software best practices we can follow to help create readable code.
 
-## Code layout
+## Place `import` statements at the top
 
-Our script currently places import statements throughout the code. 
-Python convention is to place all import statements at the top of the script so that dependant libraries 
-are clearly visible and not buried inside the code (even though there are standard ways of describing dependencies - 
-e.g. using `requirements.txt` file). 
+Let's have a look our code - the first thing we may notice is that our script currently places import statements 
+throughout the code.
+Conventionally, all import statements are placed at the top of the script so that dependant libraries
+are clearly visible and not buried inside the code (even though there are standard ways of describing dependencies -
+e.g. using `requirements.txt` file).
 This will help readability (accessibility) and reusability of our code.
 
 Our code after the modification should look like the following.
@@ -123,132 +122,7 @@ git commit -m "Move import statements to the top of the script"
  1 file changed, 4 insertions(+), 4 deletions(-)
 ```
 
-## Standard libraries
-
-Our script currently reads the data line-by-line from the JSON data file and uses custom code to manipulate
-the data. 
-Variables of interest are stored in lists but there are more suitable data structures (e.g. data frames) 
-to store data in our case. 
-By choosing custom code over standard and well-tested libraries, we are making our code less readable and understandable
-and more error-prone.
-
-The main functionality of our code can be rewritten as follows using `Pandas` library to load and manipulate the data 
-in data frames.
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-
-data_f = './eva-data.json'
-data_t = './eva-data.csv'
-g_file = './cumulative_eva_graph.png'
-
-data = pd.read_json(data_f, convert_dates=['date'])
-data['eva'] = data['eva'].astype(float)
-data.dropna(axis=0, inplace=True)
-data.sort_values('date', inplace=True)
-
-data.to_csv(data_t, index=False)
-
-data['duration_hours'] = data['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
-data['cumulative_time'] = data['duration_hours'].cumsum()
-plt.plot(data['date'], data['cumulative_time'], 'ko-')
-plt.xlabel('Year')
-plt.ylabel('Total time spent in space to date (hours)')
-plt.tight_layout()
-plt.savefig(g_file)
-plt.show()
-
-```
-
-We should replace the existing code in our Python script `eva_data_analysis.py` with the above code and commit the 
-changes. Remember to use an informative commit message.
-
-```bash
-git status
-git add eva_data_analysis.py
-git commit -m "Refactor code to use standard libraries"
-```
-```output
-[main 0ba9b04] "Refactor code to use standard libraries""
- 1 file changed, 11 insertions(+), 46 deletions(-)
-```
-
-## Command-line interface to code
-
-Let's add a command-line interface to our script to allow us pass the data file to be read and the output file to be 
-written to as parameters to our script and avoid hard-coding them.
-This improves interoperability and reusability of our code as it can now be run from the
-command line terminal and integrated into other scripts or workflows/pipelines (e.g. another script can produce our 
-input data and can be "chained" with our code in a data analysis pipeline).
-
-We will use `sys.argv` library to read the command line arguments passes to our script and make them available in our 
-code as a list.
-The first element of the list is the name of the script itself, and the following
-elements are the arguments passed to the script.
-
-Our modified code will now look as follows.
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-import sys
-
-
-if __name__ == '__main__':
-
-    if len(sys.argv) < 3:
-        data_f = './eva-data.json'
-        data_t = './eva-data.csv'
-        print(f'Using default input and output filenames')
-    else:
-        data_f = sys.argv[1]
-        data_t = sys.argv[2]
-        print('Using custom input and output filenames')
-
-    g_file = './cumulative_eva_graph.png'
-
-    print(f'Reading JSON file {data_f}')
-    data = pd.read_json(data_f, convert_dates=['date'])
-    data['eva'] = data['eva'].astype(float)
-    data.dropna(axis=0, inplace=True)
-    data.sort_values('date', inplace=True)
-
-    print(f'Saving to CSV file {data_t}')
-    data.to_csv(data_t, index=False)
-
-    print(f'Plotting cumulative spacewalk duration and saving to {g_file}')
-    data['duration_hours'] = data['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
-    data['cumulative_time'] = data['duration_hours'].cumsum()
-    plt.plot(data.date, data.cumulative_time, 'ko-')
-    plt.xlabel('Year')
-    plt.ylabel('Total time spent in space to date (hours)')
-    plt.tight_layout()
-    plt.savefig(g_file)
-    plt.show()
-    print("--END--")
-```
-
-We can now run our script from the command line passing the json input data file and csv output data file as:
-
-```bash
-python eva_data_analysis.py eva_data.json eva_data.csv
-```
-
-Remember to commit our changes.
-
-```bash
-git status
-git add eva_data_analysis.py
-git commit -m "Add commandline functionality to script"
-```
-```output
-[main b5883f6] Add commandline functionality to script
- 1 file changed, 30 insertions(+), 16 deletions(-)
-```
-
-## Meaningful variable names
+## Use meaningful variable names
 
 Variables are the most common thing you will assign when coding, and it's really important that it is clear what each variable means in order to understand what the code is doing.
 If you return to your code after a long time doing something else, or share your code with a colleague, it should be easy enough to understand what variables are involved in your code from their names.
@@ -273,6 +147,7 @@ There are also some gotchas to consider when naming variables:
     -   Again in Python, you would actually reassign the `input` name and no longer be able to access the original `input` function if you used this as a variable name. So in this case opting for something like `input_data` would be preferable. (This behaviour may be explicitly disallowed in other programming languages.)
 
 :::::: challenge
+
 ### Give a descriptive name to a variable
 
 Below we have a variable called `var` being set the value of 9.81.
@@ -290,7 +165,7 @@ var = 9.81
 
 Yes, $$9.81 m/s^2 $$ is the [gravitational force exerted by the Earth](https://en.wikipedia.org/wiki/Gravity_of_Earth).
 It is often referred to as "little g" to distinguish it from "big G" which is the [Gravitational Constant](https://en.wikipedia.org/wiki/Gravitational_constant).
-A more decriptive name for this variable therefore might be:
+A more descriptive name for this variable therefore might be:
 
 ``` python
 g_earth = 9.81
@@ -362,7 +237,8 @@ git commit -m "Use descriptive variable names"
 ::::::
 
 
-## Inline comments
+
+## Use inline comments to explain functionality
 
 Commenting is a very useful practice to help convey the context of the code.
 It can be helpful as a reminder for your future self or your collaborators as to why code is written in a certain way, how it is achieving a specific task, or the real-world implications of your code.
@@ -382,9 +258,7 @@ But here are a few things to keep in mind when commenting your code:
 -   Keep them short and concise. Large blocks of text quickly become unreadable and difficult to maintain.
 -   Comments that contradict the code are worse than no comments. Always make a priority of keeping comments up-to-date when code changes.
 
-### Examples of helpful vs. unhelpful comments
-
-#### Unhelpful:
+### Examples of unhelpful comments
 
 ``` python
 statetax = 1.0625  # Assigns the float 1.0625 to the variable 'statetax'
@@ -394,7 +268,7 @@ specialtax = 1.01  # Assigns the float 1.01 to the variable 'specialtax'
 
 The comments in this code simply tell us what the code does, which is easy enough to figure out without the inline comments.
 
-#### Helpful:
+### Examples of helpful comments
 
 ``` python
 statetax = 1.0625  # State sales tax rate is 6.25% through Jan. 1
@@ -406,7 +280,7 @@ In this case, it might not be immediately obvious what each variable represents,
 The date in the comment also indicates when the code might need to be updated.
 
 ::: challenge
-### Add some comments to a code block
+### Add inline comments our script
 
 a. Examine `eva_data_analysis.py`.
 Add as many inline comments as you think is required to help yourself and others understand what that code is doing.
@@ -473,17 +347,80 @@ git commit -m "Add inline comments to the code"
 :::
 :::
 
-## Functions
+## Use standard libraries
 
-Functions are a fundamental concept in writing software and are one of the core ways you can organise your code to improve its readability.
+Our script currently reads the data line-by-line from the JSON data file and uses custom code to manipulate
+the data.
+Variables of interest are stored in lists but there are more suitable data structures (e.g. data frames)
+to store data in our case.
+By choosing custom code over standard and well-tested libraries, we are making our code less readable and understandable
+and more error-prone.
+
+The main functionality of our code can be rewritten as follows using `Pandas` library to load and manipulate the data
+in data frames.
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+data_f = './eva-data.json'
+data_t = './eva-data.csv'
+g_file = './cumulative_eva_graph.png'
+
+data = pd.read_json(data_f, convert_dates=['date'])
+data['eva'] = data['eva'].astype(float)
+data.dropna(axis=0, inplace=True)
+data.sort_values('date', inplace=True)
+
+data.to_csv(data_t, index=False)
+
+data['duration_hours'] = data['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
+data['cumulative_time'] = data['duration_hours'].cumsum()
+plt.plot(data['date'], data['cumulative_time'], 'ko-')
+plt.xlabel('Year')
+plt.ylabel('Total time spent in space to date (hours)')
+plt.tight_layout()
+plt.savefig(g_file)
+plt.show()
+
+```
+
+We should replace the existing code in our Python script `eva_data_analysis.py` with the above code and commit the
+changes. Remember to use an informative commit message.
+
+```bash
+git status
+git add eva_data_analysis.py
+git commit -m "Refactor code to use standard libraries"
+```
+```output
+[main 0ba9b04] "Refactor code to use standard libraries""
+ 1 file changed, 11 insertions(+), 46 deletions(-)
+```
+
+## Separate units of functionality
+
+Functions are a fundamental concept in writing software and are one of the core ways you can organise your code to 
+improve its readability.
 A function is an isolated section of code that performs a single, *specific* task that can be simple or complex.
-It can then be called multiple times with different inputs throughout a codebase, but it's definition only needs to appear once.
+It can then be called multiple times with different inputs throughout a codebase, but its definition only needs to 
+appear once.
 
-Breaking up code into functions in this manner benefits readability since the smaller sections are easier to read and understand.
-Since functions can be reused, codebases naturally begin to follow the [Don't Repeat Yourself principle][dry-principle] which prevents software from becoming overly long and confusing.
-The software also becomes easier to maintain because, if the code encapsulated in a function needs to change, it only needs updating in one place instead of many.
+Breaking up code into functions in this manner benefits readability since the smaller sections are easier to read 
+and understand.
+Since functions can be reused, codebases naturally begin to follow the [Don't Repeat Yourself principle][dry-principle] 
+which prevents software from becoming overly long and confusing.
+The software also becomes easier to maintain because, if the code encapsulated in a function needs to change, 
+it only needs updating in one place instead of many.
 As we will learn in a future episode, testing code also becomes simpler when code is written in functions.
-Each function can be individually checked to ensure it is doing what is intended, which improves confidence in the software as a whole.
+Each function can be individually checked to ensure it is doing what is intended, which improves confidence in 
+the software as a whole.
+
+::: callout
+Decomposing code into functions helps with reusability of blocks of code and eliminating repetition, 
+but, equally importantly, it helps with code readability and testing.
+:::
 
 ::: challenge
 ### Create a function
@@ -525,7 +462,7 @@ While this isn't that many lines of code, thanks to using pandas inbuilt methods
 :::
 :::
 
-## Docstrings
+## Use docstrings to document functions
 
 Docstrings are a specific type of documentation that are provided within functions, and [classes][python-classes] too.
 A function docstring should explain what the isolated code is doing, what parameters the function needs (these are inputs) and what form they should take, what the function outputs (you may see words like 'returns' or 'yields' here), and errors (if any) that might be raised.
@@ -623,143 +560,6 @@ def read_json_to_dataframe(input_file):
 :::
 :::
 
-## Improving our code
-
-Finally, let's apply these good practices to `eva_data_analysis.py`
-and organise our code into functions with descriptive names and docstrings.
-
-``` python
-import pandas as pd
-import matplotlib.pyplot as plt
-import sys
-
-
-def read_json_to_dataframe(input_file_):
-    """
-    Read the data from a JSON file into a Pandas dataframe.
-    Clean the data by removing any incomplete rows and sort by date
-
-    Args:
-        input_file_ (str): The path to the JSON file.
-
-    Returns:
-         eva_df (pd.DataFrame): The loaded dataframe.
-    """
-    print(f'Reading JSON file {input_file_}')
-    eva_df = pd.read_json(input_file_, convert_dates=['date'])
-    eva_df['eva'] = eva_df['eva'].astype(float)
-    eva_df.dropna(axis=0, inplace=True)
-    eva_df.sort_values('date', inplace=True)
-    return eva_df
-
-
-def write_dataframe_to_csv(df_, output_file_):
-    """
-    Write the dataframe to a CSV file.
-
-    Args:
-        df_ (pd.DataFrame): The input dataframe.
-        output_file_ (str): The path to the output CSV file.
-
-    Returns:
-        None
-    """
-    print(f'Saving to CSV file {output_file_}')
-    df_.to_csv(output_file_, index=False)
-
-def text_to_duration(duration):
-    """
-    Convert a text format duration "HH:MM" to duration in hours
-
-    Args:
-        duration (str): The text format duration
-
-    Returns:
-        duration_hours (float): The duration in hours
-    """
-    hours, minutes = duration.split(":")
-    duration_hours = int(hours) + int(minutes)/60
-    return duration_hours
-
-
-def add_duration_hours_variable(df_):
-    """
-    Add duration in hours (duration_hours) variable to the dataset
-
-    Args:
-        df_ (pd.DataFrame): The input dataframe.
-
-    Returns:
-        df_copy (pd.DataFrame): A copy of df_ with the new duration_hours variable added
-    """
-    df_copy = df_.copy()
-    df_copy["duration_hours"] = df_copy["duration"].apply(
-        text_to_duration
-    )
-    return df_copy
-
-
-def plot_cumulative_time_in_space(df_, graph_file_):
-    """
-    Plot the cumulative time spent in space over years
-
-    Convert the duration column from strings to number of hours
-    Calculate cumulative sum of durations
-    Generate a plot of cumulative time spent in space over years and
-    save it to the specified location
-
-    Args:
-        df_ (pd.DataFrame): The input dataframe.
-        graph_file_ (str): The path to the output graph file.
-
-    Returns:
-        None
-    """
-    print(f'Plotting cumulative spacewalk duration and saving to {graph_file_}')
-    df_ = add_duration_hours_variable(df_)
-    df_['cumulative_time'] = df_['duration_hours'].cumsum()
-    plt.plot(df_.date, df_.cumulative_time, 'ko-')
-    plt.xlabel('Year')
-    plt.ylabel('Total time spent in space to date (hours)')
-    plt.tight_layout()
-    plt.savefig(graph_file_)
-    plt.show()
-
-
-if __name__ == '__main__':
-
-    if len(sys.argv) < 3:
-        input_file = './eva-data.json'
-        output_file = './eva-data.csv'
-        print(f'Using default input and output filenames')
-    else:
-        input_file = sys.argv[1]
-        output_file = sys.argv[2]
-        print('Using custom input and output filenames')
-
-    graph_file = './cumulative_eva_graph.png'
-
-    eva_data = read_json_to_dataframe(input_file)
-
-    write_dataframe_to_csv(eva_data, output_file)
-
-    plot_cumulative_time_in_space(eva_data, graph_file)
-
-    print("--END--")
-
-```
-
-Finally, let's commit these changes to our local repository and then push to our remote repository on GitHub to publish 
-these changes. 
-Remember to use an informative commit message.
-
-```bash
-git status
-git add eva_data_analysis.py
-git commit -m "Organise code into functions"
-git push origin main
-```
-
 
 ## Summary
 
@@ -784,14 +584,14 @@ We recommend the following resources for some additional reading on the topic of
 -   ['Code Readability Matters' from the Guardian's engineering blog][guardian-code-readability]
 -   [PEP 8 Style Guide for Python][pep8-comments]
 -   [Coursera: Inline commenting in Python][coursera-inline-comments]
--   [Introducing Functions from Introduction to Python][python-functions-into]
+-   [Introducing Functions from Introduction to Python][python-functions-intro]
 -   [W3Schools.com Python Functions][python-functions-w3schools]
 
 Also check the [full reference set](learners/reference.md#litref) for the course.
 
 ::: keypoints
--   Readable code is easier to understand, maintain, debug and extend!
--   Creating functions from the smallest, reusable units of code will help compartmentalise which parts of the code are doing what actions
--   Choosing descriptive variable and function names will communicate their purpose more effectively
--   Using inline comments and docstrings to describe parts of the code will help transmit understanding, and verify that the code is correct
+-   Readable code is easier to understand, maintain, debug and extend (reuse).
+-   Choosing descriptive variable and function names will communicate their purpose more effectively.
+-   Using inline comments and docstrings to describe parts of the code will help transmit understanding, and verify that the code is correct.
+-   Creating functions from the smallest, reusable units of code will help compartmentalise which parts of the code are doing what actions.
 :::

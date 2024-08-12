@@ -1,5 +1,5 @@
 ---
-title: Documenting code
+title: Code documentation
 teaching: 60
 exercises: 30
 ---

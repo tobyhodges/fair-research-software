@@ -1,5 +1,5 @@
 ---
-title: "Code testing"
+title: "Code correctness"
 teaching: 60
 exercises: 30
 ---
@@ -29,65 +29,44 @@ After completing this episode, participants should be able to:
     tested and identify areas that need further tests.
 :::
 
-## Motivation for Code Testing
-
+Now that we have improved the structure and readability of our code - it is much easier to 
+test its functionality and improve its further. 
 The goal of software testing is to check that the actual results
-produced by a piece of code meet our expectations i.e. are correct.
+produced by a piece of code meet our expectations, i.e. are correct.
 
 Adopting software testing as part of our research workflow helps us to
-conduct better research and produce FAIR software.
+conduct better research and produce FAIR software:
 
-### Better Research
-
-Software testing can help us be better, more productive researchers.
-
-Testing helps us to identify and fix problems with our code early and
+- Software testing can help us be more productive as it helps us to identify and fix problems with our code early and
 quickly and allows us to demonstrate to ourselves and others that our
 code does what we claim. More importantly, we can share our tests
-alongside our code, allowing others to check this for themselves.
-
-### FAIR Software
-
-Software testing also underpins the FAIR process by giving us the
-confidence to engage in open research practices.
-
-If we are not sure that our code works as intended and produces accurate
+alongside our code, allowing others to verify our software for themselves.
+- The act of writing tests encourages to structure our code as individual functions and often results in a more
+  **readable**, modular and maintainable codebase that is easier to extend or repurpose.
+- Software testing improves the **accessibility** and **reusability** of our code - well-written software tests 
+capture the expected behaviour of our code and can be used alongside documentation to help other developers
+quickly make sense of our code. In addition, a well tested codebase allows developers to experiment with new
+features safe in the knowledge that tests will reveal if their changes have broken any existing functionality.
+- Software testing underpins the FAIR process by giving us the
+confidence to engage in open research practices - if we are not sure that our code works as intended and produces accurate
 results, we are unlikely to feel confident about sharing our code with
 others. Software testing brings piece of mind by providing a
 step-by-step approach that we can apply to verify that our code is
 correct.
 
-Software testing also supports the FAIR process by improving the
-**accessibility** and **reusability** of our code.
+## Types of Software Tests
 
-**Accessible**:
+There are many different types of software testing.
 
--   Well written software tests capture the expected behaviour of our
-    code and can be used alongside documentation to help developers
-    quickly make sense of our code.
-
-**Reusable**:
-
--   A well tested codebase allows developers to experiment with new
-    features safe in the knowledge that tests will reveal if their
-    changes have broken any existing functionality.\
--   The act of writing tests encourages to structure our code as
-    individual functions and often results in a more modular, readable,
-    maintainable codebase that is easier to extend or repurpose.
-
-### Types of Software Tests
-
-There are many different types of software testing including:
-
--   **Unit Tests**: Unit tests focus on testing individual functions in
+-   **Unit tests** focus on testing individual functions in
     isolation. They ensure that each small part of the software performs
     as intended. By verifying the correctness of these individual units,
     we can catch errors early in the development process.
 
--   **Integration Tests**: Integration tests, check how different parts
+-   **Integration tests** check how different parts
     of the code e.g. functions work together.
 
--   **Regression Tests**: Regression tests are used to ensure that new
+-   **Regression tests** are used to ensure that new
     changes or updates to the codebase do not adversely affect the
     existing functionality. They involve checking whether a program or
     part of a program still generates the same results after changes
@@ -101,7 +80,7 @@ concepts and techniques we cover will provide a solid foundation
 applicable to other types of testing.
 
 ::: challenge
-## Types of Software Tests
+### Types of software tests
 
 Fill in the blanks in the sentences below:
 
@@ -126,7 +105,7 @@ Fill in the blanks in the sentences below:
 :::
 :::
 
-### Informal Testing
+## Informal testing
 
 **How should we test our code?** Let’s start by considering the
 following scenario. A collaborator on our project has sent us the
@@ -244,7 +223,7 @@ However, there are limitations to this approach:
     tested and which have not
 :::
 
-## Formal Testing
+## Formal testing
 
 We can overcome some of these limitations by formalising our testing
 process. A formal approach to testing our function(s) is to write
@@ -417,7 +396,7 @@ and re-run the test script. As our code base and tests grow, this will
 become cumbersome. This is not ideal and can be overcome by automating
 our tests using a testing framework.
 
-## Using a Testing Framework
+## Using a testing framework
 
 Our approach so far has had two major limitations:
 
