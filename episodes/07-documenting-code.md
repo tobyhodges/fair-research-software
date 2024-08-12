@@ -280,13 +280,13 @@ The lack of a licence for your software implies that no one can reuse the softwa
 you declare it. A common way to declare your copyright of a piece of software and the license you are 
 distributing it under is to include a file called LICENSE in the root directory of your code repository.
 
-There is an [extra content in this course](../learners/licensing.md) on different open source software licences that 
-you can choose for your code and we recommend for reading. 
+There is an optional extra [episode in this course on different open source software licences](../learners/licensing.md) 
+that you can choose for your code and that we recommend for further reading. 
 
 :::::: instructor
-Cover briefly the [extra content on different open source software licences](../learners/licensing.md), 
-make sure to mention it and point learners to it and then focus on the technicalities of adding a license file to a 
-code repository (as there is likely not going to be enough time to spend on different licence types).
+Make sure to mention the [extra content on different open source software licences](../learners/licensing.md), 
+briefly cover it if there is time, then focus on the technicalities of adding a license file to a 
+code repository (as there is likely not going to be enough time to spend on different license types).
 ::::::
 
 :::::: callout
