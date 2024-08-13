@@ -6,7 +6,7 @@ exercises: 20
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- ...
+- How can I automate the testing of my repository's code in a way that scales well?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -14,7 +14,9 @@ exercises: 20
 
 After completing this episode, participants should be able to:
 
-- ...
+- Describe the benefits of using Continuous Integration for further automation of testing
+- Enable GitHub Actions Continuous Integration for public open source repositories
+- Use continuous integration to automatically run unit tests and code coverage when changes are committed to a version control repository
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -127,3 +129,13 @@ workflows that are active in our repository. You should see "CI" here
 The body of the page lists the outcome of all historic workflow
 runs. If the workflow was triggered successfully when we pushed to
 the repository, you should see one workflow run listed here.
+
+
+::: keypoints
+
+- Continuous Integration can run tests automatically to verify changes as code develops in our repository.
+- CI builds are typically triggered by commits pushed to a repository.
+- We need to write a configuration file to inform a CI service what to do for a build.
+- We can run - and get reports from - different CI infrastructure builds simultaneously.
+
+:::
