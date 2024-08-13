@@ -104,7 +104,7 @@ So, we will use `venv` and `pip` in combination to help us create and share our 
 Creating a virtual environment with `venv` is done by executing the following command:
 
 ```python
-$ python3 -m venv /path/to/new/virtual/environment
+$ python -m venv /path/to/new/virtual/environment
 ```
 
 where `/path/to/new/virtual/environment` is a path to a directory where you want to place it -
@@ -115,7 +115,7 @@ For our project let's create a virtual environment called "venv_spacewalks".
 First, ensure you are within the project root directory, then:
 
 ```python
-$ python3 -m venv venv_spacewalks
+$ python -m venv venv_spacewalks
 ```
 
 If you list the contents of the newly created directory "venv", on a Mac or Linux system
@@ -132,7 +132,7 @@ drwxr-xr-x   2 alex  staff   64  5 Oct 11:47 include
 drwxr-xr-x   3 alex  staff   96  5 Oct 11:47 lib
 -rw-r--r--   1 alex  staff   90  5 Oct 11:47 pyvenv.cfg
 ```
-So, running the `python3 -m venv venv_spacewalks` command created the target directory called "venv_spacewalks"
+So, running the `python -m venv venv_spacewalks` command created the target directory called "venv_spacewalks"
 containing:
 
 - `pyvenv.cfg` configuration file
@@ -171,7 +171,7 @@ You can verify you are using your virtual environment's version of Python
 by checking the path using the command `which`:
 
 ```bash
-(venv_spacewalks) $ which python3
+(venv_spacewalks) $ which python
 ```
 
 When you’re done working on your project, you can exit the environment with:
@@ -206,35 +206,35 @@ To install the latest version of packages `datetime` and `matplotlib` with `pip`
 you use pip's `install` command and specify the package’s name, e.g.:
 
 ```bash
-(venv_spacewalks) $ python3 -m pip install datetime
-(venv_spacewalks) $ python3 -m pip install matplotlib
+(venv_spacewalks) $ python -m pip install datetime
+(venv_spacewalks) $ python -m pip install matplotlib
 ```
 
 or like this to install multiple packages at once for short:
 
 ```bash
-(venv_spacewalks) $ python3 -m pip install datetime matplotlib
+(venv_spacewalks) $ python -m pip install datetime matplotlib
 ```
 
 The above commands have installed packages `datetime` and `matplotlib` in our currently active `venv_spacewalks` 
 environment and will not affect any other Python projects we may have on our machines.
 
-If you run the `python3 -m pip install` command on a package that is already installed,
+If you run the `python -m pip install` command on a package that is already installed,
 `pip` will notice this and do nothing.
 
 To install a specific version of a Python package
 give the package name followed by `==` and the version number,
-e.g. `python3 -m pip install matplotlib==3.5.3`.
+e.g. `python -m pip install matplotlib==3.5.3`.
 
 To specify a minimum version of a Python package,
-you can do `python3 -m pip install matplotlib>=3.5.1`.
+you can do `python -m pip install matplotlib>=3.5.1`.
 
-To upgrade a package to the latest version, e.g. `python3 -m pip install --upgrade matplotlib`.
+To upgrade a package to the latest version, e.g. `python -m pip install --upgrade matplotlib`.
 
 To display information about a particular installed package do:
 
 ```bash
-(venv_spacewalks) $ python3 -m pip show matplotlib
+(venv_spacewalks) $ python -m pip show matplotlib
 Name: matplotlib
 Version: 3.9.0
 Summary: Python plotting package
@@ -252,7 +252,7 @@ Required-by:
 To list all packages installed with `pip` (in your current virtual environment):
 
 ```bash
-(venv_spacewalks) $ python3 -m pip list
+(venv_spacewalks) $ python -m pip list
 Package         Version
 --------------- -----------
 contourpy       1.2.1
@@ -273,7 +273,7 @@ six             1.16.0
 zope.interface  7.0.1
 ```
 
-To uninstall a package installed in the virtual environment do: `python3 -m pip uninstall <package-name>`.
+To uninstall a package installed in the virtual environment do: `python -m pip uninstall <package-name>`.
 You can also supply a list of packages to uninstall at the same time.
 
 ## Exporting/Importing virtual environments
@@ -285,11 +285,11 @@ and everyone can replicate equivalent virtual environments on their machines.
 `pip` has a handy way of exporting, saving and sharing virtual environments.
 
 To export your active environment -
-use `python3 -m pip freeze` command to produce a list of packages installed in the virtual environment.
+use `python -m pip freeze` command to produce a list of packages installed in the virtual environment.
 A common convention is to put this list in a `requirements.txt` file:
 
 ```bash
-(venv_spacewalks) $ python3 -m pip freeze > requirements.txt
+(venv_spacewalks) $ python -m pip freeze > requirements.txt
 (venv_spacewalks) $ cat requirements.txt
 contourpy==1.2.1
 cycler==0.12.1
@@ -319,7 +319,7 @@ They can then replicate your environment
 and install all the necessary packages from the project root as follows:
 
 ~~~
-(venv_spacewalks) $ python3 -m pip install -r requirements.txt
+(venv_spacewalks) $ python -m pip install -r requirements.txt
 ~~~
 {: .language-bash}
 

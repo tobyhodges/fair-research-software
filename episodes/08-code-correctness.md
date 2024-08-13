@@ -1486,142 +1486,14 @@ git push origin main
 
 :::
 
-## Continuous Integration (Optional)
+::: callout 
 
-::: callout
-### Continuous Integration
+### Continuous Integration for automated testing
 
-So far, we have run our tests locally using.
 
-``` bash
-python -m pytest
-```
 
-A limitation of this approach is that we must remember to run our tests
-each time we make any changes.
-
-Continuous integration services provide the infrastructure to
-automatically run a\
-code's test suite every time changes are pushed to a remote repository.
-
-This means that each time we (or our colleagues) push to the remote, the
-test suite will be run to verify that our tests still pass.
-
-If we are using GitHub, we can use the continuous integration service
-GitHub Actions to automatically run our tests.
-
-To setup this up:
-
--   Navigate to the spacewalks folder:
-
-``` bash
-cd ~/Desktop/Spacewalks
-```
-
--   To setup continuous integration on GitHub actions, the dependencies
-    of our code must be recorded in a `requirements.txt` file in the
-    root of our repository.
--   You can find out more about creating requirements.txt files from
-    CodeRefinery's tutorial on "Recording Dependencies".
--   For now, add the following list of code dependencies to
-    requirements.txt in the root of the spacewalks repository:
-
-``` bash
-touch requirements.txt
-```
-
-Content of `requirements.txt`:
-
-``` output
-numpy
-pandas
-matplotlib
-pytest
-pytest-cov
-```
-
--   Commit the changes to your repository:
-
-``` bash
-git add requirements.txt
-git commit -m "Add requirements.txt file"
-```
-
-Now let's define out continuous integration workflow:
-
--   Create a hidden folder .github/workflows
-
-``` bash
-mkdir -p .github/workflows
-touch .github/workflows/main.yml
-```
-
--   Define the continuous integration workflow to run on GitHub actions.
-
-``` yaml
-name: CI
-
-# We can specify which Github events will trigger a CI build
-on: push
-
-# now define a single job 'build' (but could define more)
-jobs:
-
-  build:
-
-    # we can also specify the OS to run tests on
-    runs-on: ubuntu-latest
-
-    # a job is a sequence of steps
-    steps:
-
-    # Next we need to checkout out repository, and set up Python
-    # A 'name' is just an optional label shown in the log - helpful to clarify progress - and can be anything
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Set up Python 3.12
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.12"
-
-    - name: Install Python dependencies
-      run: |
-        python3 -m pip install --upgrade pip
-        python3 -m pip install -r requirements.txt
-
-    - name: Test with PyTest
-      run: |
-        python3 -m pytest --cov
-```
-
-This workflow definition file instructs GitHub Actions to run our unit
-tests using python version 3.12 each time code is pushed to our
-repository,
-
--   Let's push these changes to our repository and see if the tests are
-    run on GitHub.
-
-``` bash
-git add .github/workflows/main.yml
-git commit -m "Add GitHub actions workflow"
-git push origin main
-```
-
--   To find out if the workflow has run, navigate to the following page
-    in your browser:
-
-```         
-https://github.com/YOUR-REPOSITORY/actions
-```
-
--   On the left of this page a sidebar titled "Actions" lists all the
-    workflows that are active in our repository. You should "CI" here
-    (the `name` of the workflow we just added to our repository ).
--   The body of the page lists the outcome of all historic workflow
-    runs. If the workflow was triggered successfully when we pushed to
-    the repository, you should see one workflow run listed here.
 :::
+
 
 ### Summary
 
@@ -1637,8 +1509,8 @@ engage in open research practices. Tests also document the intended
 behaviour of our code for other developers and mean that we can
 experiment with changes to our code knowing that our tests will let us
 know if we break any existing functionality. In other words, software
-testing suppors FAIR software by making our code more Accessible and
-Reusable.
+testing supports the FAIR software principles by making our code more **accessible** and
+**reusable**.
 
 To find out more about this topic, please see the "Further reading"
 section below.
@@ -1668,6 +1540,7 @@ Also check the [full reference set](learners/reference.md#litref) for
 the course.
 
 ::: keypoints
+
 1.  Code testing supports the FAIR principles by improving the
     accessibility and re-usability of research code.
 2.  Unit testing is crucial as it ensures each functions works
@@ -1678,4 +1551,5 @@ the course.
     ensure your code performs correctly under a variety of conditions.
 5.  Test coverage can help you to identify parts of your code that
     require additional testing.
+6. 
 :::

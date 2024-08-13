@@ -73,7 +73,8 @@ episodes:
 - 11-wrap-up.md
 
 # Information for Learners
-learners: 
+learners:
+- ci-for-testing.md
 - licensing.md
 - ethical-environmental-considerations.md
 
