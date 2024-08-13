@@ -1471,6 +1471,21 @@ git commit -m "Add test suite"
 git push origin main
 ```
 
+
+::: callout 
+
+### Commit and push your changes
+
+Do not forget to commit any uncommited changes you may have and then push your work to GitHub.
+
+```bash
+git add <your_changed_files>
+git commit -m "Your commit message"
+git push origin main
+```
+
+:::
+
 ## Continuous Integration (Optional)
 
 ::: callout

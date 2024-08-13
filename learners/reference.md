@@ -82,3 +82,7 @@ and Australian Research Data Commons
 - [CODECHECK][codecheck], an approach for independent execution of computations underlying 
 research articles
 
+- Carpentries Github Skill ups for [instructors][git-skillup-instructors] and [maintainers][git-skillup-maintainers]
+
+- [RSG Southampton Git lesson][git-soton] - [collaboration section][git-soton-collaboration]
+

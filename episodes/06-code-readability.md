@@ -247,7 +247,6 @@ if __name__ == '__main__':
 
 Commit changes:
 ```bash
-git status
 git add eva_data_analysis.py
 git commit -m "Use descriptive variable names"
 ```
@@ -358,7 +357,6 @@ if __name__ == '__main__':
 
 Commit changes:
 ```bash
-git status
 git add eva_data_analysis.py
 git commit -m "Add inline comments to the code"
 ```
@@ -409,7 +407,6 @@ We should replace the existing code in our Python script `eva_data_analysis.py` 
 changes. Remember to use an informative commit message.
 
 ```bash
-git status
 git add eva_data_analysis.py
 git commit -m "Refactor code to use standard libraries"
 ```
@@ -580,6 +577,20 @@ def read_json_to_dataframe(input_file):
 :::
 
 
+::: callout
+
+### Commit and push your changes
+
+Do not forget to commit any uncommited changes you may have and then push your work to GitHub.
+
+```bash
+git add <your_changed_files>
+git commit -m "Your commit message"
+git push origin main
+```
+
+:::
+
 ## Summary
 
 During this episode, we have discussed the importance of code readability and explored some software engineering 
@@ -595,6 +606,7 @@ Some best practices we have covered towards code readability include:
 -   Inline comments to provide real-world context
 -   Functions to isolate specific code sections for re-use
 -   Docstrings for documenting functions to facilitate their re-use
+
 
 ## Further reading
 

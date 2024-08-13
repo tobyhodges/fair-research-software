@@ -41,7 +41,7 @@ $ source venv_spacewalks/Scripts/activate # Windows
 
 :::
 
-## Sharing your code to encourage collaboration
+## Sharing code to encourage collaboration
 
 ### Making the code public
 
@@ -415,19 +415,29 @@ They will get an email and an alert within Github to accept your invitation to w
  - Your partner will now receive your pull request and can review 
 :::
 
-## Acknowledgements
 
-The content of this episode was inspired / heavily borrowed from the following resources:
+::: callout
 
-- Software carpentry git lesson licensing and citation sections - https://swcarpentry.github.io/git-novice/11-licensing.html and https://swcarpentry.github.io/git-novice/12-citation.html
-- Carpentries Github Skill up - https://carpentries-incubator.github.io/github-skill-up-instructors/ and https://carpentries.github.io/github-skill-up-maintainers/
-- RSG Soton Git lesson - https://southampton-rsg.github.io/swc-git-novice/06-collab/index.html
+### Commit and push your changes
+
+Do not forget to commit any uncommited changes you may have and then push your work to GitHub.
+
+```bash
+git add <your_changed_files>
+git commit -m "Your commit message"
+git push origin main
+```
+
+:::
+
 
 ## Further reading
 
 We recommend the following resources for some additional reading on the topic of this episode:
 
 - Licencing and citation episodes from the [Software Carpentry's Git Novice lesson][swc-git-lesson]
+- Carpentries Github Skill ups for [instructors][git-skillup-instructors] and [maintainers][git-skillup-maintainers]
+- [RSG Southampton Git lesson][git-soton] - [collaboration section][git-soton-collaboration]
 - [Open source definition][osd-definition], by the [Open Source Initiative][osd]
 - [What is free software?][free-software]
 

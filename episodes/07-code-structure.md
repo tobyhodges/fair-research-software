@@ -258,3 +258,19 @@ git commit -m "Add commandline functionality to script"
 [main b5883f6] Add commandline functionality to script
  1 file changed, 30 insertions(+), 16 deletions(-)
 ```
+
+
+
+::: callout 
+
+### Commit and push your changes
+
+Do not forget to commit any uncommited changes you may have and then push your work to GitHub.
+
+```bash
+git add <your_changed_files>
+git commit -m "Your commit message"
+git push origin main
+```
+
+:::
