@@ -17,14 +17,35 @@ After completing this episode, participants should be able to:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-A placeholder for code structure episode. 
+A placeholder for code structure episode.
 
 - Carry on about functions - add a section on `__main__`
 - Directory structure of our code - data folder, code folder, tests folder, documentation folder
 - command line interface
 
-Code structure also helps with code readability - but also following the code structure conventions makes it easier to switch 
+Code structure also helps with code readability - but also following the code structure conventions makes it easier to switch
 to another programming language.
+
+Before we move on with further code modifications, make sure your virtual development environment is active.
+
+::: callout
+
+### Activate your virtual environment
+If it is not already active, make sure to activate your virtual environment from the root of your project directory
+in your command line terminal (e.g. Bash or GitBash):
+
+```bash
+$ source venv_spacewalks/bin/activate # Mac or Linux
+$ source venv_spacewalks/Scripts/activate # Windows
+(venv_spacewalks) $
+```
+
+:::
+
+
+
+
+
 
 ## Carry on about functions - improve the rest of our code
 

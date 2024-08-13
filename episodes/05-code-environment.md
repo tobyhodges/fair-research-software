@@ -16,7 +16,6 @@ exercises: 30
 After completing this episode, participants should be able to:
 
 - Set up a Python virtual environment for our software project using `venv` and `pip`.
-- Run our software from the command line.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

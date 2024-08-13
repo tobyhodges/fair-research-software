@@ -25,39 +25,49 @@ After completing this episode, participants should be able to:
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## Motivation for documenting software
-
 We have seen how writing inline comments and docstrings within our code can help with improving its readability. 
 The purpose of software documentation is to communicate other important information 
 about our software (its purpose, dependencies, how to install and run it, etc.) to the people who need it – 
 both users and developers.   
 
-###  Better research
+## Why document our software?
 
 Software documentation is often perceived as a thankless and time-consuming task with few tangible benefits and 
 is often neglected in research projects. 
-However, like software testing, documenting our software can help us and others become more productive researchers. 
-Here are some advantages of documenting our code: 
+However, like software testing, documenting our software can help us and others
+conduct **better research** and produce **FAIR software**:
 
 - Good documentation captures important methodological details ready for when we come to publish our research 
 - Good documentation can help us return to a project seamlessly after time away 
-- Documentation can facilitate collaborations by helping to onboard new project members
+- Documentation can facilitate collaborations by helping us onboard new project members quickly and more easily
 - Good documentation can save us time by answering frequently asked questions (FAQs) about our code for us
+- Software documentation supports the FAIR research software principles by improving the re-usability of our code. 
+  - Good documentation can make our software more understandable and reusable by others, and can bring us some citations
+    and credit
+  - How-to guides and tutorials ensure that users can install our software independently and make use of its basic features
+  - Reference guides and background information can help developers understand our code sufficiently to 
+  modify/extend/repurpose it.
 
-### FAIR software
+Before we move on with further code modifications, make sure your virtual development environment is active.
 
-Software documentation supports FAIR software by improving the re-usability of our code. 
+::: callout
 
-- Good documentation can make our software more understandable and reusable by others, and can bring us some citations
-  and credit
-- How-to guides and tutorials ensure that users can install our software independently and make use of its basic features
-- Reference guides and background information can help developers understand our code sufficiently to 
-modify/extend/repurpose it.
+### Activate your virtual environment
+If it is not already active, make sure to activate your virtual environment from the root of your project directory
+in your command line terminal (e.g. Bash or GitBash):
+
+```bash
+$ source venv_spacewalks/bin/activate # Mac or Linux
+$ source venv_spacewalks/Scripts/activate # Windows
+(venv_spacewalks) $
+```
+
+:::
 
 ## Software-level documentation
 
-In previous episodes we encountered several different forms of in-code documentation 
-including  in-line comments and docstrings.  
+In previous episodes we encountered several different forms of in-code documentation aspects, 
+including in-line comments and docstrings.  
 
 These are an excellent way to improve the readability of our code, but by themselves 
 are insufficient to ensure that our code is easy to use, understand and modify - 

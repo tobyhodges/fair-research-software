@@ -39,11 +39,26 @@ year, will I be able to understand what I have done and why?"
 Or even better: "If a new person who just joined the project reads my software, will they be able to understand 
 what I have written here?"
 
-We will now learn about a few software best practices we can follow to help create readable code.
+We will now learn about a few software best practices we can follow to help create more readable code. 
+Before that, make sure your virtual development environment is active.
+
+::: callout
+
+### Activate your virtual environment
+If it is not already active, make sure to activate your virtual environment from the root of your project directory 
+in your command line terminal (e.g. Bash or GitBash):
+
+```bash
+$ source venv_spacewalks/bin/activate # Mac or Linux
+$ source venv_spacewalks/Scripts/activate # Windows
+(venv_spacewalks) $
+```
+
+:::
 
 ## Place `import` statements at the top
 
-Let's have a look our code - the first thing we may notice is that our script currently places import statements 
+Let's have a look our code again - the first thing we may notice is that our script currently places import statements 
 throughout the code.
 Conventionally, all import statements are placed at the top of the script so that dependant libraries
 are clearly visible and not buried inside the code (even though there are standard ways of describing dependencies -

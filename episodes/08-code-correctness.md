@@ -34,12 +34,14 @@ After completing this episode, participants should be able to:
 :::
 
 Now that we have improved the structure and readability of our code - it is much easier to 
-test its functionality and improve its further. 
+test its functionality and improve it further. 
 The goal of software testing is to check that the actual results
 produced by a piece of code meet our expectations, i.e. are correct.
 
+## Why use software testing?
+
 Adopting software testing as part of our research workflow helps us to
-conduct better research and produce FAIR software:
+conduct **better research** and produce **FAIR software**:
 
 - Software testing can help us be more productive as it helps us to identify and fix problems with our code early and
 quickly and allows us to demonstrate to ourselves and others that our
@@ -58,7 +60,23 @@ others. Software testing brings piece of mind by providing a
 step-by-step approach that we can apply to verify that our code is
 correct.
 
-## Types of Software Tests
+Before we move on with further code modifications, make sure your virtual development environment is active.
+
+::: callout
+
+### Activate your virtual environment
+If it is not already active, make sure to activate your virtual environment from the root of your project directory
+in your command line terminal (e.g. Bash or GitBash):
+
+```bash
+$ source venv_spacewalks/bin/activate # Mac or Linux
+$ source venv_spacewalks/Scripts/activate # Windows
+(venv_spacewalks) $
+```
+
+:::
+
+## Types of software tests
 
 There are many different types of software testing.
 
