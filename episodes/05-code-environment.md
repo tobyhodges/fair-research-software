@@ -1,5 +1,5 @@
 ---
-title: Development environment
+title: Reproducible development environment
 teaching: 60
 exercises: 30
 ---
