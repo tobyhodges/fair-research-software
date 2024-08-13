@@ -5,17 +5,21 @@ exercises: 30
 ---
 
 ::: questions
+
 -   Why does code readability matter?
 -   How can I organise my code to be more readable?
 -   What types of documentation can I include to improve the readability of my code?
+
 :::
 
 ::: objectives
+
 After completing this episode, participants should be able to:
 
 -   Organise code into reusable functions that achieve a singular purpose
 -   Choose function and variable names that help explain the purpose of the function or variable
 -   Write informative inline comments and docstrings to provide more detail about what the code is doing
+
 :::
 
 In this episode, we will introduce the concept of readable code and consider how it can help create reusable 

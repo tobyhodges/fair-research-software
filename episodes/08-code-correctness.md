@@ -5,13 +5,16 @@ exercises: 30
 ---
 
 ::: questions
+
 -   How can we verify that our code is correct?
 -   How can we automate our software tests?
 -   What makes a "good" test?
 -   Which parts of our code should we prioritize for testing?
+
 :::
 
 ::: objectives
+
 After completing this episode, participants should be able to:
 
 -   Explain why code testing is important and how this supports FAIR
@@ -27,6 +30,7 @@ After completing this episode, participants should be able to:
     appropriately.
 -   Evaluate code coverage to identify how much of the codebase is being
     tested and identify areas that need further tests.
+
 :::
 
 Now that we have improved the structure and readability of our code - it is much easier to 

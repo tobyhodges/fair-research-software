@@ -108,3 +108,4 @@ any links that you are not going to use.
 [coursera-inline-comments]: https://www.coursera.org/tutorials/python-comment#inline-commenting-in-python
 [python-functions-intro]: https://introtopython.org/introducing_functions.html
 [python-functions-w3schools]: https://www.w3schools.com/python/python_functions.asp
+[github]: https://github.com
