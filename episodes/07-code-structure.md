@@ -42,11 +42,6 @@ $ source venv_spacewalks/Scripts/activate # Windows
 
 :::
 
-
-
-
-
-
 ## Carry on about functions - improve the rest of our code
 
 Finally, let's apply these good practices to `eva_data_analysis.py`
@@ -178,10 +173,10 @@ these changes.
 Remember to use an informative commit message.
 
 ```bash
-git status
-git add eva_data_analysis.py
-git commit -m "Organise code into functions"
-git push origin main
+(venv_spacewalks) $ git status
+(venv_spacewalks) $ git add eva_data_analysis.py
+(venv_spacewalks) $ git commit -m "Organise code into functions"
+(venv_spacewalks) $ git push origin main
 ```
 
 
@@ -244,33 +239,13 @@ if __name__ == '__main__':
 We can now run our script from the command line passing the json input data file and csv output data file as:
 
 ```bash
-python eva_data_analysis.py eva_data.json eva_data.csv
+(venv_spacewalks) $ python eva_data_analysis.py eva_data.json eva_data.csv
 ```
 
 Remember to commit our changes.
 
 ```bash
-git status
-git add eva_data_analysis.py
-git commit -m "Add commandline functionality to script"
+(venv_spacewalks) $ git status
+(venv_spacewalks) $ git add eva_data_analysis.py
+(venv_spacewalks) $ git commit -m "Add commandline functionality to script"
 ```
-```output
-[main b5883f6] Add commandline functionality to script
- 1 file changed, 30 insertions(+), 16 deletions(-)
-```
-
-
-
-::: callout 
-
-### Commit and push your changes
-
-Do not forget to commit any uncommited changes you may have and then push your work to GitHub.
-
-```bash
-git add <your_changed_files>
-git commit -m "Your commit message"
-git push origin main
-```
-
-:::

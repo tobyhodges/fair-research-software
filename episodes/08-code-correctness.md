@@ -286,8 +286,8 @@ Let's create a new python file `test_code.py` in the root of our project
 folder to store our tests.
 
 ``` bash
-cd Spacewalks
-touch test_code.py
+(venv_spacewalks) $ cd spacewalks
+(venv_spacewalks) $ touch test_code.py
 ```
 
 First, we import text_to_duration into our test script. Then, we then
@@ -434,7 +434,16 @@ We will use the python testing framework pytest with its code coverage
 plugin pytest-cov. To install these libraries, open a terminal and type:
 
 ``` bash
-python -m pip install pytest pytest-cov
+(venv_spacewalks) $ python -m pip install pytest pytest-cov
+```
+
+Make sure to also capture the changes to our virtual development environment.
+
+```bash
+(venv_spacewalks) $ python -m pip freeze > requirements.txt
+(venv_spacewalks) $ git add requirements.txt
+(venv_spacewalks) $ git commit -m "Added pytest and pytest-cov libraries."
+(venv_spacewalks) $ git push origin main
 ```
 
 Let’s make sure that our tests are ready to work with pytest.
@@ -466,8 +475,8 @@ move it to a dedicated test folder and rename our test_code.py file to
 test_eva_analysis.py.
 
 ``` bash
-mkdir tests
-mv test_code.py tests/test_eva_analysis.py
+(venv_spacewalks) $ mkdir tests
+(venv_spacewalks) $ mv test_code.py tests/test_eva_analysis.py
 ```
 
 Before we re-run our tests using pytest, let's update our second test.
@@ -545,7 +554,7 @@ def text_to_duration(duration):
 Finally, let's run our tests:
 
 ``` bash
-python -m pytest 
+(venv_spacewalks) $ python -m pytest 
 ```
 
 ``` output
@@ -991,7 +1000,7 @@ def text_to_duration(duration):
 ```
 
 ``` bash
-python -m pytest --cov 
+(venv_spacewalks) $ python -m pytest --cov 
 ```
 
 ``` output
@@ -1019,7 +1028,7 @@ To get an in-depth report about which parts of our code are tested and
 which are not, we can add the option `--cov-report=html`.
 
 ``` bash
-python -m pytest --cov --cov-report=html 
+(venv_spacewalks) $ python -m pytest --cov --cov-report=html 
 ```
 
 This option generates a folder `htmlcov` which contains a html code
@@ -1054,7 +1063,7 @@ b.  Which functions in our code base are currently untested?
 
 ::: solution
 ``` bash
-python -m pytest --cov --cov-report=html
+(venv_spacewalks) $ python -m pytest --cov --cov-report=html
 ```
 
 a.  The proportion of the code base NOT covered by our tests is
@@ -1464,38 +1473,22 @@ Finally lets commit our test suite to our codebase and push the changes
 to GitHub.
 
 ``` bash
-git add eva_data_analysis.py 
-git commit -m "Add additional analysis functions"
-git add tests/
-git commit -m "Add test suite"
-git push origin main
+(venv_spacewalks) $ git add eva_data_analysis.py 
+(venv_spacewalks) $ git commit -m "Add additional analysis functions"
+(venv_spacewalks) $ git add tests/
+(venv_spacewalks) $ git commit -m "Add test suite"
+(venv_spacewalks) $ git push origin main
 ```
 
 
-::: callout 
+## Continuous Integration for automated testing
 
-### Commit and push your changes
+Continuous Integration (CI) services provide the infrastructure to
+automatically run the code's test suite every time changes are pushed to a remote repository.
+There is an [extra episode on configuring CI for automated tests on GitHub](../learners/ci-for-testing.md)
+for some additional reading.
 
-Do not forget to commit any uncommited changes you may have and then push your work to GitHub.
-
-```bash
-git add <your_changed_files>
-git commit -m "Your commit message"
-git push origin main
-```
-
-:::
-
-::: callout 
-
-### Continuous Integration for automated testing
-
-
-
-:::
-
-
-### Summary
+## Summary
 
 During this episode, we have covered how to use software tests to verify
 the correctness of our code. We have seen how to write a unit test, how
@@ -1511,9 +1504,6 @@ experiment with changes to our code knowing that our tests will let us
 know if we break any existing functionality. In other words, software
 testing supports the FAIR software principles by making our code more **accessible** and
 **reusable**.
-
-To find out more about this topic, please see the "Further reading"
-section below.
 
 ## Further reading
 

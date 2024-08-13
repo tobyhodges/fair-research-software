@@ -132,13 +132,8 @@ plt.show()
 Let's make sure we commit our changes.
 
 ```bash
-git add eva_data_analysis.py
-git commit -m "Move import statements to the top of the script"
-```
-
-```output
-[main a97a9e1] Move import statements to the top of the script
- 1 file changed, 4 insertions(+), 4 deletions(-)
+(venv_spacewalks) $ git add eva_data_analysis.py
+(venv_spacewalks) $ git commit -m "Move import statements to the top of the script"
 ```
 
 ## Use meaningful variable names
@@ -247,14 +242,75 @@ if __name__ == '__main__':
 
 Commit changes:
 ```bash
-git add eva_data_analysis.py
-git commit -m "Use descriptive variable names"
+(venv_spacewalks) $ git add eva_data_analysis.py
+(venv_spacewalks) $ git commit -m "Use descriptive variable names"
 ```
 
 :::
 ::::::
 
+## Use standard libraries
 
+Our script currently reads the data line-by-line from the JSON data file and uses custom code to manipulate
+the data.
+Variables of interest are stored in lists but there are more suitable data structures (e.g. data frames)
+to store data in our case.
+By choosing custom code over standard and well-tested libraries, we are making our code less readable and understandable
+and more error-prone.
+
+The main functionality of our code can be rewritten as follows using the `Pandas` library to load and manipulate the data
+in data frames.
+
+First, we need to install this dependency into our virtual environment (which should be active at this point).
+
+```bash
+(venv_spacewalks) $ python -m pip install pandas
+```
+The code should now look like:
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+data_f = './eva-data.json'
+data_t = './eva-data.csv'
+g_file = './cumulative_eva_graph.png'
+
+data = pd.read_json(data_f, convert_dates=['date'])
+data['eva'] = data['eva'].astype(float)
+data.dropna(axis=0, inplace=True)
+data.sort_values('date', inplace=True)
+
+data.to_csv(data_t, index=False)
+
+data['duration_hours'] = data['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
+data['cumulative_time'] = data['duration_hours'].cumsum()
+plt.plot(data['date'], data['cumulative_time'], 'ko-')
+plt.xlabel('Year')
+plt.ylabel('Total time spent in space to date (hours)')
+plt.tight_layout()
+plt.savefig(g_file)
+plt.show()
+
+```
+
+We should replace the existing code in our Python script `eva_data_analysis.py` with the above code and commit the
+changes. Remember to use an informative commit message.
+
+```bash
+(venv_spacewalks) $ git add eva_data_analysis.py
+(venv_spacewalks) $ git commit -m "Refactor code to use standard libraries"
+```
+
+Make sure to also capture the changes to our virtual development environment.
+
+```bash
+(venv_spacewalks) $ python -m pip freeze > requirements.txt
+(venv_spacewalks) $ git add requirements.txt
+(venv_spacewalks) $ git commit -m "Added Pandas library."
+(venv_spacewalks) $ git push origin main
+```
 
 ## Use inline comments to explain functionality
 
@@ -357,63 +413,12 @@ if __name__ == '__main__':
 
 Commit changes:
 ```bash
-git add eva_data_analysis.py
-git commit -m "Add inline comments to the code"
+(venv_spacewalks) $ git add eva_data_analysis.py
+(venv_spacewalks) $ git commit -m "Add inline comments to the code"
 ```
 
 :::
 :::
-
-## Use standard libraries
-
-Our script currently reads the data line-by-line from the JSON data file and uses custom code to manipulate
-the data.
-Variables of interest are stored in lists but there are more suitable data structures (e.g. data frames)
-to store data in our case.
-By choosing custom code over standard and well-tested libraries, we are making our code less readable and understandable
-and more error-prone.
-
-The main functionality of our code can be rewritten as follows using `Pandas` library to load and manipulate the data
-in data frames.
-
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-
-data_f = './eva-data.json'
-data_t = './eva-data.csv'
-g_file = './cumulative_eva_graph.png'
-
-data = pd.read_json(data_f, convert_dates=['date'])
-data['eva'] = data['eva'].astype(float)
-data.dropna(axis=0, inplace=True)
-data.sort_values('date', inplace=True)
-
-data.to_csv(data_t, index=False)
-
-data['duration_hours'] = data['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
-data['cumulative_time'] = data['duration_hours'].cumsum()
-plt.plot(data['date'], data['cumulative_time'], 'ko-')
-plt.xlabel('Year')
-plt.ylabel('Total time spent in space to date (hours)')
-plt.tight_layout()
-plt.savefig(g_file)
-plt.show()
-
-```
-
-We should replace the existing code in our Python script `eva_data_analysis.py` with the above code and commit the
-changes. Remember to use an informative commit message.
-
-```bash
-git add eva_data_analysis.py
-git commit -m "Refactor code to use standard libraries"
-```
-```output
-[main 0ba9b04] "Refactor code to use standard libraries""
- 1 file changed, 11 insertions(+), 46 deletions(-)
-```
 
 ## Separate units of functionality
 
@@ -584,9 +589,9 @@ def read_json_to_dataframe(input_file):
 Do not forget to commit any uncommited changes you may have and then push your work to GitHub.
 
 ```bash
-git add <your_changed_files>
-git commit -m "Your commit message"
-git push origin main
+(venv_spacewalks) $ git add <your_changed_files>
+(venv_spacewalks) $ git commit -m "Your commit message"
+(venv_spacewalks) $ git push origin main
 ```
 
 :::
