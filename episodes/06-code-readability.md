@@ -76,7 +76,8 @@ import matplotlib.pyplot as plt
 # https://data.nasa.gov/resource/eva.json (with modifications)
 data_f = open('./eva-data.json', 'r')
 data_t = open('./eva-data.csv','w')
-g_file = './cumulative_eva_graph.png'   
+g_file = './cumulative_eva_graph.png'  
+
 fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
 
 data=[]
@@ -197,7 +198,6 @@ a. Edit the code as follows to use descriptive variable names:
     - Change data_f to input_file
     - Change data_t to output_file
     - Change g_file to graph_file
-    - Change data to eva_df
     
 b. Commit your changes to your repository. Remember to use an informative commit message.
 
@@ -206,38 +206,68 @@ b. Commit your changes to your repository. Remember to use an informative commit
 
 Updated code:
 ```python
-if __name__ == '__main__':
 
-    if len(sys.argv) < 3:
-        input_file = './eva-data.json'
-        output_file = './eva-data.csv'
-        print(f'Using default input and output filenames')
-    else:
-        input_file = sys.argv[1]
-        output_file = sys.argv[2]
-        print('Using custom input and output filenames')
+import json
+import csv
+import datetime as dt
+import matplotlib.pyplot as plt
 
-    graph_file = './cumulative_eva_graph.png'
+# Data source: https://data.nasa.gov/resource/eva.json (with modifications)
+input_file = open('./eva-data.json', 'r')
+output_file = open('./eva-data.csv', 'w')
+graph_file = './cumulative_eva_graph.png'
 
-    print(f'Reading JSON file {input_file}')
-    eva_df = pd.read_json(input_file, convert_dates=['date'])
-    eva_df['eva'] = eva_df['eva'].astype(float)
-    eva_df.dropna(axis=0, inplace=True)
-    eva_df.sort_values('date', inplace=True)
+fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
 
-    print(f'Saving to CSV file {output_file}')
-    eva_df.to_csv(output_file, index=False)
+data=[]
 
-    print(f'Plotting cumulative spacewalk duration and saving to {graph_file}')
-    eva_df['duration_hours'] = eva_df['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
-    eva_df['cumulative_time'] = eva_df['duration_hours'].cumsum()
-    plt.plot(eva_df.date, eva_df.cumulative_time, 'ko-')
-    plt.xlabel('Year')
-    plt.ylabel('Total time spent in space to date (hours)')
-    plt.tight_layout()
-    plt.savefig(graph_file)
-    plt.show()
-    print("--END--")
+for i in range(374):
+    line=input_file.readline()
+    print(line)
+    data.append(json.loads(line[1:-1]))
+#data.pop(0)
+## Comment out this bit if you don't want the spreadsheet
+
+w=csv.writer(output_file)
+
+time = []
+date =[]
+
+j=0
+for i in data:
+    print(data[j])
+    # and this bit
+    w.writerow(data[j].values())
+    if 'duration' in data[j].keys():
+        tt=data[j]['duration']
+        if tt == '':
+            pass
+        else:
+            t=dt.datetime.strptime(tt,'%H:%M')
+            ttt = dt.timedelta(hours=t.hour, minutes=t.minute, seconds=t.second).total_seconds()/(60*60)
+            print(t,ttt)
+            time.append(ttt)
+            if 'date' in data[j].keys():
+                date.append(dt.datetime.strptime(data[j]['date'][0:10], '%Y-%m-%d'))
+                #date.append(data[j]['date'][0:10])
+
+            else:
+                time.pop(0)
+    j+=1
+
+t=[0]
+for i in time:
+    t.append(t[-1]+i)
+
+date,time = zip(*sorted(zip(date, time)))
+
+plt.plot(date,t[1:], 'ko-')
+plt.xlabel('Year')
+plt.ylabel('Total time spent in space to date (hours)')
+plt.tight_layout()
+plt.savefig(graph_file)
+plt.show()
+
 ```
 
 Commit changes:
@@ -258,8 +288,8 @@ to store data in our case.
 By choosing custom code over standard and well-tested libraries, we are making our code less readable and understandable
 and more error-prone.
 
-The main functionality of our code can be rewritten as follows using the `Pandas` library to load and manipulate the data
-in data frames.
+The main functionality of our code can be rewritten as follows using the `Pandas` library to load and manipulate the 
+data in data frames.
 
 First, we need to install this dependency into our virtual environment (which should be active at this point).
 
@@ -269,28 +299,28 @@ First, we need to install this dependency into our virtual environment (which sh
 The code should now look like:
 
 ```python
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
 
+# Data source: https://data.nasa.gov/resource/eva.json (with modifications)
+input_file = open('./eva-data.json', 'r')
+output_file = open('./eva-data.csv', 'w')
+graph_file = './cumulative_eva_graph.png'
 
-data_f = './eva-data.json'
-data_t = './eva-data.csv'
-g_file = './cumulative_eva_graph.png'
+eva_df = pd.read_json(input_file, convert_dates=['date'])
+eva_df['eva'] = eva_df['eva'].astype(float)
+eva_df.dropna(axis=0, inplace=True)
+eva_df.sort_values('date', inplace=True)
 
-data = pd.read_json(data_f, convert_dates=['date'])
-data['eva'] = data['eva'].astype(float)
-data.dropna(axis=0, inplace=True)
-data.sort_values('date', inplace=True)
+eva_df.to_csv(output_file, index=False)
 
-data.to_csv(data_t, index=False)
-
-data['duration_hours'] = data['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
-data['cumulative_time'] = data['duration_hours'].cumsum()
-plt.plot(data['date'], data['cumulative_time'], 'ko-')
+eva_df['duration_hours'] = eva_df['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
+eva_df['cumulative_time'] = eva_df['duration_hours'].cumsum()
+plt.plot(eva_df['date'], eva_df['cumulative_time'], 'ko-')
 plt.xlabel('Year')
 plt.ylabel('Total time spent in space to date (hours)')
 plt.tight_layout()
-plt.savefig(g_file)
+plt.savefig(graph_file)
 plt.show()
 
 ```
@@ -303,7 +333,7 @@ changes. Remember to use an informative commit message.
 (venv_spacewalks) $ git commit -m "Refactor code to use standard libraries"
 ```
 
-Make sure to also capture the changes to our virtual development environment.
+Make sure to capture the changes to your virtual development environment too.
 
 ```bash
 (venv_spacewalks) $ python -m pip freeze > requirements.txt
@@ -315,7 +345,8 @@ Make sure to also capture the changes to our virtual development environment.
 ## Use inline comments to explain functionality
 
 Commenting is a very useful practice to help convey the context of the code.
-It can be helpful as a reminder for your future self or your collaborators as to why code is written in a certain way, how it is achieving a specific task, or the real-world implications of your code.
+It can be helpful as a reminder for your future self or your collaborators as to why code is written in a certain way, 
+how it is achieving a specific task, or the real-world implications of your code.
 
 There are many ways to add comments to code, the most common of which is inline comments.
 
@@ -323,14 +354,16 @@ There are many ways to add comments to code, the most common of which is inline 
 # In Python, inline comments begin with the `#` symbol and a single space.
 ```
 
-Again, there are few hard and fast rules to using comments, just apply your best judgment.
-But here are a few things to keep in mind when commenting your code:
+Here are a few things to keep in mind when commenting your code:
 
--   **Avoid using comments to explain *what* your code does.** If your code is too complex for other programmers to understand, consider rewriting it for clarity rather than adding comments to explain it.
--   Focus on the ***why*** and the ***how***.
--   Make sure you're not reiterating something that your code already conveys on its own. Comments shouldn't echo your code.
--   Keep them short and concise. Large blocks of text quickly become unreadable and difficult to maintain.
--   Comments that contradict the code are worse than no comments. Always make a priority of keeping comments up-to-date when code changes.
+- Focus on the **why** and the **how** of your code - avoid using comments to explain **what** your code does. 
+If your code is too complex for other programmers to understand, consider rewriting it for clarity rather than adding 
+comments to explain it.
+- Make sure you are not reiterating something that your code already conveys on its own. Comments should not echo your 
+code.
+- Keep comments short and concise. Large blocks of text quickly become unreadable and difficult to maintain.
+- Comments that contradict the code are worse than no comments. Always make a priority of keeping comments up-to-date 
+when code changes.
 
 ### Examples of unhelpful comments
 
@@ -350,11 +383,13 @@ citytax = 1.01  # City sales tax rate is 1% through Jan. 1
 specialtax = 1.01  # Special sales tax rate is 1% through Jan. 1
 ```
 
-In this case, it might not be immediately obvious what each variable represents, so the comments offer helpful, real-world context.
+In this case, it might not be immediately obvious what each variable represents, so the comments offer helpful, 
+real-world context.
 The date in the comment also indicates when the code might need to be updated.
 
 ::: challenge
-### Add inline comments our script
+
+### Add inline comments to our script
 
 a. Examine `eva_data_analysis.py`.
 Add as many inline comments as you think is required to help yourself and others understand what that code is doing.
@@ -368,47 +403,41 @@ Hint: Inline comments in Python are denoted by a `#` symbol.
 Some good inline comments may look like the example below.
 
 ``` python
-import pandas as pd
+
 import matplotlib.pyplot as plt
-import sys
+import pandas as pd
 
 
-if __name__ == '__main__':
+# https://data.nasa.gov/resource/eva.json (with modifications)
+input_file = open('./eva-data.json', 'r')
+output_file = open('./eva-data.csv', 'w')
+graph_file = './cumulative_eva_graph.png'
 
-    if len(sys.argv) < 3:
-        input_file = './eva-data.json'
-        output_file = './eva-data.csv'
-        print(f'Using default input and output filenames')
-    else:
-        input_file = sys.argv[1]
-        output_file = sys.argv[2]
-        print('Using custom input and output filenames')
+print("--START--")
+print(f'Reading JSON file {input_file}')
+# Read the data from a JSON file into a Pandas dataframe
+eva_df = pd.read_json(input_file, convert_dates=['date'])
+eva_df['eva'] = eva_df['eva'].astype(float)
+# Clean the data by removing any incomplete rows and sort by date
+eva_df.dropna(axis=0, inplace=True)
+eva_df.sort_values('date', inplace=True)
 
-    graph_file = './cumulative_eva_graph.png'
+print(f'Saving to CSV file {output_file}')
+# Save dataframe to CSV file for later analysis
+eva_df.to_csv(output_file, index=False)
 
-    print(f'Reading JSON file {input_file}')
-    # Read the data from a JSON file into a Pandas dataframe
-    eva_df = pd.read_json(input_file, convert_dates=['date'])
-    # Clean the data by removing any incomplete rows and sort by date
-    eva_df['eva'] = eva_df['eva'].astype(float)
-    eva_df.dropna(axis=0, inplace=True)
-    eva_df.sort_values('date', inplace=True)
+print(f'Plotting cumulative spacewalk duration and saving to {graph_file}')
+# Plot cumulative time spent in space over years
+eva_df['duration_hours'] = eva_df['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
+eva_df['cumulative_time'] = eva_df['duration_hours'].cumsum()
+plt.plot(eva_df['date'], eva_df['cumulative_time'], 'ko-')
+plt.xlabel('Year')
+plt.ylabel('Total time spent in space to date (hours)')
+plt.tight_layout()
+plt.savefig(graph_file)
+plt.show()
+print("--END--")
 
-    print(f'Saving to CSV file {output_file}')
-    # Save dataframe to CSV file for later analysis
-    eva_df.to_csv(output_file, index=False)
-
-    print(f'Plotting cumulative spacewalk duration and saving to {graph_file}')
-    # Plot cumulative time spent in space over years
-    eva_df['duration_hours'] = eva_df['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
-    eva_df['cumulative_time'] = eva_df['duration_hours'].cumsum()
-    plt.plot(eva_df.date, eva_df.cumulative_time, 'ko-')
-    plt.xlabel('Year')
-    plt.ylabel('Total time spent in space to date (hours)')
-    plt.tight_layout()
-    plt.savefig(graph_file)
-    plt.show()
-    print("--END--")
 ```
 
 Commit changes:
@@ -443,57 +472,94 @@ Decomposing code into functions helps with reusability of blocks of code and eli
 but, equally importantly, it helps with code readability and testing.
 :::
 
-::: challenge
-### Create a function
+Looking at our code, you may notice it contains different pieces of functionality:
 
-Below is a function that reads in a JSON file into a dataframe structure using the [`pandas` library][pandas-org] - but the code is out of order!
+1. reading the code from JSON data file
+2. processing/cleaning the data and preparing it for analysis 
+3. data analysis and visualising the results
+4. saving the data into the CSV format
 
-Reorder the lines of code within the function so that the JSON file is read in using the `read_json` method, any incomplete rows are *dropped*, the values are *sorted* by date, and then the cleaned dataframe is *returned*.
-There is also a `print` statement that will display which file is being read in on the command line for verification.
+Let's refactor our code so that the main part of the script is simplified to only invoke the above functions, and the 
+functions themselves to contain the complexity of each of the tasks.
 
-``` python
-import pandas as pd
-
-def read_json_to_dataframe(input_file):
-    eva_df.sort_values('date', inplace=True)
-    eva_df.dropna(axis=0, inplace=True)
-    print(f'Reading JSON file {input_file}')
-    return eva_df
-    eva_df = pd.read_json(input_file, convert_dates=['date'])
-```
-
-::: solution
-### Solution
-
-Here is the correct order of the code for the function.
+Our code may look something like the following.
 
 ``` python
+
+import matplotlib.pyplot as plt
 import pandas as pd
+
+# https://data.nasa.gov/resource/eva.json (with modifications)
+input_file = open('./eva-data.json', 'r')
+output_file = open('./eva-data.csv', 'w')
+graph_file = './cumulative_eva_graph.png'
 
 def read_json_to_dataframe(input_file):
     print(f'Reading JSON file {input_file}')
     eva_df = pd.read_json(input_file, convert_dates=['date'])
+    eva_df['eva'] = eva_df['eva'].astype(float)
     eva_df.dropna(axis=0, inplace=True)
     eva_df.sort_values('date', inplace=True)
     return eva_df
-```
 
-We have chosen to create a function for reading in data files since this is a very common task within research software.
-While this isn't that many lines of code, thanks to using pandas inbuilt methods, it can be useful to package this together into a function if you need to read in a lot of similarly structured files and process them in the same way.
-:::
-:::
+
+def write_dataframe_to_csv(df, output_file):
+    print(f'Saving to CSV file {output_file}')
+    df.to_csv(output_file, index=False)
+
+
+def text_to_duration(duration):
+    hours, minutes = duration.split(":")
+    duration_hours = int(hours) + int(minutes)/60
+    return duration_hours
+
+
+def add_duration_hours_variable(df):
+    df_copy = df.copy()
+    df_copy["duration_hours"] = df_copy["duration"].apply(
+        text_to_duration
+    )
+    return df_copy
+
+
+def plot_cumulative_time_in_space(df, graph_file):
+    print(f'Plotting cumulative spacewalk duration and saving to {graph_file}')
+    df = add_duration_hours_variable(df)
+    df['cumulative_time'] = df['duration_hours'].cumsum()
+    plt.plot(df.date, df.cumulative_time, 'ko-')
+    plt.xlabel('Year')
+    plt.ylabel('Total time spent in space to date (hours)')
+    plt.tight_layout()
+    plt.savefig(graph_file)
+    plt.show()
+
+
+# Main code
+
+print("--START--")
+
+eva_data = read_json_to_dataframe(input_file)
+
+write_dataframe_to_csv(eva_data, output_file)
+
+plot_cumulative_time_in_space(eva_data, graph_file)
+
+print("--END--")
+
+```
 
 ## Use docstrings to document functions
 
-Docstrings are a specific type of documentation that are provided within functions, and [classes][python-classes] too.
-A function docstring should explain what the isolated code is doing, what parameters the function needs (these are inputs) and what form they should take, what the function outputs (you may see words like 'returns' or 'yields' here), and errors (if any) that might be raised.
+Docstrings are a specific type of documentation that are provided within functions and [Python classes][python-classes].
+A function docstring should explain what that particular code is doing, what parameters the function needs (inputs)
+and what form they should take, what the function outputs (you may see words like 'returns' or 'yields' here), 
+and errors (if any) that might be raised.
 
-Providing these docstrings helps improve code readability since it makes the function code more transparent and aids understanding.
-Particularly, docstrings that provide information on the input and output of functions makes it easier to reuse them in other parts of the code, without having to read the full function to understand what needs to be provided and what will be returned.
-
-Docstrings are another case where there are no hard and fast rules for writing them.
-Acceptable docstring formats can range from single- to multi-line.
-You can use your best judgment on how much documentation a particular function needs.
+Providing these docstrings helps improve code readability since it makes the function code more transparent and aids 
+understanding.
+Particularly, docstrings that provide information on the input and output of functions makes it easier to reuse them 
+in other parts of the code, without having to read the full function to understand what needs to be provided and 
+what will be returned.
 
 ### Example of a single-line docstring
 
@@ -503,63 +569,68 @@ def add(x, y):
     return x + y
 ```
 
-### Example of a multi-line docstring:
+### Example of a multi-line docstring
 
 ``` python
-def add(x, y=1.0):
+def divide(x, y):
     """
-    Adds two numbers together.
+    Divide expression x by expression y.
 
     Args:
-        x: A number to be included in the addition.
-        y (float, optional): A float number to be included in the addition. Defaults to 1.0.
+        x: A number to be divided.
+        y: A number to be divide by.
 
     Returns:
-        float: The sum of x and y.
+        float: The division of x by y.
+        
+    Raises:
+        ZeroDivisionError: Cannot divide by zero.
     """
-    return x + y
+    return x / y
 ```
 
 Some projects may have their own guidelines on how to write docstrings, such as [numpy][numpy-docstring].
-If you are contributing code to a wider project or community, try to follow the guidelines and standards they provide for codestyle.
+If you are contributing code to a wider project or community, try to follow the guidelines and standards they provide 
+for code style.
 
-As your code grows and becomes more complex, the docstrings can form the content of a reference guide allowing developers to quickly look up how to use the APIs, functions, and classes defined in your codebase.
-Hence, it is common to find tools that will automatically extract docstrings from your code and generate a website where people can learn about your code without downloading/installing and reading the code files - such as [MkDocs][mkdocs-org].
+As your code grows and becomes more complex, the docstrings can form the content of a reference guide allowing 
+developers to quickly look up how to use the APIs, functions, and classes defined in your codebase.
+Hence, it is common to find tools that will automatically extract docstrings from your code and generate a 
+website where people can learn about your code without downloading/installing and reading the code files - 
+such as [MkDocs][mkdocs-org].
 
-::: challenge
+:::::: challenge
+
 ### Writing docstrings
 
-Write a docstring for the `read_json_to_dataframe` function from the previous exercise.
+Write docstrings for all the functions we introduced in the previous exercise.
 Things you may want to consider when writing your docstring are:
 
 -   Describing what the function does
 -   What kind of inputs does the function take? Are they required or optional? Do they have default values?
 -   What output will the function produce?
 
-Hint: Python docstrings are defined by enclosing the text with `"""` above and below. This text is also indented to the same level as the code defined beneath it, which is 4 whitespaces.
+::: hint 
 
-::: solution
-### Solution
+Python docstrings are defined by enclosing the text with `"""` above and below. 
+This text is also indented to the same level as the code defined beneath it, which is 4 whitespaces.
 
-A good enough docstring for this function would look like this:
+:::
 
-``` python
-def read_json_to_dataframe(input_file):
-    """
-    Read the data from a JSON file into a Pandas dataframe
-    Clean the data by removing any incomplete rows and sort by date
-    """
-    print(f'Reading JSON file {input_file}')
-    eva_df = pd.read_json(input_file, 
-                          convert_dates=['date'])
-    eva_df.dropna(axis=0, inplace=True)
-    eva_df.sort_values('date', inplace=True)
-    return eva_df
-```
+::::::
 
-Using [Google's docstring convention](google-doc-string), the docstring may look more like this:
+Using [Google's docstring convention](google-doc-string), our code may look something like the following.
 
 ``` python
+
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# https://data.nasa.gov/resource/eva.json (with modifications)
+input_file = open('./eva-data.json', 'r')
+output_file = open('./eva-data.csv', 'w')
+graph_file = './cumulative_eva_graph.png'
+
 def read_json_to_dataframe(input_file):
     """
     Read the data from a JSON file into a Pandas dataframe.
@@ -570,47 +641,107 @@ def read_json_to_dataframe(input_file):
 
     Returns:
          eva_df (pd.DataFrame): The cleaned and sorted data as a dataframe structure
-    """        
+    """
     print(f'Reading JSON file {input_file}')
-    eva_df = pd.read_json(input_file, 
-                          convert_dates=['date'])
+    eva_df = pd.read_json(input_file, convert_dates=['date'])
+    eva_df['eva'] = eva_df['eva'].astype(float)
     eva_df.dropna(axis=0, inplace=True)
     eva_df.sort_values('date', inplace=True)
     return eva_df
+
+
+def write_dataframe_to_csv(df, output_file):
+    """
+    Write the dataframe to a CSV file.
+
+    Args:
+        df (pd.DataFrame): The input dataframe.
+        output_file (str): The path to the output CSV file.
+
+    Returns:
+        None
+    """
+    print(f'Saving to CSV file {output_file}')
+    df.to_csv(output_file, index=False)
+
+def text_to_duration(duration):
+    """
+    Convert a text format duration "HH:MM" to duration in hours
+
+    Args:
+        duration (str): The text format duration
+
+    Returns:
+        duration_hours (float): The duration in hours
+    """
+    hours, minutes = duration.split(":")
+    duration_hours = int(hours) + int(minutes)/60
+    return duration_hours
+
+
+def add_duration_hours_variable(df):
+    """
+    Add duration in hours (duration_hours) variable to the dataset
+
+    Args:
+        df (pd.DataFrame): The input dataframe.
+
+    Returns:
+        df_copy (pd.DataFrame): A copy of df_ with the new duration_hours variable added
+    """
+    df_copy = df.copy()
+    df_copy["duration_hours"] = df_copy["duration"].apply(
+        text_to_duration
+    )
+    return df_copy
+
+
+def plot_cumulative_time_in_space(df, graph_file):
+    """
+    Plot the cumulative time spent in space over years
+
+    Convert the duration column from strings to number of hours
+    Calculate cumulative sum of durations
+    Generate a plot of cumulative time spent in space over years and
+    save it to the specified location
+
+    Args:
+        df (pd.DataFrame): The input dataframe.
+        graph_file (str): The path to the output graph file.
+
+    Returns:
+        None
+    """
+    print(f'Plotting cumulative spacewalk duration and saving to {graph_file}')
+    df = add_duration_hours_variable(df)
+    df['cumulative_time'] = df['duration_hours'].cumsum()
+    plt.plot(df.date, df.cumulative_time, 'ko-')
+    plt.xlabel('Year')
+    plt.ylabel('Total time spent in space to date (hours)')
+    plt.tight_layout()
+    plt.savefig(graph_file)
+    plt.show()
+
+
+print("--START--")
+
+eva_data = read_json_to_dataframe(input_file)
+
+write_dataframe_to_csv(eva_data, output_file)
+
+plot_cumulative_time_in_space(eva_data, graph_file)
+
+print("--END--")
+
 ```
-:::
-:::
 
-
-::: callout
-
-### Commit and push your changes
-
-Do not forget to commit any uncommited changes you may have and then push your work to GitHub.
+Do not forget to commit any uncommitted changes you may have and then push your work to GitHub.
 
 ```bash
 (venv_spacewalks) $ git add <your_changed_files>
 (venv_spacewalks) $ git commit -m "Your commit message"
 (venv_spacewalks) $ git push origin main
 ```
-
-:::
-
-## Summary
-
-During this episode, we have discussed the importance of code readability and explored some software engineering 
-practices that help facilitate this.
-
-Code readability is important because it makes it simpler and quicker for a person (future you or a collaborator) 
-to understand what purpose the code is serving, and therefore begin contributing to it more easily, saving time and 
-effort.
-
-Some best practices we have covered towards code readability include:
-
--   Variable naming practices for descriptive yet concise code
--   Inline comments to provide real-world context
--   Functions to isolate specific code sections for re-use
--   Docstrings for documenting functions to facilitate their re-use
 
 
 ## Further reading
@@ -626,8 +757,10 @@ We recommend the following resources for some additional reading on the topic of
 Also check the [full reference set](learners/reference.md#litref) for the course.
 
 ::: keypoints
--   Readable code is easier to understand, maintain, debug and extend (reuse).
--   Choosing descriptive variable and function names will communicate their purpose more effectively.
--   Using inline comments and docstrings to describe parts of the code will help transmit understanding, and verify that the code is correct.
--   Creating functions from the smallest, reusable units of code will help compartmentalise which parts of the code are doing what actions.
+- Readable code is easier to understand, maintain, debug and extend (reuse) - saving time and effort.
+- Choosing descriptive variable and function names will communicate their purpose more effectively.
+- Using inline comments and docstrings to describe parts of the code will help transmit understanding and context.
+- Use libraries or packages for common functionality to avoid duplication.
+- Creating functions from the smallest, reusable units of code will make the code more readable and help. 
+compartmentalise which parts of the code are doing what actions and isolate specific code sections for re-use.
 :::

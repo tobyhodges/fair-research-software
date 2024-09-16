@@ -286,7 +286,7 @@ zope.interface  7.0.1
 To uninstall a package installed in the virtual environment do: `python -m pip uninstall <package-name>`.
 You can also supply a list of packages to uninstall at the same time.
 
-## Exporting/Importing virtual environments
+## Sharing virtual environments
 
 You are collaborating on a project with a team so, naturally,
 you will want to share your environment with your collaborators
@@ -328,7 +328,12 @@ The `requirements.txt` file can then be committed to a version control system
 (we will see how to do this using Git in a moment)
 and get shipped as part of your software and shared with collaborators and/or users.
 
-Let's do that now.
+Note that you only need to share the small `requirements.txt` file with your collaborators - and not the entire  
+`venv_spacewalks` directory with packages contained in your virtual environment. 
+We need to tell Git to ignore that directory, so it is not tracked and shared - we do this by creating a file 
+`.gitignore` in the root directory of our project and adding a line `venv_spacewalks` to it.
+
+Let's now put `requirements.txt` under version control and share it along with our code.
 
 ```bash
 (venv_spacewalks) $ git add requirements.txt
@@ -357,6 +362,12 @@ What you need to do in this case (apart from installing the new and removing the
 from your virtual environment) is update the contents of the `requirements.txt` file accordingly
 by re-issuing `pip freeze` command and propagate the updated `requirements.txt` file to your collaborators
 via your code sharing platform.
+
+## Further reading
+
+We recommend the following resources for some additional reading on the topic of this episode:
+
+- [Official Python Documentation: Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html)
 
 :::::: keypoints
 - Virtual environments keep Python versions and dependencies required by different projects separate.
