@@ -1,13 +1,13 @@
 ---
 title: Reproducible development environment
-teaching: 60
-exercises: 30
+teaching: 30
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What are virtual environments in software development and why you should use them?
-- How can we manage Python virtual environments and external (third-party) libraries?
+- What are virtual environments in software development and why use them?
+- How can we manage Python virtual coding environments and external (third-party) libraries on our machines?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -15,7 +15,7 @@ exercises: 30
 
 After completing this episode, participants should be able to:
 
-- Set up a Python virtual environment for our software project using `venv` and `pip`.
+- Set up a Python virtual coding environment for a software project using `venv` and `pip`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -43,6 +43,7 @@ import matplotlib.pyplot as plt
 This means that our code requires several **external libraries**
 (also called third-party packages or dependencies) -
 `json`, `csv`, `datetime` and `matplotlib`.
+
 Python applications often use external libraries that do not come as part of the standard Python distribution.
 This means that you will have to use a **package manager** tool to install them on your system.
 Applications will also sometimes need a
@@ -103,7 +104,7 @@ So, we will use `venv` and `pip` in combination to help us create and share our 
 
 Creating a virtual environment with `venv` is done by executing the following command:
 
-```python
+```bash
 $ python -m venv /path/to/new/virtual/environment
 ```
 
@@ -111,21 +112,26 @@ where `/path/to/new/virtual/environment` is a path to a directory where you want
 conventionally within your software project so they are co-located.
 This will create the target directory for the virtual environment.
 
-For our project let's create a virtual environment called "venv_spacewalks".
-First, ensure you are within the project root directory, then:
+For our project let's create a virtual environment called "venv_spacewalks" from our project's root directory.
 
-```python
+Firstly, ensure you are located within the project's root directory:
+
+```bash
+$ cd /path/to/spacewalks
+```
+
+```bash
 $ python -m venv venv_spacewalks
 ```
 
-If you list the contents of the newly created directory "venv", on a Mac or Linux system
+If you list the contents of the newly created directory "venv_spacewalks", on a Mac or Linux system
 (slightly different on Windows as explained below) you should see something like:
 
 ```bash
 $ ls -l venv_spacewalks
 ```
 
-```bash
+```output
 total 8
 drwxr-xr-x  12 alex  staff  384  5 Oct 11:47 bin
 drwxr-xr-x   2 alex  staff   64  5 Oct 11:47 include
@@ -194,9 +200,9 @@ we will see how to handle it using Git in one of the subsequent episodes.
 
 ## Installing external packages
 
-We noticed earlier that our code depends on four *external packages/libraries* -
+We noticed earlier that our code depends on four **external packages/libraries** -
 `json`, `csv`, `datetime` and `matplotlib`. 
-As of Python 3.5, Python comes with in-built JSON and CSV libraries - this means there is no need to install these  
+As of Python 3.5, Python comes with in-built JSON and CSV libraries - this means there is no need to install these 
 additional packages (if you are using a fairly recent version of Python), but you still need to import them in any 
 script that uses them. 
 However, we still need to install packages `datetime` and `matplotlib` as they do not come as standard with 
@@ -235,6 +241,8 @@ To display information about a particular installed package do:
 
 ```bash
 (venv_spacewalks) $ python -m pip show matplotlib
+```
+```output
 Name: matplotlib
 Version: 3.9.0
 Summary: Python plotting package
@@ -253,6 +261,8 @@ To list all packages installed with `pip` (in your current virtual environment):
 
 ```bash
 (venv_spacewalks) $ python -m pip list
+```
+```output
 Package         Version
 --------------- -----------
 contourpy       1.2.1
@@ -286,11 +296,13 @@ and everyone can replicate equivalent virtual environments on their machines.
 
 To export your active environment -
 use `python -m pip freeze` command to produce a list of packages installed in the virtual environment.
-A common convention is to put this list in a `requirements.txt` file:
+A common convention is to put this list in a `requirements.txt` file in your project's root directory:
 
 ```bash
 (venv_spacewalks) $ python -m pip freeze > requirements.txt
 (venv_spacewalks) $ cat requirements.txt
+```
+```output
 contourpy==1.2.1
 cycler==0.12.1
 DateTime==5.5
@@ -313,29 +325,8 @@ depending on the version of the packages you have installed,
 as well as any differences in the packages that they themselves use.
 
 The `requirements.txt` file can then be committed to a version control system
-(we will see how to do this using Git in one of the following episodes)
+(we will see how to do this using Git in a moment)
 and get shipped as part of your software and shared with collaborators and/or users.
-They can then replicate your environment
-and install all the necessary packages from the project root as follows:
-
-~~~
-(venv_spacewalks) $ python -m pip install -r requirements.txt
-~~~
-{: .language-bash}
-
-As your project grows - you may need to update your environment for a variety of reasons.
-For example, one of your project's dependencies has just released a new version
-(dependency version number update),
-you need an additional package for data analysis (adding a new dependency)
-or you have found a better package and no longer need the older package
-(adding a new and removing an old dependency).
-What you need to do in this case
-(apart from installing the new and removing the packages that are no longer needed
-from your virtual environment)
-is update the contents of the `requirements.txt` file accordingly
-by re-issuing `pip freeze` command
-and propagate the updated `requirements.txt` file to your collaborators
-via your code sharing platform (e.g. GitHub).
 
 Let's do that now.
 
@@ -344,3 +335,34 @@ Let's do that now.
 (venv_spacewalks) $ git commit -m "Initial commit of requirements.txt."
 (venv_spacewalks) $ git push origin main
 ```
+
+Your collaborators or users of your software can now download your software's source code and replicate the same 
+virtual software environment for running your code on their machines using `requirements.txt` to install all 
+the necessary depending packages. 
+
+To recreate a virtual environment from `requirements.txt`, from the project root one can do the following:
+
+```bash
+(venv_spacewalks) $ python -m pip install -r requirements.txt
+```
+
+As your project grows - you may need to update your environment for a variety of reasons, e.g.:
+
+- one of your project's dependencies has just released a new version (dependency version number update),
+- you need an additional package for data analysis (adding a new dependency), or 
+- you have found a better package and no longer need the older package
+(adding a new and removing an old dependency).
+
+What you need to do in this case (apart from installing the new and removing the packages that are no longer needed
+from your virtual environment) is update the contents of the `requirements.txt` file accordingly
+by re-issuing `pip freeze` command and propagate the updated `requirements.txt` file to your collaborators
+via your code sharing platform.
+
+:::::: keypoints
+- Virtual environments keep Python versions and dependencies required by different projects separate.
+- A Python virtual environment is itself a directory structure.
+- You can use `venv` to create and manage Python virtual environments, and `pip` to install and manage Python 
+external (third-party) libraries.
+- By convention, you can save and export your Python virtual environment in a `requirements.txt` in your project's root 
+directory, which can then be shared with collaborators/users and used to replicate your virtual environment elsewhere.
+::::::
