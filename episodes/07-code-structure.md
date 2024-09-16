@@ -570,6 +570,16 @@ if __name__ == "__main__":
 
 ::::::
 
+## Further reading
+
+We recommend the following resources for some additional reading on the topic of this episode:
+
+- [Organizing your projects](https://coderefinery.github.io/reproducible-research/organizing-projects/) chapter from the [CodeRefinery's Reproducible Research tutorial](https://coderefinery.github.io/reproducible-research/intro/)
+- [MIT Broad Reseach Communication Lab's "File Structure" guide](https://mitcommlab.mit.edu/broad/commkit/file-structure/)
+
+
 ::: keypoints
+
 - Good practices for code and project structure are essential for creating readable, accessible and reproducibile projects.
+
 :::

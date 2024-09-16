@@ -59,7 +59,7 @@ The solution for this problem is to create a self-contained
 which contains a particular version of Python installation
 plus a number of additional external libraries.
 
-## Virtual environments
+## Virtual development environments
 So what exactly are virtual environments, and why use them?
 
 A Python virtual environment helps us create an **isolated working copy** of a software project
@@ -87,7 +87,7 @@ Virtual environments also enable you to always use
 the latest available version without specifying it explicitly.
 They also enable you to use a specific older version of a package for your project, should you need to.
 
-## Managing Python virtual environments
+## Managing virtual environments
 
 There are several command line tools used for managing Python virtual environments - we will use `venv`, 
 available by default from the standard `Python` distribution since `Python 3.3`.
