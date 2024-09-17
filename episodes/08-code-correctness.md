@@ -40,11 +40,13 @@ produced by a piece of code meet our expectations, i.e. are correct.
 
 Before we move on with further code modifications, make sure your virtual development environment is active.
 
+:::::: instructor
+
 ::: callout
 
 ### Activate your virtual environment
-If it is not already active, make sure to activate your virtual environment from the root of your project directory
-in your command line terminal (e.g. Bash or GitBash):
+If it is not already active, make sure to remind learners to activate their virtual environments from the root of
+the software project directory in command line terminal (e.g. Bash or GitBash):
 
 ```bash
 $ source venv_spacewalks/bin/activate # Mac or Linux
@@ -53,10 +55,9 @@ $ source venv_spacewalks/Scripts/activate # Windows
 ```
 :::
 
-::: instructor
-At this point, the `eva_data_analysis.py` code (and the 
-[state of the software repository](https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/08-code-correctness))
-should look like as follows:
+At this point, the state of the software repository should be as in
+https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/08-code-correctness
+and the `eva_data_analysis.py` code should look like as follows:
 
 ``` python
 import matplotlib.pyplot as plt
@@ -184,7 +185,8 @@ if __name__ == "__main__":
 
 
 ```
-:::
+
+::::::
 
 ## Why use software testing?
 

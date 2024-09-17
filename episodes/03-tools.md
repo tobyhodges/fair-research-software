@@ -105,6 +105,9 @@ check if it is a change in the code due to using a newer version, or a change in
 We will be using the Git version control system, which can be used through the command line terminal, 
 in a browser or in a desktop application.
 
+## Code structure and style guidelines
+TODO
+
 ## Code correctness
 
 Testing ensures that your code is correct and does what it is set out to do. When you write code you often feel very 

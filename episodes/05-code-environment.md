@@ -369,6 +369,9 @@ We recommend the following resources for some additional reading on the topic of
 
 - [Official Python Documentation: Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html)
 
+Also check the [full reference set](learners/reference.md#litref) for the course.
+
+
 :::::: keypoints
 - Virtual environments keep Python versions and dependencies required by different projects separate.
 - A Python virtual environment is itself a directory structure.
