@@ -139,7 +139,8 @@ analyse our data and plot a graph into a separate function `plot_cumulative_time
 the code to convert the data column containing spacewalk durations as text into numbers which we can perform 
 arithmetic operations over, and add that numerical data as a new column in our dataset. 
 
-The main part of our code then becomes much simpler and only contains the invocation of the following three functions:
+The main part of our code then becomes much simpler and more readable, only 
+containing the invocation of the following three functions:
 
 ```python
 eva_data = read_json_to_dataframe(input_file)
@@ -490,39 +491,41 @@ Remember to commit our changes.
 ## Directory structure for software projects
 
 One of the steps to make your work more easily readable and reproducible is to organise your software projects 
-following certain conventions to use consistent and informative directory structure. This way, 
-people will immediately know where to find things within your project.
+following certain conventions on consistent and informative directory structure. 
+This way, people will immediately know where to find things within your project.
 Here are some general guidelines that apply to all research projects (including software projects):
 
 - Put all files related to a project into a single directory
 - Do not mix project files - different projects should have separate directories and repositories (it is OK to copy 
-files if both projects require them)
+files into multiple places if both projects require them)
 - Avoid spaces in directory and file names – they can cause errors when read by computers
 - If you have sensitive data - you can put it in a private repository on GitHub
 - Use .gitignore to specify what files should not be tracked - e.g. passwords, local configuration, etc.
 - Add a README file to your repository to describe the project and instructions on running the code or reproducing 
-the results (will be covered later in this course)
+the results (we will covered this later in this course).
 
 ```output
 project_name/
 ├── README.md             # overview of the project
 ├── data/                 # data files used in the project
 │   ├── README.md         # describes where data came from
-│   └── sub-folder/       # may contain subdirectories
-├── processed_data/       # intermediate files from the analysis
+│   └── sub-folder/       # may contain subdirectories, e.g. for intermediate files from the analysis
 ├── manuscript/           # manuscript describing the results
 ├── results/              # results of the analysis (data, tables, figures)
 ├── src/                  # contains all code in the project
 │   ├── LICENSE           # license for your code
 │   ├── requirements.txt  # software requirements and dependencies
 │   └── ...
-└── doc/                  # documentation for your project
+├── src/                  # source code for your project
+├── doc/                  # documentation for your project
 ├── index.rst
+├── main_script.py        # main script/code entry point
 └── ...
 ```
 
-- Source code is typically placed in the `src/` or `source/` directory (and its subdirectories)
-- Data is typically placed under `data/` or
+- Source code is typically placed in the `src/` or `source/` directory (and its subdirectories containing hierarchical 
+libraries of your code). The main script or the main entry to your code may remain in the project root.
+- Data is typically placed under `data/` 
     - Raw data or input files can also be placed under `raw_data/` - original data should not be modified and should be kept raw
     - Processed or cleaned data or intermediate results from data analysis can be placed under `processed_data/`
 - Documentation is typically placed or compiled into `doc/` or `docs/`
