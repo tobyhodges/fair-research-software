@@ -124,9 +124,31 @@ print("--END--")
 
 ## Functions for Modular and Reusable Code 
 
-Functions - reiterate structure and modularity
+As we have already seen in the previous episode - functions play a key role in creating modular and reusable code.
+We are going to carry on improving our code following these principles:
 
-TODO - refactor the remaining 3 functions (in previous episode we refactored 2)
+- Each function should have a single, clear responsibility. This makes functions easier to understand, test, and reuse.
+- Functions should accept parameters to allow flexibility and reusability in different contexts; avoid hard-coding 
+values inside functions/code (e.g. data files to read from/write to); instead, pass them as arguments.
+- Split complex tasks into smaller, simpler functions that can be composed; each function should handle a distinct 
+part of a larger task.
+- Write functions that can be easily combined or reused with other functions to build more complex functionality.
+
+Bearing in mind the above principles, we can further simplify our code by extracting the code to process, 
+analyse our data and plot a graph into a separate function `plot_cumulative_time_in_space`, and then further break down
+the code to convert the data column containing spacewalk durations as text into numbers which we can perform 
+arithmetic operations over, and add that numerical data as a new column in our dataset. 
+
+The main part of our code then becomes much simpler and only contains the invocation of the following three functions:
+
+```python
+eva_data = read_json_to_dataframe(input_file)
+write_dataframe_to_csv(eva_data, output_file)
+plot_cumulative_time_in_space(eva_data, graph_file)
+```
+Remember to add docstrings and comments to the new functions to explain their functionalities. 
+
+Our new code may look like the following.
 
 ```python
 
