@@ -129,13 +129,10 @@ TODO - refactor the remaining 3 functions (in previous episode we refactored 2)
 
 ```python
 
+
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
-graph_file = './cumulative_eva_graph.png'
 
 def read_json_to_dataframe(input_file):
     """
@@ -229,7 +226,13 @@ def plot_cumulative_time_in_space(df, graph_file):
     plt.show()
 
 
+# Main code
+
 print("--START--")
+
+input_file = open('./eva-data.json', 'r')
+output_file = open('./eva-data.csv', 'w')
+graph_file = './cumulative_eva_graph.png'
 
 eva_data = read_json_to_dataframe(input_file)
 
@@ -238,6 +241,7 @@ write_dataframe_to_csv(eva_data, output_file)
 plot_cumulative_time_in_space(eva_data, graph_file)
 
 print("--END--")
+
 
 ```
 
