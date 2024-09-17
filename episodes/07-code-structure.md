@@ -6,9 +6,10 @@ exercises: 30
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What is a common code pattern for creating software that can read input from command line?
-- What are conventional places to store data, code, results, tests and auxiliary information within our code or 
-research project? 
+- How can be bests structure code into reusable components with a single responsibility?
+- What is a common code structure (pattern) for creating software that can read input from command line?
+- What are conventional places to store data, code, results, tests and auxiliary information and metadata 
+within our software or research project? 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
