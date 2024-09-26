@@ -1,5 +1,5 @@
 ---
-title: Implementing a minimal test suite
+title: Implementing a test suite
 teaching: 0
 exercises: 30
 ---
@@ -7,48 +7,49 @@ exercises: 30
 ::::::::::::::::::::::::::::::::::::: objectives
 After completing this episode, participants should be able to:
 
-- Implement a minimal test suite
-
+- Implement a test suite using `pytest` testing framework for automated testing
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- How can we implement a minimal test suite when someone adds new code to our project?
+- How can we implement a test suite when someone adds new code to our project?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Implementing a minimal test suite
+This extra episode provides additional exercises on writing tests and should be followed after the [episode 
+on code correctness](08-code-correctness.md) and with [the starter code from the end of that episode](https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/blob/09-code-documentation/eva_data_analysis.py).
 
 A member of our research team shares the following code with us to add to our existing codebase:
 
 ``` python
-def summarise_categorical(df_, varname_):
+def summarise_categorical(df, varname):
     """
     Tabulate the distribution of a categorical variable
 
     Args:
-        df_ (pd.DataFrame): The input dataframe.
-        varname_ (str): The name of the variable
+        df (pd.DataFrame): The input dataframe.
+        varname (str): The name of the variable
 
     Returns:
         pd.DataFrame: dataframe containing the count and percentage of
         each unique value of varname_
-        
+
     Examples:
         >>> df_example  = pd.DataFrame({
             'vehicle': ['Apollo 16', 'Apollo 17', 'Apollo 17'],
             }, index=[0, 1, 2)
         >>> summarise_categorical(df_example, "vehicle")
         Tabulating distribution of categorical variable vehicle
+        
              vehicle  count  percentage
         0  Apollo 16      1        33.0
         1  Apollo 17      2        67.0
     """
-    print(f'Tabulating distribution of categorical variable {varname_}')
+    print(f'Tabulating distribution of categorical variable {varname}')
 
     # Prepare statistical summary
-    count_variable = df_[[varname_]].copy()
+    count_variable = df[[varname]].copy()
     count_summary = count_variable.value_counts()
     percentage_summary = round(count_summary / count_variable.size, 2) * 100
 
@@ -57,106 +58,41 @@ def summarise_categorical(df_, varname_):
     df_summary.columns = ['count', 'percentage']
     df_summary.sort_index(inplace=True)
 
-
     df_summary = df_summary.reset_index()
     return df_summary
 ```
 
-This looks like a useful tool for creating summary statistics tables, so
-let's integrate this into our `eva_data_analysis.py`code and then write
-a minimal test suite to check that this code is behaving as expected.
+This looks like a useful tool for creating summary statistics tables, so let's integrate this into our 
+`eva_data_analysis.py`code and then write a minimal test suite to check that this code is behaving as expected.
 
 ``` python
-import pandas as pd
-import matplotlib.pyplot as plt
-import sys
-import re
-
-
 ...
-
-def add_crew_size_variable(df_):
-    """
-    Add crew size (crew_size) variable to the dataset
-
-    Args:
-        df_ (pd.DataFrame): The input dataframe.
-
-    Returns:
-        pd.DataFrame: A copy of df_ with the new crew_size variable added
-    """
-    print('Adding crew size variable (crew_size) to dataset')
-    df_copy = df_.copy()
-    df_copy["crew_size"] = df_copy["crew"].apply(
-        calculate_crew_size
-    )
-    return df_copy
-
-
-def summarise_categorical(df_, varname_):
-    """
-    Tabulate the distribution of a categorical variable
-
-    Args:
-        df_ (pd.DataFrame): The input dataframe.
-        varname_ (str): The name of the variable
-
-    Returns:
-        pd.DataFrame: dataframe containing the count and percentage of
-        each unique value of varname_
-    """
-    print(f'Tabulating distribution of categorical variable {varname_}')
-
-    # Prepare statistical summary
-    count_variable = df_[[varname_]].copy()
-    count_summary = count_variable.value_counts() # There is a bug here that we will fix later!
-    percentage_summary = round(count_summary / count_variable.size, 2) * 100
-
-    # Combine results into a summary data frame
-    df_summary = pd.concat([count_summary, percentage_summary], axis=1)
-    df_summary.columns = ['count', 'percentage']
-    df_summary.sort_index(inplace=True)
-
-
-    df_summary = df_summary.reset_index()
-    return df_summary
-
-
-if __name__ == '__main__':
-
-    if len(sys.argv) < 3:
-        input_file = './eva-data.json'
-        output_file = './eva-data.csv'
-        print(f'Using default input and output filenames')
-    else:
-        input_file = sys.argv[1]
-        output_file = sys.argv[2]
-        print('Using custom input and output filenames')
-
-    graph_file = './cumulative_eva_graph.png'
+def main(input_file, output_file, graph_file):
+    print("--START--")
 
     eva_data = read_json_to_dataframe(input_file)
 
-    eva_data_prepared = add_crew_size_variable(eva_data)
+    write_dataframe_to_csv(eva_data, output_file)
 
-    write_dataframe_to_csv(eva_data_prepared, output_file)
+    eva_data = add_crew_size_column(eva_data)
 
-    table_crew_size = summarise_categorical(eva_data_prepared, "crew_size")
+    table_crew_size = summarise_categorical(eva_data, "crew_size") # new line added
 
-    write_dataframe_to_csv(table_crew_size, "./table_crew_size.csv")
+    write_dataframe_to_csv(table_crew_size, "results/table_crew_size.csv")
 
-    plot_cumulative_time_in_space(eva_data_prepared, graph_file)
+    plot_cumulative_time_in_space(eva_data, graph_file)
 
     print("--END--")
+    
 ```
 
-To write tests for this function, we'll need to be able to compare
-dataframes. The pandas.testing module in the pandas library provides
-functions and utilities for testing pandas objects and includes a
+To write tests for this function, we will need to be able to compare dataframes. 
+The `pandas.testing` module in the `pandas` library provides
+functions and utilities for testing `pandas` objects and includes a
 function `assert_frame_equal` that we can use to compare two dataframes.
 
 ::: challenge
-### Exercise 1 - Typical Inputs
+### Exercise 1 - typical inputs
 
 First, check that the function behaves as expected with typical input
 values. Fill in the gaps in the skeleton test below:
@@ -213,7 +149,7 @@ def test_summarise_categorical():
 :::
 
 ::: challenge
-### Exercise 2 - Edge Cases
+### Exercise 2 - edge cases
 
 Now let's check that the function behaves as expected with edge cases.\
 Does the code behave as expected when the column of interest contains
@@ -270,7 +206,7 @@ def test_summarise_categorical_missvals():
 :::
 
 ::: challenge
-### Exercise 3 - Invalid inputs
+### Exercise 3 - invalid inputs
 
 Now write a test to check that the `summarise_categorical` function
 raises an appropriate error when asked to tabulate a column that does
