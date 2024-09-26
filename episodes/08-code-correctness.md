@@ -9,7 +9,7 @@ exercises: 30
 -   How can we verify that our code is correct?
 -   How can we automate our software tests?
 -   What makes a "good" test?
--   Which parts of our code should we prioritize for testing?
+-   Which parts of our code should we prioritise for testing?
 
 :::
 
@@ -17,19 +17,14 @@ exercises: 30
 
 After completing this episode, participants should be able to:
 
--   Explain why code testing is important and how this supports FAIR
-    software.
--   Describe the different types of software tests (unit tests,
-    integration tests, regression tests).
--   Implement unit tests to verify that function(s) behave as expected
-    using the Python testing framework `pytest`.
--   Interpret the output from `pytest` to identify which function(s) are
-    not behaving as expected.
--   Write tests using typical values, edge cases and invalid inputs to
-    ensure that the code can handle extreme values and invalid inputs
-    appropriately.
--   Evaluate code coverage to identify how much of the codebase is being
-    tested and identify areas that need further tests.
+-   Explain why code testing is important and how this supports FAIR software.
+-   Describe the different types of software tests (unit tests, integration tests, regression tests).
+-   Implement unit tests to verify that function behave as expected using the Python testing framework `pytest`.
+-   Interpret the output from `pytest` to identify which functions are not behaving as expected.
+-   Write tests using typical values, edge cases and invalid inputs to ensure that the code can handle extreme 
+values and invalid inputs appropriately.
+-   Evaluate code coverage to identify how much of the codebase is being tested and identify areas that need further 
+tests.
 
 :::
 
@@ -270,8 +265,8 @@ Let’s explore this process by writing some formal tests for our
 calculate_crew_size function later).
 
 The `text_to_duration` function converts a duration stored as a string
-in format "HH:MM" to a duration in hours, e.g. duration "01:15" (1 hour and 15 minutes) 
-should return a float point value of 1.25.
+in format "HH:MM" to a duration in hours, e.g. duration `01:15` (1 hour and 15 minutes) 
+should return a numerical value of `1.25`.
 
 ``` python
 def text_to_duration(duration):
