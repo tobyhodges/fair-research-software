@@ -224,8 +224,8 @@ Extend the README for Spacewalks by adding:
 
 Installation instructions:
 
-NB: In the solution below the back ticks of each code block have been escaped to avoid rendering issues.
-
+NB: In the solution below the back ticks of each code block have been escaped to avoid rendering issues (if you are 
+copying and pasting the text, make sure you unescape them).
 
 ```text
 ## Installation instructions
@@ -233,20 +233,20 @@ NB: In the solution below the back ticks of each code block have been escaped to
 + Clone the Spacewalks repository to your local machine using Git.
 If you don't have Git installed, you can download it from the official Git website.
 
-\`\`\`bash
+\`\`\`
 git clone https://github.com/your-repository-url/spacewalks.git
 cd spacewalks
 \`\`\`
 
 + Install the necessary dependencies:
-\`\`\`bash
-pip install pandas==2.2.2 matplotlib==3.8.4 numpy==2.0.0 pytest==7.4.2
+\`\`\`
+python3 -m pip install pandas==2.2.2 matplotlib==3.8.4 numpy==2.0.0 pytest==7.4.2
 \`\`\`
 
 + To ensure everything is working correctly, run the tests using pytest.
 
-\`\`\`bash
-python -m pytest
+\`\`\`
+python3 -m pytest
 \`\`\`
 ```
 
@@ -258,12 +258,12 @@ Usage instructions:
 To run an analysis using the eva_data_analysis.py script from the command line terminal,
 launch the script using Python as follows:
 
-\`\`\`python
+\`\`\`
 # Usage Examples
-python eva_data_analysis.py eva-data.json eva-data.csv
+python3 eva_data_analysis.py eva-data.json eva-data.csv
 \`\`\`
 
-The first argument is path to the Json data file.
+The first argument is path to the JSON data file.
 The second argument is the path the CSV output file.
 ```
 ::::::::::::::::::::::::
@@ -886,9 +886,6 @@ Do not forget to commit any uncommitted changes you may have and then push your 
 (venv_spacewalks) $ git commit -m "Your commit message"
 (venv_spacewalks) $ git push origin main
 ```
-
-:::
-
 
 ## Further reading
 

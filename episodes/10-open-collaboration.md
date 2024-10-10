@@ -1,5 +1,5 @@
 ---
-title: Open collaboration on code
+title: Open code & collaboration
 teaching: 60
 exercises: 30
 ---
@@ -22,8 +22,15 @@ After completing this episode, participants should be able to:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-In addition to adding a license and other metadata to our code (covered in previous episode) 
-there are several other important steps to consider before sharing the code publicly.
+Sharing code openly promotes collaboration, transparency, and innovation by allowing others to review, use, and 
+improve the code. 
+It fosters knowledge exchange, accelerates scientific progress, and enhances the reproducibility of research. 
+Additionally, open sharing encourages community contributions and can lead to better-maintained, 
+more reliable software.
+
+Adding a license and other metadata to our code (covered in the previous episode) are the first steps towards 
+sharing the code publicly.
+There are several other important steps to consider which we will cover here.
 
 ::: callout
 
@@ -36,6 +43,11 @@ $ source venv_spacewalks/bin/activate # Mac or Linux
 $ source venv_spacewalks/Scripts/activate # Windows
 (venv_spacewalks) $
 ```
+:::
+
+::: instructor
+At this point, the code in your local software project's directory should be as in:
+https://github.com/carpentries-incubator/astronaut-data-analysis-not-so-fair/tree/10-open-collaboration
 :::
 
 ## Sharing code to encourage collaboration
