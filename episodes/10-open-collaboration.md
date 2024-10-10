@@ -28,7 +28,7 @@ It fosters knowledge exchange, accelerates scientific progress, and enhances the
 Additionally, open sharing encourages community contributions and can lead to better-maintained, 
 more reliable software.
 
-Adding a license and other metadata to our code (covered in the previous episode) are the first steps towards 
+Adding a [license](../learners/licensing.md) and other metadata to our code (covered in the previous episode) are the first steps towards 
 sharing the code publicly.
 There are several other important steps to consider which we will cover here.
 
@@ -505,20 +505,15 @@ Also check the [full reference set](learners/reference.md#litref) for the course
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Open source applies Copyright licenses permitting others to reuse and adapt your code or data.
-- Permissive licenses allow code to be used in other products providing the copyright statement is displayed.
-- Copyleft licenses require the source code of any modifications to be released under a copyleft license.
-- Creative commons licenses are suitable for non-code files such as documentation and images.
-- Open source software can be sold, but you must supply the source code and the people you sell it to can give it away to somebody else.
-- Add license file to your repository and add a license to each file in case it gets detached.
-- Zenodo can be used to archive a Github repository and obtain a DOI for it.
-- We can include a CITATION file to tell people how to cite our code.
-- Github can track bugs or issues with a program.
-- Git branches can be used to allow multiple developers to work on the same part of a program in parallel.
+- Zenodo can be used to archive a GitHub repository and obtain a DOI for it.
+- We include a CITATION file with our code to tell people how to cite it.
+- GitHub can help us track bugs or issues with software.
+- Git branches can be used to allow multiple developers to work on the same part of code in parallel.
 - The `git branch` command shows the list of branches and can create new branches.
 - The `git switch` command changes which branch we are working on.
 - The `git merge` command merges another branch into the current one.
-- Pull requests allow developers to work on their own branch/fork and then request other developers review their changes before they are merged.
+- Pull requests allow developers to work on their own branch/fork and then request other developers review 
+their changes before they are merged.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
