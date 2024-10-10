@@ -617,11 +617,6 @@ if __name__ == "__main__":
 
 ::::::
 
-After the above exercise, you will be invoking your script from command line as:
-
-```bash
-(venv_spacewalks) $ python data/eva_data_analysis.py eva_data.json results/eva_data.csv
-```
 Remember to commit your latest changes:
 
 ```bash

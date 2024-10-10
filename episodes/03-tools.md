@@ -77,8 +77,8 @@ correctly on their machine - helping with code understanding and reusability.
 
 ### Software- and project- level documentation
 
-Documentation comes in many forms - from **software-level documentation** including descriptive names of variables and 
-functions and additional comments that explain lines of your code, to **project-level documentation** and 
+Documentation comes in many forms - from **software-level documentation** including docstrings describing 
+functions and classes and in-line comments that explain lines of your code, to **project-level documentation** and 
 **metadata** (including README, LICENCE, CITATION, CONTRIBUTING, etc. files)
 that help to discover it, explain the legal terms of reusing it, describe its functionality and how to install, run and contribute to it,
 to whole websites full of documentation with function definitions, usage examples, tutorials and guides.

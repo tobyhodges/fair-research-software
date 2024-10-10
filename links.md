@@ -123,3 +123,4 @@ any links that you are not going to use.
 [pypi]: https://pypi.org/
 [cran]: https://cran.r-project.org/web/packages/
 [awesome-rs-registries]: https://github.com/NLeSC/awesome-research-software-registries
+[mkdocs-deploy]: https://www.mkdocs.org/user-guide/deploying-your-docs/
