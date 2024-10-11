@@ -1,0 +1,93 @@
+#------------------------------------------------------------
+# Values for this lesson.
+#------------------------------------------------------------
+
+# Which carpentry is this (swc, dc, lc, or cp)?
+# swc: Software Carpentry
+# dc: Data Carpentry
+# lc: Library Carpentry
+# cp: Carpentries (to use for instructor training for instance)
+# incubator: The Carpentries Incubator
+carpentry: 'incubator'
+
+# Overall title for pages.
+title: 'Tools and practices for FAIR research software' # FIXME
+
+# Date the lesson was created (YYYY-MM-DD, this is empty by default)
+created: 2023-10-03 # FIXME
+
+# Comma-separated list of keywords for the lesson
+keywords: 'software, FAIR, reproducibility, sustainability, open, research, lesson, The Carpentries' # FIXME
+
+# Life cycle stage of the lesson
+# possible values: pre-alpha, alpha, beta, stable
+life_cycle: 'alpha' # FIXME
+
+# License of the lesson
+license: 'CC-BY 4.0'
+
+# Link to the source repository for this lesson
+source: 'https://github.com/softwaresaved/fair-research-software' # FIXME
+
+# Default branch of your lesson
+branch: 'main'
+
+# Who to contact if there are any issues
+contact: 'a.nenadic@software.ac.uk' # FIXME
+
+# Navigation ------------------------------------------------
+#
+# Use the following menu items to specify the order of
+# individual pages in each dropdown section. Leave blank to
+# include all pages in the folder.
+#
+# Example -------------
+#
+# episodes:
+# - introduction.md
+# - first-steps.md
+#
+# learners:
+# - setup.md
+#
+# instructors:
+# - instructor-notes.md
+#
+# profiles:
+# - one-learner.md
+# - another-learner.md
+
+# Order of episodes in your lesson
+episodes: 
+#- writing-content.md
+- 01-introduction.md
+- 02-fair-research-software.md
+- 03-tools.md
+- 04-version-control.md
+- 05-code-environment.md
+- 06-code-readability.md
+- 07-code-structure.md
+- 08-code-correctness.md
+- 09-code-documentation.md
+- 10-open-collaboration.md
+- 11-wrap-up.md
+
+# Information for Learners
+learners:
+- test-suite-exercise.md
+- ci-for-testing.md
+- licensing.md
+- ethical-environmental-considerations.md
+
+# Information for Instructors
+instructors: 
+
+# Learner Profiles
+profiles: 
+
+# Customisation ---------------------------------------------
+#
+# This space below is where custom yaml items (e.g. pinning
+# sandpaper and varnish versions) should live
+
+
