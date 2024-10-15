@@ -46,10 +46,16 @@
     <loc>https://softwaresaved.github.io/fair-research-software/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://softwaresaved.github.io/fair-research-software/aio.html</loc>
+  </url>
+  <url>
     <loc>https://softwaresaved.github.io/fair-research-software/ci-for-testing.html</loc>
   </url>
   <url>
     <loc>https://softwaresaved.github.io/fair-research-software/ethical-environmental-considerations.html</loc>
+  </url>
+  <url>
+    <loc>https://softwaresaved.github.io/fair-research-software/images.html</loc>
   </url>
   <url>
     <loc>https://softwaresaved.github.io/fair-research-software/index.html</loc>
@@ -100,13 +106,25 @@
     <loc>https://softwaresaved.github.io/fair-research-software/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://softwaresaved.github.io/fair-research-software/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://softwaresaved.github.io/fair-research-software/instructor/ci-for-testing.html</loc>
   </url>
   <url>
     <loc>https://softwaresaved.github.io/fair-research-software/instructor/ethical-environmental-considerations.html</loc>
   </url>
   <url>
+    <loc>https://softwaresaved.github.io/fair-research-software/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://softwaresaved.github.io/fair-research-software/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://softwaresaved.github.io/fair-research-software/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://softwaresaved.github.io/fair-research-software/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://softwaresaved.github.io/fair-research-software/instructor/licensing.html</loc>
@@ -116,6 +134,12 @@
   </url>
   <url>
     <loc>https://softwaresaved.github.io/fair-research-software/instructor/test-suite-exercise.html</loc>
+  </url>
+  <url>
+    <loc>https://softwaresaved.github.io/fair-research-software/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://softwaresaved.github.io/fair-research-software/key-points.html</loc>
   </url>
   <url>
     <loc>https://softwaresaved.github.io/fair-research-software/licensing.html</loc>
